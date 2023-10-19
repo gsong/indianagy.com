@@ -6,70 +6,73 @@ import Card from "../components/Card.astro";
 <Layout
   title="India Nagy: Brand Identities, Graphic Design, Project Management"
 >
-  <header>
-    <h1>India Nagy</h1>
-    <nav>
+  <main class="stack-large">
+    <section id="about" class="stack-small">
+      <hgroup>
+        <h2 class="sr-only">About India Nagy</h2>
+        <p class="intro-text">
+          Crafting Connections with Consumers: Brand & Design Expertise, Project
+          Management, and Excellence
+        </p>
+      </hgroup>
+
+      <p>
+        Creative visionary with more than 10 years of experience transforming
+        brands through innovative packaging design. My expertise spans print,
+        digital, and packaging mediums for captivating consumer experiences.
+      </p>
+
+      <p>
+        I've brought concepts to life for major brands including Skippy, Pyramid
+        Breweries, and Myntz! My portfolio shows off imaginative designs that
+        engage shoppers while delivering strategic outcomes.
+      </p>
+
+      <p>
+        Success comes from uniting teams around a shared vision. I leverage
+        curiosity, collaboration and project management strengths to uncover
+        opportunities and ensure flawless execution.
+      </p>
+
+      <p>
+        I'm seeking a senior art director role where I can make brands leap off
+        shelves into hearts and minds. Let's connect if you need a design expert
+        who thrives on driving strategic impact through creativity.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>My Skills</h2>
       <ul>
-        <li>
-          <a href="/#skills">My Skills</a>
-        </li>
-        <li>
-          <a href="/#case-studies">Case Studies</a>
-        </li>
-        <li>About</li>
-        <li>Contact</li>
+        <li>Branding & Packaging Design</li>
+        <li>Website & Digital Design</li>
+        <li>Photography & Art Direction</li>
       </ul>
-    </nav>
-  </header>
+    </section>
+
+    <section id="case-studies">
+      <h2>Case Studies</h2>
+      <ul>
+        <li>Skippy & Salted Nut Roll</li>
+        <li>Myntz! Breathmints</li>
+      </ul>
+    </section>
+  </main>
 </Layout>
 
-<main>
-  <section id="about">
-    <hgroup>
-      <h2 class="sr-only">About India Nagy</h2>
-      <p class="intro-text">
-        Crafting Connections with Consumers: Brand & Design Expertise, Project
-        Management, and Excellence
-      </p>
-    </hgroup>
-    <p>
-      I am a dedicated Art Director with over a decade of expertise in consumer
-      goods packaging and brand design, specializing in the dynamic food and
-      beverage industries. My career has been defined by my ability to create
-      captivating and innovative designs across various mediums, including
-      packaging, print, and digital media, all while delivering strategic
-      outcomes. My portfolio showcases collaborations with renowned brands such
-      as Skippy, Pyramid Breweries, and Myntz!.
-    </p>
-    <p>
-      What sets me apart is not just my technical and creative capabilities, but
-      also my problem-solving mindset, project management skills, and a strong
-      spirit of collaboration. I thrive in team environments, driving success
-      through effective communication and a shared commitment to excellence.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>My Skills</h2>
-    <ul>
-      <li>Branding & Packaging Design</li>
-      <li>Website & Digital Design</li>
-      <li>Photography & Art Direction</li>
-    </ul>
-  </section>
-
-  <section id="case-studies">
-    <h2>Case Studies</h2>
-    <ul>
-      <li>Skippy & Salted Nut Roll</li>
-      <li>Myntz! Breathmints</li>
-    </ul>
-  </section>
-</main>
-
 <style>
+  main {
+    margin-inline: var(--s0);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
   .intro-text {
-    font-size: var(--s5);
+    font-size: var(--s3);
+    font-weight: bold;
     text-wrap: balance;
+    line-height: calc(1.125 * 1.125);
   }
 </style>

@@ -6,7 +6,7 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content="India Nagy’s professional website" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/reset.css" />
@@ -14,7 +14,33 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="stack-small">
+    <header>
+      <h1>India Nagy</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/#skills">My Skills</a>
+          </li>
+          <li>
+            <a href="/#case-studies">Case Studies</a>
+          </li>
+          <li>
+            <a href="/#about">About</a>
+          </li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+
     <slot />
   </body>
 </html>
+
+<style>
+  body {
+    display: grid;
+    justify-content: center;
+    align-content: start;
+  }
+</style>

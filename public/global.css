@@ -11,6 +11,9 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+  --s7: calc(var(--s6) * var(--ratio));
+  --s8: calc(var(--s7) * var(--ratio));
 
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -28,6 +31,18 @@ nav,
 main,
 footer {
   max-inline-size: none;
+}
+
+h2 {
+  font-size: var(--s3);
+}
+
+.stack-large > * + * {
+  margin-block-start: var(--s8);
+}
+
+.stack-small > * + * {
+  margin-block-start: var(--s1);
 }
 
 .sr-only:not(:focus):not(:active) {
