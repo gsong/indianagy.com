@@ -19,22 +19,17 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-* {
-  max-inline-size: 60ch;
-}
-
-html,
-body,
-div,
-header,
-nav,
-main,
-footer {
-  max-inline-size: none;
+body {
+  display: grid;
+  justify-content: center;
 }
 
 h2 {
   font-size: var(--s3);
+}
+
+main {
+  margin-inline: var(--s0);
 }
 
 .stack-large > * + * {
@@ -43,6 +38,12 @@ h2 {
 
 .stack-small > * + * {
   margin-block-start: var(--s1);
+}
+
+.center-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sr-only:not(:focus):not(:active) {

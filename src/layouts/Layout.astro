@@ -15,7 +15,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="stack-small">
-    <header>
+    <header class="center-horizontal">
       <h1>India Nagy</h1>
       <nav>
         <ul>
@@ -36,11 +36,3 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
-
-<style>
-  body {
-    display: grid;
-    justify-content: center;
-    align-content: start;
-  }
-</style>
