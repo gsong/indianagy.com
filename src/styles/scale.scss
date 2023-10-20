@@ -1,0 +1,12 @@
+@use "sass:math";
+
+$base-font-size: 1rem;
+$ratio: 1.125;
+
+@function ms-factor($step) {
+  @return math.pow($ratio, $step);
+}
+
+@function ms($step) {
+  @return $base-font-size * ms-factor($step);
+}

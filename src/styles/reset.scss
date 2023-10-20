@@ -1,5 +1,6 @@
 /* https://andy-bell.co.uk/a-more-modern-css-reset/ */
 /* https://chriscoyier.net/2023/10/03/being-picky-about-a-css-reset-for-fun-pleasure/ */
+@import "./scale.scss";
 
 /* Box sizing rules */
 *,
@@ -10,10 +11,8 @@
 
 /* Prevent font size inflation */
 html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  line-height: min(calc(var(--ratio) * var(--ratio) * var(--ratio)), 1.5);
+  line-height: min(ms-factor(4), 1.5);
 }
 
 /* Remove default margin in favour of better control in authored CSS */
@@ -51,7 +50,7 @@ h4,
 button,
 input,
 label {
-  line-height: var(--ratio);
+  line-height: ms-factor(1);
 }
 
 /* Balance text wrapping on headings */

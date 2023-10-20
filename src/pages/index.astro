@@ -7,12 +7,8 @@ import Card from "../components/Card.astro";
   title="India Nagy: Brand Identities, Graphic Design, Project Management"
 >
   <main class="stack-large">
-    <section
-      id="about"
-      class="center-horizontal stack-small"
-      style="inline-size: 90vw;"
-    >
-      <div style="max-inline-size: 60ch;">
+    <section id="about" class="center-horizontal">
+      <div class="stack-small max-inline-size:60ch">
         <hgroup>
           <h2 class="sr-only">About India Nagy</h2>
           <p class="intro-text">
@@ -68,7 +64,9 @@ import Card from "../components/Card.astro";
   </main>
 </Layout>
 
-<style>
+<style lang="scss">
+  @import "../styles/scale.scss";
+
   p {
     text-wrap: pretty;
   }
@@ -83,16 +81,17 @@ import Card from "../components/Card.astro";
   }
 
   .intro-text {
-    font-size: var(--s3);
+    font-size: ms(3);
     font-weight: bold;
     text-wrap: balance;
-    line-height: calc(1.125 * 1.125);
+    line-height: ms-factor(2);
   }
 
   .switcher {
-    --limit: 4;
-    --space: var(--s1);
-    --threshold: 400px;
+    $limit: 4;
+    $space: ms(1);
+    $threshold: 400px;
+    $last-child: $limit + 1;
 
     display: block;
 
@@ -100,17 +99,17 @@ import Card from "../components/Card.astro";
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
-      margin: calc((var(--space) / 2) * -1);
+      margin: calc((#{space} / 2) * -1);
     }
 
     > * > * {
-      flex-basis: calc((var(--threshold) - (100% - var(--space))) * 999);
-      margin: calc(var(--space) / 2);
+      flex-basis: calc((#{$threshold} - (100% - #{$space})) * 999);
+      margin: calc(#{$space} / 2);
       flex-grow: 1;
     }
 
-    > * > :nth-last-child(n + calc(var(--limit) + 1)),
-    > * > :nth-last-child(n + calc(var(--limit) + 1)) ~ * {
+    > * > :nth-last-child(n + #{$last-child}),
+    > * > :nth-last-child(n + #{$last-child}) ~ * {
       flex-basis: 100%;
     }
   }

@@ -1,0 +1,46 @@
+@import "./scale.scss";
+
+:root {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+  margin-block-start: ms(1);
+}
+
+h2 {
+  font-size: ms(3);
+}
+
+main {
+  inline-size: 90vw;
+}
+
+.stack-large > * + * {
+  margin-block-start: ms(8);
+}
+
+.stack-small > * + * {
+  margin-block-start: ms(1);
+}
+
+.center-horizontal {
+  display: grid;
+  justify-content: center;
+  align-content: start;
+}
+
+.max-inline-size\:60ch {
+  max-inline-size: 60ch;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
