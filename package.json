@@ -10,10 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.3.0"
+    "astro": "^3.3.0",
+    "purgecss": "^5.0.0"
   },
   "devDependencies": {
     "astro-compress": "^2.0.15",
+    "astro-purgecss": "^3.2.1",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "sass": "^1.69.4"

@@ -3,6 +3,8 @@
 :root {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,18 +19,15 @@ main {
   inline-size: 90vw;
 }
 
-.stack-large > * + * {
-  margin-block-start: ms(8);
-}
-
-.stack-small > * + * {
-  margin-block-start: ms(1);
-}
-
 .center-horizontal {
-  display: grid;
-  justify-content: center;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.inline-size\:max {
+  inline-size: min(100%, 1280px);
 }
 
 .max-inline-size\:60ch {
@@ -44,3 +43,13 @@ main {
   white-space: nowrap;
   width: 1px;
 }
+
+@mixin stacks {
+  @for $i from 0 through 8 {
+    .stack\:#{$i} > * + * {
+      margin-block-start: ms($i);
+    }
+  }
+}
+
+@include stacks;

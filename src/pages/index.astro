@@ -6,9 +6,9 @@ import Card from "../components/Card.astro";
 <Layout
   title="India Nagy: Brand Identities, Graphic Design, Project Management"
 >
-  <main class="stack-large">
+  <main class="stack:8">
     <section id="about" class="center-horizontal">
-      <div class="stack-small max-inline-size:60ch">
+      <div class="stack:1 max-inline-size:60ch">
         <hgroup>
           <h2 class="sr-only">About India Nagy</h2>
           <p class="intro-text">
@@ -43,20 +43,18 @@ import Card from "../components/Card.astro";
       </div>
     </section>
 
-    <section id="skills" class="stack-small">
+    <section id="skills" class="stacks:1 center-horizontal">
       <h2>My Skills</h2>
-      <div class="switcher">
-        <ul>
-          <li>Branding & Packaging Design</li>
-          <li>Website & Digital Design</li>
-          <li>Photography & Art Direction</li>
-        </ul>
-      </div>
+      <ul class="switcher inline-size:max">
+        <li>Branding & Packaging Design</li>
+        <li>Website & Digital Design</li>
+        <li>Photography & Art Direction</li>
+      </ul>
     </section>
 
-    <section id="case-studies">
+    <section id="case-studies" class="stack:1 center-horizontal">
       <h2>Case Studies</h2>
-      <ul>
+      <ul class="switcher inline-size:max">
         <li>Skippy & Salted Nut Roll</li>
         <li>Myntz! Breathmints</li>
       </ul>
@@ -78,39 +76,29 @@ import Card from "../components/Card.astro";
 
   li {
     border: 1px solid red;
+    min-block-size: 5lh;
   }
 
   .intro-text {
     font-size: ms(3);
     font-weight: bold;
     text-wrap: balance;
-    line-height: ms-factor(2);
+    line-height: ms-factor(1);
+    margin-block-end: 1lh;
   }
 
   .switcher {
-    $limit: 4;
     $space: ms(1);
-    $threshold: 400px;
-    $last-child: $limit + 1;
+    $threshold: 800px;
 
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: calc(#{$space} / 2);
 
     > * {
-      display: flex;
-      flex-wrap: wrap;
-      overflow: hidden;
-      margin: calc((#{space} / 2) * -1);
-    }
-
-    > * > * {
       flex-basis: calc((#{$threshold} - (100% - #{$space})) * 999);
-      margin: calc(#{$space} / 2);
       flex-grow: 1;
-    }
-
-    > * > :nth-last-child(n + #{$last-child}),
-    > * > :nth-last-child(n + #{$last-child}) ~ * {
-      flex-basis: 100%;
     }
   }
 </style>
