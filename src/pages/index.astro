@@ -1,47 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout
   title="India Nagy: Brand Identities, Graphic Design, Project Management"
 >
   <main class="stack:8">
-    <section id="about" class="center-horizontal">
-      <div class="stack:1 max-inline-size:60ch">
-        <hgroup>
-          <h2 class="sr-only">About India Nagy</h2>
-          <p class="intro-text">
-            Crafting Connections with Consumers: Brand & Design Expertise,
-            Project Management, and Excellence
-          </p>
-        </hgroup>
-
-        <p>
-          Creative visionary with more than 10 years of experience transforming
-          brands through innovative packaging design. My expertise spans print,
-          digital, and packaging mediums for captivating consumer experiences.
-        </p>
-
-        <p>
-          I've brought concepts to life for major brands including Skippy,
-          Pyramid Breweries, and Myntz! My portfolio shows off imaginative
-          designs that engage shoppers while delivering strategic outcomes.
-        </p>
-
-        <p>
-          Success comes from uniting teams around a shared vision. I leverage
-          curiosity, collaboration and project management strengths to uncover
-          opportunities and ensure flawless execution.
-        </p>
-
-        <p>
-          I'm seeking a senior art director role where I can make brands leap
-          off shelves into hearts and minds. Let's connect if you need a design
-          expert who thrives on driving strategic impact through creativity.
-        </p>
-      </div>
-    </section>
+    <About />
 
     <section id="skills" class="stacks:1 center-horizontal">
       <h2>My Skills</h2>
@@ -65,10 +31,6 @@ import Card from "../components/Card.astro";
 <style lang="scss">
   @import "../styles/scale.scss";
 
-  p {
-    text-wrap: pretty;
-  }
-
   ul {
     list-style: none;
     padding: 0;
@@ -77,14 +39,6 @@ import Card from "../components/Card.astro";
   li {
     border: 1px solid red;
     min-block-size: 5lh;
-  }
-
-  .intro-text {
-    font-size: ms(3);
-    font-weight: bold;
-    text-wrap: balance;
-    line-height: ms-factor(1);
-    margin-block-end: 1lh;
   }
 
   .switcher {

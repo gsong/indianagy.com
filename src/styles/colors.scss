@@ -1,0 +1,5 @@
+@function color-primary($lightness) {
+  $lightness: "#{$lightness}%";
+  $color: oklch(#{$lightness} 0.16 45.5);
+  @return $color;
+}

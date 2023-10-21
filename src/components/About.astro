@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import headshot from "../images/headshot.png";
+---
+
+<section id="about" class="center-horizontal">
+  <div class="stack:1 max-inline-size:60ch">
+    <hgroup>
+      <h2 class="sr-only">About India Nagy</h2>
+      <p class="intro-text">
+        <span>Crafting Connections with Consumers</span>: Brand & Design
+        Expertise, Project Management, and Excellence
+      </p>
+    </hgroup>
+
+    <div class="detail stack:1">
+      <Image src={headshot} alt="" width="200" densities={[1.5, 2]} />
+
+      <p>
+        Creative visionary with more than 10 years of experience transforming
+        brands through innovative packaging design. My expertise spans print,
+        digital, and packaging mediums for captivating consumer experiences.
+      </p>
+
+      <p>
+        I’ve brought concepts to life for major brands including Skippy, Pyramid
+        Breweries, and Myntz! My portfolio shows off imaginative designs that
+        engage shoppers while delivering strategic outcomes.
+      </p>
+
+      <p>
+        Success comes from uniting teams around a shared vision. I leverage
+        curiosity, collaboration and project management strengths to uncover
+        opportunities and ensure flawless execution.
+      </p>
+
+      <p>
+        I’m seeking a senior art director role where I can make brands leap off
+        shelves into hearts and minds. Let’s connect if you need a design expert
+        who thrives on driving strategic impact through creativity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/colors.scss";
+  @import "../styles/scale.scss";
+
+  .detail {
+    container-type: inline-size;
+
+    img {
+      border-radius: 50%;
+      margin-inline: auto;
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  @container (width > 425px) {
+    .detail {
+      img {
+        float: left;
+        shape-outside: circle(50%);
+        margin-inline-end: ms(2);
+        width: unset;
+        height: unset;
+      }
+
+      p:nth-of-type(1) {
+        margin-block-start: 0;
+      }
+    }
+  }
+
+  .intro-text {
+    font-size: ms(3);
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: ms-factor(2);
+    margin-block-end: 1lh;
+
+    span {
+      color: color-primary(60);
+    }
+  }
+</style>

@@ -1,3 +1,4 @@
+@import "./colors.scss";
 @import "./scale.scss";
 
 :root {
@@ -8,15 +9,24 @@
 }
 
 body {
-  margin-block-start: ms(1);
+  margin-block-start: ms(0);
+}
+
+main {
+  inline-size: 90vw;
+}
+
+h1,
+h2 {
+  color: color-primary(60);
 }
 
 h2 {
   font-size: ms(3);
 }
 
-main {
-  inline-size: 90vw;
+p {
+  text-wrap: pretty;
 }
 
 .center-horizontal {
