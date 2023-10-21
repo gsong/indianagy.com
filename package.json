@@ -16,6 +16,8 @@
   "devDependencies": {
     "astro-compress": "^2.0.15",
     "astro-purgecss": "^3.2.1",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "sass": "^1.69.4"
