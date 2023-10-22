@@ -47,15 +47,47 @@ const { title } = Astro.props;
 <style lang="scss">
   @import "../styles/colors.scss";
   @import "../styles/scale.scss";
+  @import "../styles/shadows.scss";
 
   $header-height: 4.5rem + ms(-4) * 3;
 
   header {
     inline-size: 100%;
     padding-block: ms(-4);
-    background-color: color-gray(95);
     position: fixed;
     z-index: 100;
+    background: color-gray(85, 0.85);
+    backdrop-filter: blur(15px);
+
+    @include shadow-medium(color-white);
+  }
+
+  .content {
+    $margin: $header-height + ms(-4);
+    margin-block-start: $margin;
+  }
+
+  :global(.anchor) {
+    position: relative;
+    top: -$header-height;
+    visibility: hidden;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    @media (orientation: landscape) and (max-height: 640px),
+      (max-width: 470px) and (max-height: 870px) {
+      header {
+        position: initial;
+      }
+
+      .content {
+        margin-block-start: ms(2);
+      }
+
+      :global(.anchor) {
+        top: 0;
+      }
+    }
   }
 
   h1 {
@@ -74,15 +106,5 @@ const { title } = Astro.props;
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  .content {
-    margin-block-start: $header-height;
-  }
-
-  :global(.anchor) {
-    position: relative;
-    top: -$header-height;
-    visibility: hidden;
   }
 </style>

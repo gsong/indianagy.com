@@ -14,7 +14,7 @@ import headshot from "../images/headshot.png";
       </p>
 
       <div class="detail stack:1">
-        <Image src={headshot} alt="" width="200" densities={[1.5, 2]} />
+        <Image src={headshot} alt="" width="200" densities={[1.5, 2, 2.5, 3]} />
 
         <p>
           Creative visionary with more than 10 years of experience transforming
@@ -46,6 +46,7 @@ import headshot from "../images/headshot.png";
   <style lang="scss">
     @import "../styles/colors.scss";
     @import "../styles/scale.scss";
+    @import "../styles/shadows.scss";
 
     .detail {
       container-type: inline-size;
@@ -55,6 +56,8 @@ import headshot from "../images/headshot.png";
         margin-inline: auto;
         width: 150px;
         height: 150px;
+
+        @include shadow-medium(color-white);
       }
     }
 

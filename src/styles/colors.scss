@@ -1,23 +1,21 @@
-@function color-primary($lightness) {
-  $lightness: "#{$lightness}%";
-  $color: oklch(#{$lightness} 0.16 45.5);
-  @return $color;
+@function color-primary($lightness, $alpha: 1) {
+  @return _color($lightness, 0.16, 45.5, $alpha);
 }
 
-@function color-secondary($lightness) {
-  $lightness: "#{$lightness}%";
-  $color: oklch(#{$lightness} 0.066 226.05);
-  @return $color;
+@function color-secondary($lightness, $alpha: 1) {
+  @return _color($lightness, 0.066, 226.05, $alpha);
 }
 
-@function color-white($lightness) {
-  $lightness: "#{$lightness}%";
-  $color: oklch(#{$lightness} 0.01352908677048263 92.97793627734326);
-  @return $color;
+@function color-white($lightness, $alpha: 1) {
+  @return _color($lightness, 0.01352908677048263, 92.97793627734326, $alpha);
 }
 
-@function color-gray($lightness) {
-  $lightness: "#{$lightness}%";
-  $color: oklch(#{$lightness} 0.018 309.98);
+@function color-gray($lightness, $alpha: 1) {
+  @return _color($lightness, 0.018, 309.98, $alpha);
+}
+
+@function _color($l, $c, $h, $a: 1) {
+  $l: "#{$l}%";
+  $color: oklch(#{$l} #{$c} #{$h} / #{$a});
   @return $color;
 }
