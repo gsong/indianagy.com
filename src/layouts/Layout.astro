@@ -15,9 +15,13 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="center-horizontal stack:4">
-    <header class="center-horizontal stack:0">
-      <h1>India Nagy<span class="sr-only">’s Professional Website</span></h1>
+  <body class="center-horizontal">
+    <header class="center-horizontal">
+      <h1>
+        <a href="/">
+          India Nagy<span class="sr-only">’s Professional Website</span>
+        </a>
+      </h1>
       <nav>
         <ul>
           <li>
@@ -34,7 +38,9 @@ const { title } = Astro.props;
       </nav>
     </header>
 
-    <slot />
+    <div class="content">
+      <slot />
+    </div>
   </body>
 </html>
 
@@ -42,11 +48,41 @@ const { title } = Astro.props;
   @import "../styles/colors.scss";
   @import "../styles/scale.scss";
 
+  $header-height: 4.5rem + ms(-4) * 3;
+
+  header {
+    inline-size: 100%;
+    padding-block: ms(-4);
+    background-color: color-gray(95);
+    position: fixed;
+    z-index: 100;
+  }
+
+  h1 {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  nav {
+    margin-block-start: ms(-4);
+  }
+
   ul {
     display: flex;
     gap: ms(0);
     list-style: none;
     padding: 0;
     margin: 0;
+  }
+
+  .content {
+    margin-block-start: $header-height;
+  }
+
+  :global(.anchor) {
+    position: relative;
+    top: -$header-height;
+    visibility: hidden;
   }
 </style>

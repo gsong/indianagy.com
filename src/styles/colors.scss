@@ -3,3 +3,21 @@
   $color: oklch(#{$lightness} 0.16 45.5);
   @return $color;
 }
+
+@function color-secondary($lightness) {
+  $lightness: "#{$lightness}%";
+  $color: oklch(#{$lightness} 0.066 226.05);
+  @return $color;
+}
+
+@function color-white($lightness) {
+  $lightness: "#{$lightness}%";
+  $color: oklch(#{$lightness} 0.01352908677048263 92.97793627734326);
+  @return $color;
+}
+
+@function color-gray($lightness) {
+  $lightness: "#{$lightness}%";
+  $color: oklch(#{$lightness} 0.018 309.98);
+  @return $color;
+}
