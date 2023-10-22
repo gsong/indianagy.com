@@ -10,11 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.3.0",
+    "astro": "^3.3.2",
     "purgecss": "^5.0.0"
   },
   "devDependencies": {
-    "astro-compress": "^2.0.15",
     "astro-purgecss": "^3.2.1",
     "autoprefixer": "^10.4.16",
     "cssnano": "^6.0.1",
