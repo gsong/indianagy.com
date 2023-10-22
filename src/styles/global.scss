@@ -2,6 +2,8 @@
 @import "./scale.scss";
 
 :root {
+  --max-width: 90vw;
+
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -14,7 +16,7 @@ body {
 }
 
 main {
-  inline-size: 90vw;
+  inline-size: var(--max-width);
 }
 
 h1,

@@ -17,25 +17,27 @@ const { title } = Astro.props;
   </head>
   <body class="center-horizontal">
     <header class="center-horizontal">
-      <h1>
-        <a href="/">
-          India Nagy<span class="sr-only">’s Professional Website</span>
-        </a>
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="/#skills">My Skills</a>
-          </li>
-          <li>
-            <a href="/#case-studies">Case Studies</a>
-          </li>
-          <li>
-            <a href="/#about">About</a>
-          </li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+      <div class="header-content max-inline-size:60ch">
+        <h1>
+          <a href="/">
+            India Nagy<span class="sr-only">’s Professional Website</span>
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="/#skills">My Skills</a>
+            </li>
+            <li>
+              <a href="/#case-studies">Case Studies</a>
+            </li>
+            <li>
+              <a href="/#about">About</a>
+            </li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="content">
@@ -49,7 +51,15 @@ const { title } = Astro.props;
   @import "../styles/scale.scss";
   @import "../styles/shadows.scss";
 
-  $header-height: 4.5rem + ms(-4) * 3;
+  $header-max-width: 520px;
+
+  body {
+    --header-height: calc(2.5rem + #{ms(-4)} * 3);
+
+    @media (max-width: $header-max-width) {
+      --header-height: calc(4rem + #{ms(-4)} * 3);
+    }
+  }
 
   header {
     inline-size: 100%;
@@ -62,14 +72,29 @@ const { title } = Astro.props;
     @include shadow-medium(color-white);
   }
 
+  h1 {
+    font-size: clamp(ms(3), 4vw, ms(5));
+  }
+
+  .header-content {
+    display: flex;
+    inline-size: min(100%, var(--max-width));
+    justify-content: space-between;
+    align-items: baseline;
+
+    @media (max-width: $header-max-width) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .content {
-    $margin: $header-height + ms(-4);
-    margin-block-start: $margin;
+    margin-block-start: calc(var(--header-height) + ms(-4));
   }
 
   :global(.anchor) {
     position: relative;
-    top: -$header-height;
+    top: calc(var(--header-height) * -1);
     visibility: hidden;
   }
 
@@ -90,10 +115,8 @@ const { title } = Astro.props;
     }
   }
 
-  h1 {
-    a {
-      text-decoration: none;
-    }
+  h1 a {
+    text-decoration: none;
   }
 
   nav {
