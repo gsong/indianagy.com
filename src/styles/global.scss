@@ -4,8 +4,8 @@
 :root {
   --max-width: 90vw;
 
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Inter Variable", system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   scroll-behavior: smooth;
 }
@@ -21,10 +21,12 @@ main {
 
 h1,
 h2 {
+  font-family: "Lora Variable";
   color: color-primary(60);
 }
 
 h2 {
+  font-weight: 600;
   font-size: ms(3);
 }
 

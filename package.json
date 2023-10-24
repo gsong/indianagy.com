@@ -10,7 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.3.3",
+    "@fontsource-variable/inter": "^5.0.15",
+    "@fontsource-variable/lora": "^5.0.9",
+    "astro": "^3.3.4",
     "purgecss": "^5.0.0"
   },
   "devDependencies": {
