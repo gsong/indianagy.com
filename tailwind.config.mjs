@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
@@ -50,6 +52,10 @@ export default {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+      },
+      fontFamily: {
+        sans: ["Work Sans Variable", ...defaultTheme.fontFamily.sans],
+        serif: ["Alice", ...defaultTheme.fontFamily.sans],
       },
     },
   },
