@@ -24,7 +24,7 @@ jobs:
           echo "SITE_URL=https://${REPO_OWNER}.github.io/" >> $GITHUB_ENV
           echo "SITE_BASE=/${REPO_NAME}/" >> $GITHUB_ENV
       - name: Install, build, and upload site
-        uses: withastro/action@v2
+        uses: withastro/action@v3
 
   deploy:
     needs: build
