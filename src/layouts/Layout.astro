@@ -2,6 +2,9 @@
 import "@fontsource/alice";
 import "@fontsource-variable/work-sans";
 
+import alice from "@fontsource/alice/files/alice-latin-400-normal.woff2?url";
+import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2?url";
+
 import "@/styles/global.css";
 ---
 
@@ -11,18 +14,32 @@ import "@/styles/global.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={alice}
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href={workSans}
+      crossorigin="anonymous"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
   </head>
 
   <body>
-    <header class="site-width mb-1 py-4">
+    <header class="site-width mb-1 py-4 md:mb-3">
       <nav class="flex items-baseline justify-between">
-        <a href="/" class="font-serif text-3xl">India Nagy</a>
-        <div class="flex gap-x-3.5">
+        <a href="/" class="font-serif text-3xl lg:text-5xl">India Nagy</a>
+        <div class="flex gap-x-3.5 md:text-xl">
           <a href="#">Work</a>
           <a href="#">About</a>
-          <a href="#">Contact</a>
+          <a href="/contact">Contact</a>
         </div>
       </nav>
     </header>

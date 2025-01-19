@@ -1,0 +1,10 @@
+---
+import { Image } from "astro:assets";
+
+const { imgSrc, imgAlt, label } = Astro.props;
+---
+
+<div>
+  <Image src={imgSrc} alt={imgAlt || label} class="w-full rounded-t-lg" />
+  <h3 class="mt-1 font-serif text-xl text-muted-foreground">{label}</h3>
+</div>
