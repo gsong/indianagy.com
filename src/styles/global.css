@@ -16,12 +16,25 @@
     @apply bg-background text-foreground;
   }
 
+  h1,
+  h2 {
+    @apply mb-4 scroll-m-20 font-serif tracking-tight;
+  }
+
   h1 {
-    @apply scroll-m-20 font-serif text-3xl tracking-tight lg:text-5xl;
+    @apply text-3xl lg:text-5xl;
+  }
+
+  h2 {
+    @apply text-2xl lg:text-4xl;
   }
 
   p {
-    @apply leading-7 [&:not(:first-child)]:mt-6;
+    @apply text-pretty leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  a {
+    @apply hover:underline hover:underline-offset-4;
   }
 
   .site-width {
