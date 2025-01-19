@@ -5,6 +5,10 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
+  site: process.env.SITE_URL || "https://indianagy.com",
+  base: process.env.SITE_BASE || "/",
+  output: "static",
+
   integrations: [
     react(),
     tailwind({

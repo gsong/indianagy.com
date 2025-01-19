@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Allow this job to clone the repo and create a page deployment
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Set environment variables
+        run: |
+          REPO_OWNER=${{ github.repository_owner }}
+          REPO_NAME=${{ github.event.repository.name }}
+          echo "SITE_URL=https://${REPO_OWNER}.github.io/" >> $GITHUB_ENV
+          echo "SITE_BASE=/${REPO_NAME}/" >> $GITHUB_ENV
+      - name: Install, build, and upload site
+        uses: withastro/action@v2
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
