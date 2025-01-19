@@ -1,12 +1,14 @@
 {
   "name": "indianagy-dot-com",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "dev": "astro dev --host",
+    "astro": "astro",
     "build": "astro build",
-    "preview": "astro preview --host",
-    "astro": "astro"
+    "dev": "astro dev --host",
+    "postinstall": "if command -v jq &> /dev/null; then pnpm_version=$(pnpm --version) && jq --arg version \"$pnpm_version\" '.packageManager = \"pnpm@\" + $version' package.json > tmp.json && mv tmp.json package.json; else echo 'jq not found, skipping packageManager update'; fi",
+    "preview": "astro preview --host"
   },
   "dependencies": {
     "@astrojs/react": "^4.1.5",
