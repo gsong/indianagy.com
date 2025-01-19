@@ -1,8 +1,54 @@
 ---
-import Welcome from "../components/Welcome.astro";
-import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import Layout from "@/layouts/Layout.astro";
+import { Card, CardContent } from "@/components/ui/card";
+
+import amazonImage from "@/images/home/case-studies/amazon.png";
 ---
 
 <Layout>
-  <Welcome />
+  <main class="site-width">
+    <p class="mb-4 font-serif text-xl text-muted-foreground">
+      Art Director & Graphic Designer
+    </p>
+
+    <section>
+      <h1 class="mb-8">Case Studies</h1>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <Card>
+          <CardContent className="p-0">
+            <Image
+              src={amazonImage}
+              alt="Amazon Grocery"
+              class="w-full rounded-t-lg"
+            />
+            <h3 class="p-6 text-xl">Amazon Grocery</h3>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent class="p-0">
+            <img
+              src="/skippy.jpg"
+              alt="Skippy Nut Roll"
+              class="w-full rounded-t-lg"
+            />
+            <h3 class="p-6 text-xl text-gray-600">Skippy Nut Roll</h3>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent class="p-0">
+            <img
+              src="/myntz.jpg"
+              alt="Myntz! Breathmints"
+              class="w-full rounded-t-lg"
+            />
+            <h3 class="p-6 text-xl text-gray-600">Myntz! Breathmints</h3>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  </main>
 </Layout>

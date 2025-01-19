@@ -7,16 +7,25 @@
     @apply border-border;
   }
 
+  html,
+  body {
+    @apply m-0 h-full w-full;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 
   h1 {
-    @apply scroll-m-20 font-serif text-4xl tracking-tight lg:text-5xl;
+    @apply scroll-m-20 font-serif text-3xl tracking-tight lg:text-5xl;
   }
 
   p {
     @apply leading-7 [&:not(:first-child)]:mt-6;
+  }
+
+  .site-width {
+    @apply mx-auto max-w-7xl px-4;
   }
 }
 
@@ -41,7 +50,7 @@
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
     --ring: 24.6 95% 53.1%;
-    --radius: 1rem;
+    --radius: 0.3rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
