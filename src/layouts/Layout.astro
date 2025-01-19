@@ -29,18 +29,27 @@ import "@/styles/global.css";
       crossorigin="anonymous"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <title>India Nagy's Portfolio</title>
   </head>
 
   <body>
     <header class="site-width mb-1 py-4 md:mb-3">
-      <nav class="flex items-baseline justify-between">
+      <nav
+        class="flex items-baseline justify-between"
+        aria-label="primary navigation"
+      >
         <a href="/" class="font-serif text-3xl lg:text-5xl">India Nagy</a>
-        <div class="flex gap-x-3.5 md:text-xl">
-          <a href="#">Work</a>
-          <a href="#">About</a>
-          <a href="/contact">Contact</a>
-        </div>
+        <ul class="flex gap-x-3.5 md:text-xl">
+          <li>
+            <a href="#">Work</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <slot />
