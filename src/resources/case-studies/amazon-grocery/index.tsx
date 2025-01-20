@@ -1,7 +1,6 @@
-import type { CaseStudy } from "../types";
+import type { DetailMetadata } from "../../types";
 
-import { initGetImage } from "../utils";
-
+import { initGetImage } from "../../utils";
 const images = import.meta.glob("./images/*.{png,jpg}");
 
 const getImage = initGetImage(images);
@@ -34,4 +33,4 @@ export default {
   description,
   credit:
     "Credit: art direction @Dana Deneinger, creative director, and Amazon Go!/Grocery Team",
-} satisfies CaseStudy;
+} satisfies DetailMetadata;

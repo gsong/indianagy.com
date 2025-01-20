@@ -1,0 +1,12 @@
+---
+import Detail from "./Detail.astro";
+import { caseStudies } from "@/resources/case-studies";
+
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<Detail details={caseStudies} label={label} />
