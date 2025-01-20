@@ -1,8 +1,11 @@
 import type { DetailMetadata } from "../../types";
 
 import { initGetImage } from "../../utils";
-const images = import.meta.glob("./images/*.{png,jpg}");
+import { slugify } from "../utils";
 
+const label = "Myntz! Breathmint";
+
+const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
 
 export const sections = [
@@ -29,8 +32,8 @@ const description = () => (
 );
 
 export default {
-  label: "Myntz! Breathmint",
-  href: `${import.meta.env.BASE_URL}case-study/myntz`,
+  label,
+  ...slugify(label),
   imgSrc: getImage("card.png"),
   highlights: [
     "Brand Strategy",
