@@ -1,17 +1,42 @@
 ---
+import path from "node:path";
+
 import Layout from "@/layouts/Layout.astro";
+
+const images = import.meta.glob("../../public/videos/*{png,jpg}");
+
+const videos = Object.keys(images).map((k) =>
+  path.basename(k, path.extname(k)),
+);
 ---
 
 <Layout>
-  <video controls width="640" height="360">
-    <source src="/videos/cat.webm" type="video/webm" />
-
-    <source src="/videos/cat.mp4" type="video/mp4" />
-
-    <p>
-      Your browser doesn't support HTML5 video. Here is a <a
-        href="/videos/cat.mp4">link to the video</a
-      > instead.
-    </p>
-  </video>
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+    {
+      videos.map((video) => (
+        <video
+          class="aspect-video h-auto w-full"
+          aria-label="Video description"
+          controls
+          poster={`${import.meta.env.BASE_URL}videos/${video}.jpg`}
+        >
+          <source
+            src={`${import.meta.env.BASE_URL}videos/${video}.webm`}
+            type="video/webm"
+          />
+          <source
+            src={`${import.meta.env.BASE_URL}videos/${video}.mp4`}
+            type="video/mp4"
+          />
+          <p>
+            Your browser doesn't support HTML5 video. Here is a{" "}
+            <a href={`${import.meta.env.BASE_URL}videos/${video}.mp4`}>
+              link to the video
+            </a>{" "}
+            instead.
+          </p>
+        </video>
+      ))
+    }
+  </div>
 </Layout>
