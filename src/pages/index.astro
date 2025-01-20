@@ -13,7 +13,7 @@ import { expertise } from "@/data/expertise";
       <p class="mb-4 font-serif text-xl text-muted-foreground md:text-2xl">
         Art Director & Graphic Designer
       </p>
-      <nav aria-label="secondary navigation">
+      <nav aria-label="secondary navigation" class="md:min-w-[28rem]">
         <ul
           class="grid auto-cols-min grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2"
         >
@@ -32,7 +32,7 @@ import { expertise } from "@/data/expertise";
 
     <section class="mx-4 mb-10">
       <h2 class="text-muted-foreground">Case Studies</h2>
-      <ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
+      <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {
           caseStudies.map(({ label, imgSrc, href }) => (
             <Card label={label} href={href} imgSrc={imgSrc} />
@@ -43,7 +43,7 @@ import { expertise } from "@/data/expertise";
 
     <section class="mx-4 mb-10">
       <h2 class="text-muted-foreground">Expertise</h2>
-      <ul class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {
           expertise.map(({ label, imgSrc, href }) => (
             <Card label={label} href={href} imgSrc={imgSrc} />
