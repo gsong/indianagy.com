@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 export interface Section {
   label: string;
-  imgSrc: ImageMetadata;
+  images: ImageMetadata[];
 }
 
 export interface CaseStudy {

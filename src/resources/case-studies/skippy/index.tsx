@@ -1,6 +1,5 @@
 import type { CaseStudy } from "../types";
 
-import cardImage from "./images/card.png";
 import { initGetImage } from "../utils";
 
 const images = import.meta.glob("./images/*.{png,jpg}");
@@ -8,11 +7,14 @@ const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
 
 export const sections = [
-  { label: "Branding", imgSrc: getImage("branding.png") },
-  { label: "Web", imgSrc: getImage("web.png") },
-  { label: "Digital Imagery", imgSrc: getImage("digital.png") },
-  { label: "Packaging", imgSrc: getImage("packaging-1.png") },
-  { label: "Store Displays", imgSrc: getImage("store.png") },
+  { label: "Branding", images: [getImage("branding.png")] },
+  { label: "Web", images: [getImage("web.png")] },
+  { label: "Digital Imagery", images: [getImage("digital.png")] },
+  {
+    label: "Packaging",
+    images: ["packaging-1.png", "packaging-2.png"].map(getImage),
+  },
+  { label: "Store Displays", images: [getImage("store.png")] },
 ];
 
 const description = () => (
@@ -32,7 +34,7 @@ const description = () => (
 export default {
   label: "Skippy Nut Roll",
   href: `${import.meta.env.BASE_URL}case-study/skippy-nut-roll`,
-  imgSrc: cardImage,
+  imgSrc: getImage("card.png"),
   highlights: [
     "Brand Strategy",
     "Art Direction",
