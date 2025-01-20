@@ -1,0 +1,12 @@
+---
+import Detail from "./Detail.astro";
+import { expertise } from "@/resources/expertise";
+
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props;
+---
+
+<Detail details={expertise} label={label} />

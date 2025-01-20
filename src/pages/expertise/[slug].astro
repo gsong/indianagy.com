@@ -1,0 +1,14 @@
+---
+import Expertise from "@/components/Expertise.astro";
+import { expertise } from "@/resources/expertise";
+
+export const getStaticPaths = () =>
+  expertise.map(({ label, slug }) => ({
+    params: { slug },
+    props: { label },
+  }));
+
+const { label } = Astro.props;
+---
+
+<Expertise label={label} />

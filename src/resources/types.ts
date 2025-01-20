@@ -2,7 +2,8 @@ import type { JSX } from "react";
 
 export interface Section {
   label: string;
-  images: ImageMetadata[];
+  images?: ImageMetadata[];
+  videos?: string[];
 }
 
 export interface DetailMetadata {
