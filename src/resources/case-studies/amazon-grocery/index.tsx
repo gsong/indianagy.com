@@ -1,9 +1,9 @@
-import cardImage from "@/images/home/case-studies/amazon.png";
-import { initGetImage } from "./utils";
+import type { CaseStudy } from "../types";
 
-const images = import.meta.glob(
-  "@/images/case-study/amazon-grocery/*.{png,jpg}",
-);
+import cardImage from "./images/card.png";
+import { initGetImage } from "../utils";
+
+const images = import.meta.glob("./images/*.{png,jpg}");
 
 const getImage = initGetImage(images);
 
@@ -35,6 +35,4 @@ export default {
   description,
   credit:
     "Credit: art direction @Dana Deneinger, creative director, and Amazon Go!/Grocery Team",
-};
-
-export type Section = (typeof sections)[number];
+} satisfies CaseStudy;

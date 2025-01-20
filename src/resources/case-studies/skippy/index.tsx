@@ -1,7 +1,9 @@
-import cardImage from "@/images/home/case-studies/skippy.png";
-import { initGetImage } from "./utils";
+import type { CaseStudy } from "../types";
 
-const images = import.meta.glob("@/images/case-study/skippy/*.{png,jpg}");
+import cardImage from "./images/card.png";
+import { initGetImage } from "../utils";
+
+const images = import.meta.glob("./images/*.{png,jpg}");
 
 const getImage = initGetImage(images);
 
@@ -29,7 +31,7 @@ const description = () => (
 
 export default {
   label: "Skippy Nut Roll",
-  href: `${import.meta.env.BASE_URL}case-study/skippy-nul-roll`,
+  href: `${import.meta.env.BASE_URL}case-study/skippy-nut-roll`,
   imgSrc: cardImage,
   highlights: [
     "Brand Strategy",
@@ -40,4 +42,4 @@ export default {
   ],
   sections,
   description,
-};
+} satisfies CaseStudy;

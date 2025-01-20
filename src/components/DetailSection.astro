@@ -1,6 +1,11 @@
 ---
 import { Picture } from "astro:assets";
 
+interface Props {
+  label: string;
+  imgSrc: ImageMetadata;
+}
+
 const { label, imgSrc } = Astro.props;
 ---
 
