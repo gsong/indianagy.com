@@ -1,26 +1,22 @@
 ---
 import Detail from "@/components/Detail.astro";
-import { sections } from "@/data/case-study/amazon-grocery";
+import { caseStudies } from "@/data/case-study";
+
+const caseStudy = caseStudies[0];
 ---
 
 <Detail
-  title="Amazon Grocery"
-  highlights={["Brand", "Digital", "Retail Store Environment"]}
-  sections={sections}
+  title={caseStudy.label}
+  highlights={caseStudy.highlights}
+  sections={caseStudy.sections}
   previous={{ label: "Skippy Nut Roll", href: "#" }}
   next={{ label: "Skippy Nut Roll", href: "#" }}
 >
   <Fragment slot="description">
-    As graphic designer, I created digital and print programmatic signage and
-    that highlighted the innovative character of Amazon's new store, while
-    adapting the brand's new expression into cohesive visual materials.
-    Collaborating with the copywriter and art director, I ensured seamless
-    integration of brand messaging across mediums, delivering an engaging and
-    impactful customer experience.
+    <caseStudy.description />
   </Fragment>
 
   <Fragment slot="credit">
-    Credit: art direction @Dana Deneinger, creative director, and Amazon
-    Go!/Grocery Team
+    {caseStudy.credit}
   </Fragment>
 </Detail>

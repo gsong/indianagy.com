@@ -27,7 +27,7 @@ const { title, highlights, sections, previous, next } = Astro.props;
 
   <Highlights items={highlights} />
 
-  <p><slot name="description" /></p>
+  <slot name="description" />
 
   {sections.map((section) => <DetailSecton {...section} />)}
 
