@@ -1,13 +1,12 @@
 ---
+import type { Section as Props } from "@/resources/case-studies/types";
+
 import { Picture } from "astro:assets";
 
-interface Props {
-  label: string;
-  imgSrc: ImageMetadata;
-}
-
-const { label, imgSrc } = Astro.props;
+const { label, images } = Astro.props;
 ---
 
 <h2 class="mt-10">{label}</h2>
-<Picture src={imgSrc} alt={label} />
+<div class="flex flex-col gap-4 sm:gap-6">
+  {images.map((imgSrc) => <Picture src={imgSrc} alt={label} />)}
+</div>

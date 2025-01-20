@@ -1,6 +1,5 @@
 import type { CaseStudy } from "../types";
 
-import cardImage from "./images/card.png";
 import { initGetImage } from "../utils";
 
 const images = import.meta.glob("./images/*.{png,jpg}");
@@ -8,11 +7,11 @@ const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
 
 export const sections = [
-  { label: "Store Renders", imgSrc: getImage("store-renders.png") },
-  { label: "Signage", imgSrc: getImage("signage.png") },
-  { label: "Website", imgSrc: getImage("website.png") },
-  { label: "Digital Menus", imgSrc: getImage("menu.jpg") },
-  { label: "Store Signage", imgSrc: getImage("store-signage.png") },
+  { label: "Store Renders", images: [getImage("store-renders.png")] },
+  { label: "Signage", images: [getImage("signage.png")] },
+  { label: "Website", images: [getImage("website.png")] },
+  { label: "Digital Menus", images: [getImage("menu.jpg")] },
+  { label: "Store Signage", images: [getImage("store-signage.png")] },
 ];
 
 const description = () => (
@@ -29,7 +28,7 @@ const description = () => (
 export default {
   label: "Amazon Grocery",
   href: `${import.meta.env.BASE_URL}case-study/amazon-grocery`,
-  imgSrc: cardImage,
+  imgSrc: getImage("card.png"),
   highlights: ["Brand", "Digital", "Retail Store Environment"],
   sections,
   description,
