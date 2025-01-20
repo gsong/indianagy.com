@@ -8,6 +8,7 @@ export default defineConfig({
   site: process.env.SITE_URL || "https://indianagy.com",
   base: process.env.SITE_BASE || "/",
   output: "static",
+  server: { host: true },
 
   integrations: [
     react(),
@@ -15,4 +16,8 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
+
+  vite: {
+    server: { allowedHosts: true },
+  },
 });

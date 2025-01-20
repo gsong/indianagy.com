@@ -6,9 +6,9 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
-    "dev": "astro dev --host",
+    "dev": "astro dev",
     "postinstall": "if command -v jq &> /dev/null; then pnpm_version=$(pnpm --version) && jq --arg version \"$pnpm_version\" '.packageManager = \"pnpm@\" + $version' package.json > tmp.json && mv tmp.json package.json; else echo 'jq not found, skipping packageManager update'; fi",
-    "preview": "astro preview --host"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/react": "^4.1.6",
