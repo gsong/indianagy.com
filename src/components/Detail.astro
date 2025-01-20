@@ -1,0 +1,60 @@
+---
+import type { Section } from "@/data/case-study/amazon-grocery";
+
+import DetailCredit from "@/components/DetailCredit.astro";
+import DetailSecton from "@/components/DetailSection.astro";
+import Highlights from "@/components/Highlights.astro";
+import Layout from "@/layouts/Layout.astro";
+
+interface Nav {
+  label: string;
+  href: string;
+}
+
+interface Props {
+  title: string;
+  highlights: string[];
+  sections: Section[]; // Adjust based on your actual section data structure
+  previous?: Nav;
+  next?: Nav;
+}
+
+const { title, highlights, sections, previous, next } = Astro.props;
+---
+
+<Layout>
+  <h1>{title}</h1>
+
+  <Highlights items={highlights} />
+
+  <p><slot name="description" /></p>
+
+  {sections.map((section) => <DetailSecton {...section} />)}
+
+  {
+    Astro.slots.has("credit") ? (
+      <DetailCredit>
+        <slot name="credit" />
+      </DetailCredit>
+    ) : null
+  }
+
+  <nav class="flex items-center justify-between py-4">
+    {
+      previous ? (
+        <a href={previous.href} class="before:mr-1 before:content-['<']">
+          {previous.label}
+        </a>
+      ) : (
+        <div />
+      )
+    }
+    {
+      next ? (
+        <a href={next.href} class="after:ml-1 after:content-['>']">
+          {next.label}
+        </a>
+      ) : null
+    }
+  </nav>
+</Layout>
