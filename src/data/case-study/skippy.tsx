@@ -29,7 +29,7 @@ const description = () => (
 
 export default {
   label: "Skippy Nut Roll",
-  href: "/case-study/skippy-nul-roll",
+  href: `${import.meta.env.BASE_URL}case-study/skippy-nul-roll`,
   imgSrc: cardImage,
   highlights: [
     "Brand Strategy",

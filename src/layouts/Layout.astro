@@ -6,6 +6,8 @@ import alice from "@fontsource/alice/files/alice-latin-400-normal.woff2?url";
 import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2?url";
 
 import "@/styles/global.css";
+
+const BASE_URL = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -13,7 +15,7 @@ import "@/styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${BASE_URL}favicon.svg`} />
     <link
       rel="preload"
       as="font"
@@ -38,18 +40,20 @@ import "@/styles/global.css";
         class="site-width flex items-baseline justify-between"
         aria-label="primary navigation"
       >
-        <a href="/" class="font-serif text-2xl hover:no-underline md:text-5xl"
+        <a
+          href={BASE_URL}
+          class="font-serif text-2xl hover:no-underline md:text-5xl"
           >India Nagy</a
         >
         <ul class="flex gap-x-3.5 md:text-xl">
           <li>
-            <a href="/">Work</a>
+            <a href={BASE_URL}>Work</a>
           </li>
           <li>
             <a href="#">About</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href={`${BASE_URL}contact`}>Contact</a>
           </li>
         </ul>
       </nav>
