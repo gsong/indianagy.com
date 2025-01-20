@@ -1,40 +1,43 @@
 import cardImage from "@/images/home/case-studies/skippy.png";
 import { initGetImage } from "./utils";
 
-const images = import.meta.glob(
-  "@/images/case-study/amazon-grocery/*.{png,jpg}",
-);
+const images = import.meta.glob("@/images/case-study/skippy/*.{png,jpg}");
 
 const getImage = initGetImage(images);
 
 export const sections = [
-  { label: "Store Renders", imgSrc: getImage("store-renders.png") },
-  { label: "Signage", imgSrc: getImage("signage.png") },
-  { label: "Website", imgSrc: getImage("website.png") },
-  { label: "Digital Menus", imgSrc: getImage("menu.jpg") },
-  { label: "Store Signage", imgSrc: getImage("store-signage.png") },
+  { label: "Branding", imgSrc: getImage("branding.png") },
+  { label: "Web", imgSrc: getImage("web.png") },
+  { label: "Digital Imagery", imgSrc: getImage("digital.png") },
+  { label: "Packaging", imgSrc: getImage("packaging-1.png") },
+  { label: "Store Displays", imgSrc: getImage("store.png") },
 ];
 
 const description = () => (
   <p>
-    As graphic designer, I created digital and print programmatic signage and
-    that highlighted the innovative character of Amazon's new store, while
-    adapting the brand's new expression into cohesive visual materials.
-    Collaborating with the copywriter and art director, I ensured seamless
-    integration of brand messaging across mediums, delivering an engaging and
-    impactful customer experience.
+    For the co-branded launch of the classic Salted Nut Roll with Skippy, I
+    designed packaging that seamlessly integrated both brands across wrappers,
+    cartons, corrugated POP display shippers, and bags. Integrating Skippy’s
+    branding, I adapted designs for various printing methods while maintaining
+    brand standards. I also created digital assets for the brand website and
+    Amazon, updating sites to support the launch. Collaborating with Hormel
+    under Pearson’s marketing director, I prepared and presented designs,
+    efficiently implementing feedback. The project earned recognition as an
+    Innovative Product at the 2023 Sweets and Snack Show.
   </p>
 );
 
 export default {
-  label: "Amazon Grocery",
-  href: "/case-study/amazon-grocery",
+  label: "Skippy Nut Roll",
+  href: "/case-study/skippy-nul-roll",
   imgSrc: cardImage,
-  highlights: ["Brand", "Digital", "Retail Store Environment"],
+  highlights: [
+    "Brand Strategy",
+    "Art Direction",
+    "Web & Digital Imagery",
+    "Packaging Design",
+    "POS Design",
+  ],
   sections,
   description,
-  credit:
-    "Credit: art direction @Dana Deneinger, creative director, and Amazon Go!/Grocery Team",
 };
-
-export type Section = (typeof sections)[number];
