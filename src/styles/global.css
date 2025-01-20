@@ -17,8 +17,14 @@
   }
 
   h1,
+  h2,
+  h3 {
+    @apply scroll-m-20 font-serif tracking-tight;
+  }
+
+  h1,
   h2 {
-    @apply mb-4 scroll-m-20 font-serif tracking-tight;
+    @apply mb-4;
   }
 
   h1 {
@@ -34,7 +40,7 @@
   }
 
   p {
-    @apply text-pretty leading-7 [&:not(:first-child)]:mt-6;
+    @apply max-w-[60ch] text-pretty leading-7 [&:not(:first-child)]:mt-6;
   }
 
   a {

@@ -33,17 +33,17 @@ import "@/styles/global.css";
   </head>
 
   <body>
-    <header class="site-width mb-1 py-4 md:mb-3">
+    <header class="mb-2 py-2 shadow-md md:mb-4 md:py-4">
       <nav
-        class="flex items-baseline justify-between"
+        class="site-width flex items-baseline justify-between"
         aria-label="primary navigation"
       >
-        <a href="/" class="font-serif text-3xl hover:no-underline lg:text-5xl"
+        <a href="/" class="font-serif text-2xl hover:no-underline md:text-5xl"
           >India Nagy</a
         >
         <ul class="flex gap-x-3.5 md:text-xl">
           <li>
-            <a href="#">Work</a>
+            <a href="/">Work</a>
           </li>
           <li>
             <a href="#">About</a>
@@ -54,6 +54,9 @@ import "@/styles/global.css";
         </ul>
       </nav>
     </header>
-    <slot />
+
+    <main class="site-width">
+      <slot />
+    </main>
   </body>
 </html>

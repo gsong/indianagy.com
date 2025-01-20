@@ -1,0 +1,8 @@
+---
+import { Picture } from "astro:assets";
+
+const { label, imgSrc } = Astro.props;
+---
+
+<h2 class="mt-10">{label}</h2>
+<Picture src={imgSrc} alt={label} />
