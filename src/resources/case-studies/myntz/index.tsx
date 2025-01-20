@@ -3,7 +3,7 @@ import type { DetailMetadata } from "../../types";
 import { initGetImage } from "../../utils";
 import { slugify } from "../utils";
 
-const label = "Myntz! Breathmint";
+const label = "Myntz! Breathmints";
 
 const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
