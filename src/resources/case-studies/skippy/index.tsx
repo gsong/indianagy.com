@@ -1,8 +1,11 @@
 import type { DetailMetadata } from "../../types";
 
 import { initGetImage } from "../../utils";
-const images = import.meta.glob("./images/*.{png,jpg}");
+import { slugify } from "../utils";
 
+const label = "Skippy Nut Roll";
+
+const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
 
 export const sections = [
@@ -31,8 +34,8 @@ const description = () => (
 );
 
 export default {
-  label: "Skippy Nut Roll",
-  href: `${import.meta.env.BASE_URL}case-study/skippy-nut-roll`,
+  label,
+  ...slugify(label),
   imgSrc: getImage("card.png"),
   highlights: [
     "Brand Strategy",

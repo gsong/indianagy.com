@@ -1,8 +1,11 @@
 import type { DetailMetadata } from "../../types";
 
+import { slugify } from "../utils";
 import { initGetImage } from "../../utils";
-const images = import.meta.glob("./images/*.{png,jpg}");
 
+const label = "Amazon Grocery";
+
+const images = import.meta.glob("./images/*.{png,jpg}");
 const getImage = initGetImage(images);
 
 export const sections = [
@@ -25,8 +28,8 @@ const description = () => (
 );
 
 export default {
-  label: "Amazon Grocery",
-  href: `${import.meta.env.BASE_URL}case-study/amazon-grocery`,
+  label,
+  ...slugify(label),
   imgSrc: getImage("card.png"),
   highlights: ["Brand", "Digital", "Retail Store Environment"],
   sections,

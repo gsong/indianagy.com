@@ -7,6 +7,7 @@ export interface Section {
 
 export interface DetailMetadata {
   label: string;
+  slug: string;
   href: string;
   imgSrc: ImageMetadata;
   highlights: string[];
