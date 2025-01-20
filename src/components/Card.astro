@@ -1,0 +1,37 @@
+---
+import { Picture } from "astro:assets";
+
+const { label, href, imgSrc, imgAlt } = Astro.props;
+---
+
+<li
+  class="card relative flex flex-col rounded-lg border border-transparent p-1"
+>
+  <div class="order-1">
+    <h3 class="font-serif">
+      <a href={href || "#"} class="hover:no-underline">{label}</a>
+    </h3>
+  </div>
+  <div>
+    <Picture src={imgSrc} alt={imgAlt || label} class="rounded-lg" />
+  </div>
+</li>
+
+<style>
+  .card:focus-within {
+    @apply border-muted-foreground;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  a:focus {
+    outline: none;
+  }
+</style>

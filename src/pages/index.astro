@@ -1,33 +1,24 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import CaseStudyCard from "@/components/CaseStudyCard.astro";
-
-import amazonImage from "@/images/home/case-studies/amazon.png";
-import myntzImage from "@/images/home/case-studies/myntz.png";
-import skippyImage from "@/images/home/case-studies/skippy.png";
-
-const skills = [
-  { label: "Photography Art Direction", href: "#" },
-  { label: "Packaging", href: "#" },
-  { label: "Print", href: "#" },
-  { label: "Social + Web", href: "#" },
-  { label: "Environmental", href: "#" },
-  { label: "Illustration", href: "#" },
-];
+import Card from "@/components/Card.astro";
+import { caseStudies } from "@/data/case-studies";
+import { expertise } from "@/data/expertise";
 ---
 
 <Layout>
   <main class="site-width">
+    <h1 class="sr-only">India Nagy's Portfolio</h1>
+
     <aside class="mb-10 md:flex md:items-start md:gap-x-20 lg:gap-x-40">
       <p class="mb-4 font-serif text-xl text-muted-foreground md:text-2xl">
         Art Director & Graphic Designer
       </p>
       <nav aria-label="secondary navigation">
         <ul
-          class="grid auto-cols-min grid-cols-1 gap-x-5 gap-y-2 sm:grid-cols-2"
+          class="grid auto-cols-min grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2"
         >
           {
-            skills.map(({ label, href }) => (
+            expertise.map(({ label, href }) => (
               <li>
                 <a href={href} class="hover:underline">
                   {label}
@@ -41,20 +32,24 @@ const skills = [
 
     <section class="mx-4 mb-10">
       <h2 class="text-muted-foreground">Case Studies</h2>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <CaseStudyCard imgSrc={amazonImage} label="Amazon Grocery" />
-        <CaseStudyCard imgSrc={skippyImage} label="Skippy Nut Roll" />
-        <CaseStudyCard imgSrc={myntzImage} label="Myntz! Breathmints" />
-      </div>
+      <ul class="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {
+          caseStudies.map(({ label, imgSrc, href }) => (
+            <Card label={label} href={href} imgSrc={imgSrc} />
+          ))
+        }
+      </ul>
     </section>
 
     <section class="mx-4 mb-10">
       <h2 class="text-muted-foreground">Expertise</h2>
-      <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-        <CaseStudyCard imgSrc={amazonImage} label="Amazon Grocery" />
-        <CaseStudyCard imgSrc={skippyImage} label="Skippy Nut Roll" />
-        <CaseStudyCard imgSrc={myntzImage} label="Myntz! Breathmints" />
-      </div>
+      <ul class="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {
+          expertise.map(({ label, imgSrc, href }) => (
+            <Card label={label} href={href} imgSrc={imgSrc} />
+          ))
+        }
+      </ul>
     </section>
 
     <aside>
