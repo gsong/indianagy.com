@@ -11,15 +11,15 @@
     "preview": "astro preview --host"
   },
   "dependencies": {
-    "@astrojs/react": "^4.1.5",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/react": "^4.1.6",
+    "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/work-sans": "^5.1.1",
     "@fontsource/alice": "^5.1.1",
     "@radix-ui/react-slot": "^1.1.1",
     "@sindresorhus/slugify": "^2.2.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
-    "astro": "^5.1.7",
+    "astro": "^5.1.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.473.0",
