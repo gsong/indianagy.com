@@ -8,6 +8,10 @@ export const caseStudies = [
     href: "/case-study/amazon-grocery",
     imgSrc: amazonImage,
   },
-  { label: "Skippy Nut Roll", href: "#", imgSrc: skippyImage },
+  {
+    label: "Skippy Nut Roll",
+    href: "/case-study/skippy-nut-roll",
+    imgSrc: skippyImage,
+  },
   { label: "Myntz! Breathmints", href: "#", imgSrc: myntzImage },
 ];

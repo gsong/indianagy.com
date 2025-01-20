@@ -1,0 +1,18 @@
+---
+import Detail from "@/components/Detail.astro";
+import { caseStudies } from "@/data/case-study";
+
+const caseStudy = caseStudies[1];
+---
+
+<Detail
+  title={caseStudy.label}
+  highlights={caseStudy.highlights}
+  sections={caseStudy.sections}
+  previous={{ label: "Skippy Nut Roll", href: "#" }}
+  next={{ label: "Skippy Nut Roll", href: "#" }}
+>
+  <Fragment slot="description">
+    <caseStudy.description />
+  </Fragment>
+</Detail>
