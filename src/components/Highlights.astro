@@ -6,11 +6,13 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class="m-0 flex list-none flex-wrap items-center gap-2 uppercase">
+<ul
+  class="m-0 flex max-w-[60ch] list-none flex-wrap items-center gap-2 uppercase leading-4"
+>
   {
     items.map((item, index) => (
       <li
-        class={index < items.length - 1 ? "after:ml-2 after:content-['•']" : ""}
+        class={index < items.length - 1 ? "after:ml-1 after:content-['•']" : ""}
       >
         {item}
       </li>
