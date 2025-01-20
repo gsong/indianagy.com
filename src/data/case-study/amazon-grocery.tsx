@@ -28,7 +28,7 @@ const description = () => (
 
 export default {
   label: "Amazon Grocery",
-  href: "/case-study/amazon-grocery",
+  href: `${import.meta.env.BASE_URL}case-study/amazon-grocery`,
   imgSrc: cardImage,
   highlights: ["Brand", "Digital", "Retail Store Environment"],
   sections,
