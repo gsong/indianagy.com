@@ -5,7 +5,7 @@ export interface Section {
   images: ImageMetadata[];
 }
 
-export interface CaseStudy {
+export interface DetailMetadata {
   label: string;
   href: string;
   imgSrc: ImageMetadata;
