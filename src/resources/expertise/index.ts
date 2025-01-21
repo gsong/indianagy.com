@@ -3,5 +3,11 @@ import type { DetailMetadata } from "../types";
 import photography from "./photography";
 import socialWeb from "./social-web";
 import packaging from "./packaging";
+import print from "./print";
 
-export const expertise: DetailMetadata[] = [photography, packaging, socialWeb];
+export const expertise: DetailMetadata[] = [
+  photography,
+  packaging,
+  print,
+  socialWeb,
+];
