@@ -10,7 +10,7 @@ const getImage = initGetImage(images);
 
 export const sections = [
   {
-    images: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg"].map(getImage),
+    images: ["01.png", "02.png", "03.png", "04.png", "05.png"].map(getImage),
   },
 ];
 

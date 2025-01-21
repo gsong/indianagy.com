@@ -26,10 +26,10 @@ const { current, previous, next } = getDetailNavigation(details, label);
 
   {current.credit ? <DetailCredit>{current.credit}</DetailCredit> : null}
 
-  <nav class="flex items-center justify-between py-4">
+  <nav class="mt-2 flex items-center justify-between py-4 sm:text-lg">
     {
       previous ? (
-        <a href={previous.href} class="before:mr-1 before:content-['<']">
+        <a href={previous.href} class="before:content-['<']">
           {previous.label}
         </a>
       ) : (
@@ -38,7 +38,7 @@ const { current, previous, next } = getDetailNavigation(details, label);
     }
     {
       next ? (
-        <a href={next.href} class="after:ml-1 after:content-['>']">
+        <a href={next.href} class="after:content-['>']">
           {next.label}
         </a>
       ) : null

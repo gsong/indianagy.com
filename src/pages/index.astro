@@ -9,7 +9,7 @@ import { expertise } from "@/resources/expertise";
   <h1 class="sr-only">India Nagy's Portfolio</h1>
 
   <aside class="mb-10 md:flex md:items-start md:gap-x-20 lg:gap-x-40">
-    <p class="mb-4 font-serif text-xl text-muted-foreground md:text-2xl">
+    <p class="mb-4 font-serif text-xl md:text-2xl">
       Art Director & Graphic Designer
     </p>
     <nav aria-label="secondary navigation" class="md:min-w-[28rem]">
@@ -27,8 +27,8 @@ import { expertise } from "@/resources/expertise";
     </nav>
   </aside>
 
-  <section class="mx-4 mb-10">
-    <h2 class="text-muted-foreground">Case Studies</h2>
+  <section class="mb-10">
+    <h2>Case Studies</h2>
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
       {
         caseStudies.map(({ label, imgSrc, href }) => (
@@ -38,8 +38,8 @@ import { expertise } from "@/resources/expertise";
     </ul>
   </section>
 
-  <section class="mx-4 mb-10">
-    <h2 class="text-muted-foreground">Expertise</h2>
+  <section class="mb-10">
+    <h2>Expertise</h2>
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2">
       {
         expertise.map(({ label, imgSrc, href }) => (
@@ -50,7 +50,7 @@ import { expertise } from "@/resources/expertise";
   </section>
 
   <aside>
-    <p class="font-serif text-xl text-muted-foreground sm:w-3/6 sm:text-2xl">
+    <p class="font-serif text-xl sm:w-3/6 sm:text-2xl">
       I am a graphic designer and art director with a passion for photography
       and illustration. I have experience in packaging, print, social media, and
       web design. I am currently available for freelance work.

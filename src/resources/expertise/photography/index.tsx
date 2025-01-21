@@ -10,11 +10,11 @@ const getImage = initGetImage(images);
 
 export const sections = [
   {
-    label: "Packaging",
+    label: "Packaging Imagery",
     images: ["packaging-1.png", "packaging-2.png"].map(getImage),
   },
   {
-    label: "Marketing",
+    label: "Marketing Imagery",
     images: ["marketing-1.png", "marketing-2.png", "marketing-3.png"].map(
       getImage,
     ),

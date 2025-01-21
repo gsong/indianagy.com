@@ -54,4 +54,6 @@ export default {
   ],
   sections,
   description,
+  credit:
+    "Credit: art direction for Promise Confection website branding @Gertrude",
 } satisfies DetailMetadata;

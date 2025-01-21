@@ -28,7 +28,7 @@
   }
 
   h1 {
-    @apply text-3xl lg:text-5xl;
+    @apply text-3xl lg:text-4xl;
   }
 
   h2 {
@@ -48,14 +48,14 @@
   }
 
   .site-width {
-    @apply mx-auto max-w-7xl px-2 md:px-4;
+    @apply mx-auto max-w-7xl px-4;
   }
 }
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --foreground: 240 10% 20%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;

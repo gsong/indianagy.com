@@ -13,7 +13,10 @@ export const sections = [
     label: "Strategy",
     images: ["strategy-1.png", "strategy-2.png"].map(getImage),
   },
-  { label: "Photography Art Direction", images: [getImage("photo.png")] },
+  {
+    label: "Photography Art Direction",
+    images: ["photo-1.png", "photo-2.png"].map(getImage),
+  },
   {
     label: "Packaging",
     images: ["packaging-1.png", "packaging-2.png"].map(getImage),
