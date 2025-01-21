@@ -22,10 +22,8 @@ jobs:
         run: git lfs checkout
       - name: Set environment variables
         run: |
-          REPO_OWNER=${{ github.repository_owner }}
-          REPO_NAME=${{ github.event.repository.name }}
-          echo "SITE_URL=https://${REPO_OWNER}.github.io/" >> $GITHUB_ENV
-          echo "SITE_BASE=/${REPO_NAME}/" >> $GITHUB_ENV
+          echo "SITE_URL=https://indianagy.com/" >> $GITHUB_ENV
+          echo "SITE_BASE=/" >> $GITHUB_ENV
       - name: Install, build, and upload site
         uses: withastro/action@v3
 
