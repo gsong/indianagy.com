@@ -1,6 +1,7 @@
 import type { DetailMetadata } from "../types";
 
 import environmental from "./environmental";
+import illustration from "./illustration";
 import packaging from "./packaging";
 import photography from "./photography";
 import print from "./print";
@@ -12,4 +13,5 @@ export const expertise: DetailMetadata[] = [
   print,
   socialWeb,
   environmental,
+  illustration,
 ];

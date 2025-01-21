@@ -6,7 +6,7 @@ import { Picture } from "astro:assets";
 const { label, images, videos } = Astro.props;
 ---
 
-{label ? <h2 class="mt-10">{label}</h2> : null}
+{label ? <h2 class="mt-10">{label}</h2> : <div class="mt-10" />}
 
 {
   videos ? (
