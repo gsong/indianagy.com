@@ -1,0 +1,39 @@
+---
+import { Picture } from "astro:assets";
+
+import Layout from "@/layouts/Layout.astro";
+import aboutImage from "@/images/about.jpg";
+---
+
+<Layout>
+  <h1 class="sr-only">About India Nagy</h1>
+
+  <Picture
+    src={aboutImage}
+    alt="India basking in the sun in front of a mural in Mexico"
+    class="max-w-[60ch] rounded-3xl"
+  />
+
+  <p>
+    Born in Brooklyn and raised in Florida, I’ve called Seattle home since 1996,
+    where I’ve been channeling my endless curiosity and deep passion for
+    creativity ever since.
+  </p>
+
+  <p>
+    My career has taken me from a local design agency to leading creative
+    efforts at Choice Organic Teas, where I shaped the brand’s story and oversaw
+    everything from packaging to marketing collateral. I’ve managed a diverse
+    portfolio of consumer brands for a national confectioner manufacturer and,
+    most recently, collaborated with teams at Amazon to deliver innovative
+    design solutions that supported key business goals.
+  </p>
+
+  <p>
+    On my own time, I like traveling to sunny places, birdwatching, reading,
+    crafting pompoms, and trying to figure out how to grow things in my garden.
+    My 12 year old daughter is my youth mentor and keeps me in touch with the
+    latest trends. My favorite Crayola color is Seafoam. I’m a Leo and an
+    extroverted introvert. I like being helpful.
+  </p>
+</Layout>
