@@ -10,7 +10,7 @@ const getImage = initGetImage(images);
 
 export const sections = [
   {
-    label: "Social Campaigns",
+    label: "Campaigns",
     images: ["social-1.png", "social-2.png"].map(getImage),
   },
   {
@@ -26,7 +26,7 @@ export const sections = [
   },
   {
     label: "Web",
-    images: ["web-1.png", "web-2.jpg", "web-3.jpg"].map(getImage),
+    images: ["web-2.jpg", "web-3.jpg"].map(getImage),
   },
 ];
 

@@ -10,7 +10,7 @@ const { label, images, videos } = Astro.props;
 
 {
   videos ? (
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
       {videos.map((video) => (
         <video
           class="aspect-video h-auto w-full"
@@ -42,7 +42,7 @@ const { label, images, videos } = Astro.props;
 
 {
   images ? (
-    <div class="flex flex-col gap-4 sm:gap-6">
+    <div class="flex flex-col gap-4 sm:gap-10">
       {images.map((imgSrc) => (
         <Picture src={imgSrc} alt="" />
       ))}
