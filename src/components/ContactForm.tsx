@@ -97,7 +97,7 @@ export const ContactForm = () => {
 
         <input type="checkbox" className="hidden" {...register("botcheck")} />
 
-        <Button type="submit" disabled={isSubmitting} className="w-full">
+        <Button type="submit" disabled={isSubmitting}>
           {isSubmitting ? <LoadingSpinner /> : "Send Message"}
         </Button>
       </form>
@@ -122,8 +122,8 @@ type FormFieldProps = {
 const FormField = ({ label, error, children }: FormFieldProps) => {
   return (
     <div className="mb-4">
-      <label className="mb-2 block text-sm font-medium">
-        <div className="mb-1 text-lg">{label}</div>
+      <label className="mb-2 block">
+        <div className="mb-1">{label}</div>
         {children}
         {error && <p className="!mt-1 text-sm text-red-500">{error}</p>}
       </label>
