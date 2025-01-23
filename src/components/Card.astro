@@ -15,11 +15,19 @@ const { label, href, imgSrc } = Astro.props;
 >
   <div class="order-1">
     <h3>
-      <a href={href || "#"} class="hover:no-underline">{label}</a>
+      <a href={href} class="hover:no-underline">{label}</a>
     </h3>
   </div>
   <div>
-    <Picture src={imgSrc} alt={label} class="rounded-3xl" inferSize />
+    <Picture
+      src={imgSrc}
+      alt={label}
+      class="rounded-3xl"
+      widths={[600, 1200]}
+      sizes="600px"
+      formats={["avif", "webp"]}
+      inferSize
+    />
   </div>
 </li>
 
