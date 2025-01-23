@@ -44,7 +44,7 @@ const { label, images, videos } = Astro.props;
   images ? (
     <div class="flex flex-col gap-4 sm:gap-10">
       {images.map((imgSrc) => (
-        <Picture src={imgSrc} alt="" />
+        <Picture src={imgSrc} alt="" inferSize />
       ))}
     </div>
   ) : null

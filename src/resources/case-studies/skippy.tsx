@@ -1,12 +1,10 @@
-import type { DetailMetadata } from "../../types";
+import type { DetailMetadata } from "../types";
 
-import { initGetImage } from "../../utils";
-import { slugify } from "../utils";
+import { initGetImage, slugify } from "./utils";
 
 const label = "Skippy Nut Roll";
 
-const images = import.meta.glob("./images/*.{png,jpg}");
-const getImage = initGetImage(images);
+const getImage = initGetImage("skippy");
 
 export const sections = [
   { label: "Branding", images: [getImage("branding.png")] },

@@ -1,5 +1,18 @@
 import type { DetailMetadata } from "./types";
 
+export const createUrlGenerator = (baseUrl: string) => {
+  const cleanBaseUrl = baseUrl.replace(/\/$/, "");
+
+  return (firstPart: string) => {
+    const cleanFirstPart = firstPart.replace(/^\/|\/$/g, "");
+
+    return (secondPart: string): string => {
+      const cleanSecondPart = secondPart.replace(/^\/|\/$/g, "");
+      return `${cleanBaseUrl}/${cleanFirstPart}/${cleanSecondPart}`;
+    };
+  };
+};
+
 export const initGetImage =
   (images: Record<string, Function>) => (filename: string) => {
     const matchingKey = Object.keys(images).find((key) =>

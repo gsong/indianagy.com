@@ -1,12 +1,10 @@
-import type { DetailMetadata } from "../../types";
+import type { DetailMetadata } from "../types";
 
-import { slugify } from "../utils";
-import { initGetImage } from "../../utils";
+import { initGetImage, slugify } from "./utils";
 
 const label = "Illustration";
 
-const images = import.meta.glob("./images/*.{png,jpg}");
-const getImage = initGetImage(images);
+const getImage = initGetImage("illustration");
 
 export const sections = [
   {
