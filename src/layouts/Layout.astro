@@ -9,7 +9,12 @@ import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-
 
 import "@/styles/global.css";
 
+const SITE = import.meta.env.SITE;
 const BASE_URL = import.meta.env.BASE_URL;
+const SITE_NAME = "India Nagy’s Portfolio";
+const TITLE = "India Nagy | Art Director & Graphic Designer";
+const DESCRIPTION =
+  "Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands. Passionate about storytelling, collaboration, and turning curiosity into impactful design solutions.";
 ---
 
 <!doctype html>
@@ -36,22 +41,23 @@ const BASE_URL = import.meta.env.BASE_URL;
     <link rel="icon" href={`${BASE_URL}favicon.ico`} sizes="32x32" />
     <link rel="apple-touch-icon" href={`${BASE_URL}apple-touch-icon.png`} />
 
+    <title>{SITE_NAME}</title>
+    <meta name="description" content={DESCRIPTION} />
     <meta name="generator" content={Astro.generator} />
-    <title>India Nagy's Portfolio</title>
 
     <!-- Open Graph Tags -->
-    <meta property="og:site_name" content="India Nagy's Portfolio" />
-    <meta
-      property="og:title"
-      content="India Nagy | Art Director & Graphic Designer"
-    />
-    <meta
-      property="og:description"
-      content="Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands. Passionate about storytelling, collaboration, and turning curiosity into impactful design solutions."
-    />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={TITLE} />
+    <meta property="og:description" content={DESCRIPTION} />
     <meta property="og:image" content="" />
-    <meta property="og:url" content="https://indianagy.com" />
+    <meta property="og:url" content={SITE} />
     <meta property="og:type" content="website" />
+
+    <!-- Twitter Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={TITLE} />
+    <meta name="twitter:description" content={DESCRIPTION} />
+    <meta name="twitter:url" content={SITE} />
   </head>
 
   <body>
