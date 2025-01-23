@@ -21,6 +21,13 @@ jobs:
         run: |
           echo "SITE_URL=https://indianagy.com/" >> $GITHUB_ENV
           echo "SITE_BASE=/" >> $GITHUB_ENV
+      - name: Cache Astro build
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro
+          key: ${{ runner.os }}-astro-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-astro-
       - name: Install, build, and upload site
         uses: withastro/action@v3
 
