@@ -16,10 +16,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          lfs: true
           persist-credentials: false
-      - name: Checkout LFS objects
-        run: git lfs checkout
       - name: Set environment variables
         run: |
           echo "SITE_URL=https://indianagy.com/" >> $GITHUB_ENV
