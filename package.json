@@ -11,7 +11,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/react": "^4.1.6",
+    "@astrojs/react": "^4.2.0",
     "@astrojs/tailwind": "^5.1.5",
     "@fontsource-variable/work-sans": "^5.1.1",
     "@fontsource/alice": "^5.1.1",
