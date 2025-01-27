@@ -1,6 +1,8 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { ContactForm } from "@/components/ContactForm";
+
+import { FileText } from "lucide-react";
 ---
 
 <Layout>
@@ -15,4 +17,13 @@ import { ContactForm } from "@/components/ContactForm";
   </div>
 
   <ContactForm client:load />
+  <div class="mt-8">
+    <a
+      href="https://pub-01eadd61e87f425eb8cdb0a64a96ed42.r2.dev/resume.pdf"
+      class="flex gap-2"
+    >
+      <FileText />
+      Download my resume.
+    </a>
+  </div>
 </Layout>
