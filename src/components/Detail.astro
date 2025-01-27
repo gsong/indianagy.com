@@ -2,7 +2,7 @@
 import type { DetailMetadata } from "@/resources/types";
 
 import DetailCredit from "@/components/DetailCredit.astro";
-import DetailSecton from "@/components/DetailSection.astro";
+import DetailSection from "@/components/DetailSection.astro";
 import Highlights from "@/components/Highlights.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getDetailNavigation } from "@/resources/utils";
@@ -22,7 +22,7 @@ const { current, previous, next } = getDetailNavigation(details, label);
   <Highlights items={current.highlights} />
   <current.description />
 
-  {current.sections.map((section) => <DetailSecton {...section} />)}
+  {current.sections.map((section) => <DetailSection {...section} />)}
 
   {current.credit ? <DetailCredit>{current.credit}</DetailCredit> : null}
 
