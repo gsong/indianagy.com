@@ -1,7 +1,7 @@
 ---
 import type { Section as Props } from "@/resources/types";
 
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 const { label, images, videos } = Astro.props;
 ---
@@ -44,12 +44,11 @@ const { label, images, videos } = Astro.props;
   images ? (
     <div class="flex flex-col gap-4 sm:gap-10">
       {images.map((imgSrc) => (
-        <Picture
+        <Image
           src={imgSrc}
           alt=""
           widths={[768, 1280, 1536, 2560]}
           sizes="(max-width: 768px) 768px, 1280px"
-          formats={["avif", "webp"]}
           inferSize
         />
       ))}
