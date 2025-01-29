@@ -1,5 +1,5 @@
 ---
-import { Picture } from "astro:assets";
+import { Image } from "astro:assets";
 
 interface Props {
   label: string;
@@ -19,13 +19,12 @@ const { label, href, imgSrc } = Astro.props;
     </h3>
   </div>
   <div>
-    <Picture
+    <Image
       src={imgSrc}
       alt={label}
       class="rounded-3xl"
       widths={[600, 1200]}
       sizes="600px"
-      formats={["avif", "webp"]}
       inferSize
     />
   </div>
