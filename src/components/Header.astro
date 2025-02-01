@@ -1,0 +1,14 @@
+---
+interface Props {
+  label: string;
+  subtitle?: string;
+  class?: string;
+}
+
+const { label, subtitle, class: className } = Astro.props;
+---
+
+<header class:list={["header-content", className]}>
+  <h2>{label}</h2>
+  {subtitle ? <p>{subtitle}</p> : null}
+</header>

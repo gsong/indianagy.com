@@ -1,5 +1,6 @@
 ---
 import Card from "@/components/Card.astro";
+import Header from "@/components/Header.astro";
 import Layout from "@/layouts/Layout.astro";
 import { caseStudies } from "@/resources/case-studies";
 import { expertise } from "@/resources/expertise";
@@ -28,13 +29,10 @@ import { expertise } from "@/resources/expertise";
   </aside>
 
   <section class="mb-10">
-    <header>
-      <h2 class="!mb-0">Case Studies</h2>
-      <p class="!mt-1 mb-4">
-        Peek behind the scenes with these design case studies for beloved
-        consumer brands.
-      </p>
-    </header>
+    <Header
+      label="Case Studies"
+      subtitle="Peek behind the scenes with these design case studies for beloved consumer brands."
+    />
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
       {
         caseStudies.map(({ label, imgSrc, href }) => (
