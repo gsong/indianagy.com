@@ -11,6 +11,7 @@
   "scripts": {
     "astro": "astro",
     "build": "astro build",
+    "deploy": "pnpm build && netlify deploy --prod",
     "dev": "astro dev",
     "postinstall": "if command -v jq &> /dev/null; then pnpm_version=$(pnpm --version) && jq --arg version \"$pnpm_version\" '.packageManager = \"pnpm@\" + $version' package.json > tmp.json && mv tmp.json package.json; else echo 'jq not found, skipping packageManager update'; fi",
     "preview": "astro preview"
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
+    "netlify-cli": "^18.0.3",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
