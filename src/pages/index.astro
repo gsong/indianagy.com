@@ -9,7 +9,7 @@ import { expertise } from "@/resources/expertise";
   <h1 class="sr-only">India Nagy's Portfolio</h1>
 
   <aside class="mb-10 md:flex md:items-start md:gap-x-20 lg:gap-x-40">
-    <p class="mb-4 font-serif text-xl md:text-2xl">
+    <p class="mb-2 text-xl font-semibold md:text-2xl">
       Art Director & Graphic Designer
     </p>
     <nav aria-label="secondary navigation" class="md:min-w-[28rem]">
@@ -17,7 +17,7 @@ import { expertise } from "@/resources/expertise";
         {
           expertise.map(({ label, href }) => (
             <li>
-              <a href={href} class="hover:underline">
+              <a href={href} class="home-nav">
                 {label}
               </a>
             </li>
@@ -28,7 +28,13 @@ import { expertise } from "@/resources/expertise";
   </aside>
 
   <section class="mb-10">
-    <h2>Case Studies</h2>
+    <header>
+      <h2 class="!mb-0">Case Studies</h2>
+      <p class="!mt-1 mb-4">
+        Peek behind the scenes with these design case studies for beloved
+        consumer brands.
+      </p>
+    </header>
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
       {
         caseStudies.map(({ label, imgSrc, href }) => (
