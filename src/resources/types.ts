@@ -2,6 +2,7 @@ import type { JSX } from "react";
 
 export interface Section {
   label?: string;
+  description?: string;
   images?: string[];
   videos?: string[];
 }
@@ -13,6 +14,6 @@ export interface DetailMetadata {
   imgSrc: string;
   highlights: string[];
   sections: Section[];
-  description: () => JSX.Element;
+  description?: () => JSX.Element;
   credit?: string;
 }

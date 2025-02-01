@@ -46,14 +46,6 @@
   a {
     @apply hover:underline hover:underline-offset-4;
   }
-
-  .site-width {
-    @apply mx-auto max-w-7xl px-4;
-  }
-
-  .home-nav {
-    @apply underline underline-offset-4 hover:no-underline;
-  }
 }
 
 @layer base {
@@ -110,5 +102,23 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+  }
+}
+
+@layer components {
+  .site-width {
+    @apply mx-auto max-w-7xl px-4;
+  }
+
+  .home-nav {
+    @apply underline underline-offset-4 hover:no-underline;
+  }
+
+  .header-content h2 {
+    @apply mb-0;
+  }
+
+  .header-content p {
+    @apply mb-4 mt-1;
   }
 }

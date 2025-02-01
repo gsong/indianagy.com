@@ -20,9 +20,16 @@ const { current, previous, next } = getDetailNavigation(details, label);
   <h1>{current.label}</h1>
 
   <Highlights items={current.highlights} />
-  <current.description />
+  {current.description ? <current.description /> : null}
 
-  {current.sections.map((section) => <DetailSection {...section} />)}
+  {
+    current.sections.map((section) => (
+      <>
+        <hr class="my-4" />
+        <DetailSection {...section} />
+      </>
+    ))
+  }
 
   {current.credit ? <DetailCredit>{current.credit}</DetailCredit> : null}
 

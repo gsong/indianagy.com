@@ -3,10 +3,18 @@ import type { Section as Props } from "@/resources/types";
 
 import { Picture } from "astro:assets";
 
-const { label, images, videos } = Astro.props;
+import Header from "@/components/Header.astro";
+
+const { label, description, images, videos } = Astro.props;
 ---
 
-{label ? <h2 class="mt-10">{label}</h2> : <div class="mt-10" />}
+{
+  label ? (
+    <Header label={label} subtitle={description} class="mt-10" />
+  ) : (
+    <div class="mt-10" />
+  )
+}
 
 {
   videos ? (
