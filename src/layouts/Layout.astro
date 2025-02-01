@@ -68,7 +68,7 @@ const IMAGE_URL =
   <body>
     <header
       id="header"
-      class="fixed left-0 right-0 top-0 z-50 mb-2 bg-white py-2 shadow-lg md:mb-4 md:py-12"
+      class="fixed left-0 right-0 top-0 z-50 mb-2 bg-white py-2 shadow-lg transition-all duration-200 ease-in-out md:mb-4 md:py-12"
     >
       <nav
         class="site-width flex items-baseline justify-between"
@@ -125,25 +125,57 @@ const IMAGE_URL =
 </html>
 
 <script>
-  function updateMainPadding() {
-    const header = document.getElementById("header");
-    const main = document.getElementById("main");
+  const header = document.getElementById("header");
+  const main = document.getElementById("main");
+
+  function debounce<T extends (...args: any[]) => void>(
+    func: T,
+    wait: number,
+  ): (...args: Parameters<T>) => void {
+    let timeout: ReturnType<typeof setTimeout> | undefined;
+
+    return function executedFunction(...args: Parameters<T>): void {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  }
+
+  const updateMainPadding = debounce(() => {
     if (header && main) {
       const headerHeight = header.offsetHeight;
       main.style.paddingTop = `${headerHeight}px`;
     }
-  }
+  }, 10);
 
-  updateMainPadding();
+  const handleScrollHeader = () => {
+    if (header) {
+      const shouldBeCompact = window.scrollY > 50;
+      const isCurrentlyCompact = !header.classList.contains("md:py-12");
 
-  window.addEventListener("resize", updateMainPadding);
+      if (shouldBeCompact !== isCurrentlyCompact) {
+        if (shouldBeCompact) {
+          header.classList.remove("md:mb-4", "md:py-12");
+        } else {
+          header.classList.add("md:mb-4", "md:py-12");
+        }
+      }
+    }
+  };
 
-  const resizeObserver = new ResizeObserver(() => {
-    updateMainPadding();
+  window.addEventListener("load", () => {
+    handleScrollHeader();
+    setTimeout(updateMainPadding, 250);
   });
 
-  const header = document.getElementById("main-header");
+  window.addEventListener("scroll", handleScrollHeader);
+
   if (header) {
+    const resizeObserver = new ResizeObserver(updateMainPadding);
     resizeObserver.observe(header);
   }
 </script>
