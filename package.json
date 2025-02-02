@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.0",
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",
     "@fontsource-variable/work-sans": "^5.1.1",
     "@fontsource/alice": "^5.1.1",
