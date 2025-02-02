@@ -1,15 +1,14 @@
 ---
 import "@fontsource-variable/work-sans";
 import "@fontsource/alice";
-import { Mail } from "lucide-react";
-import { Phone } from "lucide-react";
+
+import Footer from "./Footer.astro";
+import Head from "./Head.astro";
+import Header from "./Header.astro";
 
 import "@/styles/global.css";
 
-import Head from "@/components/Head.astro";
-
 const BASE_URL = import.meta.env.BASE_URL;
-const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
@@ -17,93 +16,12 @@ const currentYear = new Date().getFullYear();
   <Head />
 
   <body>
-    <header
-      id="header"
-      class="fixed left-0 top-0 z-50 w-full bg-white bg-opacity-80 py-2 shadow-lg backdrop-blur-md backdrop-filter md:py-12"
-    >
-      <nav
-        class="site-width flex items-baseline justify-between"
-        aria-label="primary navigation"
-      >
-        <a
-          href={BASE_URL}
-          class="font-serif text-2xl hover:no-underline md:text-3xl"
-          >India Nagy</a
-        >
-        <ul class="flex gap-x-3.5">
-          <li>
-            <a href={BASE_URL}>Work</a>
-          </li>
-          <li>
-            <a href={`${BASE_URL}about`}>About</a>
-          </li>
-          <li>
-            <a href={`${BASE_URL}contact`}>Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <Header />
 
-    <main id="main" class="site-width mt-6 pt-[48px] sm:mt-8 md:pt-[132px]">
+    <main class="site-width mt-6 pt-[48px] sm:mt-8 md:pt-[132px]">
       <slot />
     </main>
 
-    <footer class="mt-6 bg-secondary py-2">
-      <div class="site-width my-4 space-y-4">
-        <a
-          href="mailto:hello@indianagy.com"
-          class="flex w-fit items-center gap-2"
-          rel="nofollow"
-        >
-          <Mail size="18" />
-          <div>hello@indianagy.com</div>
-        </a>
-        <a
-          href="tel:+12063835468"
-          aria-label="Call India at 206-383-5468"
-          class="flex w-fit items-center gap-2"
-          rel="nofollow"
-        >
-          <Phone size="18" />
-          <div>(260) 383-5468</div>
-        </a>
-        <p class="text-sm text-muted-foreground">
-          © <span id="current-year">{currentYear}</span> India Nagy. All rights
-          reserved.
-        </p>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
-
-<script>
-  const header = document.getElementById("header")!;
-
-  function updateHeaderHeight() {
-    const scrollTop = document.documentElement.scrollTop;
-
-    if (scrollTop > 90) {
-      header.classList.remove("md:py-12");
-    } else {
-      header.classList.add("md:py-12");
-    }
-  }
-
-  window.addEventListener("load", () => {
-    setTimeout(() => {
-      header.classList.add(
-        "transition-[padding]",
-        "duration-300",
-        "ease-in-out",
-      );
-    }, 100);
-
-    window.addEventListener("scroll", updateHeaderHeight);
-  });
-</script>
-
-<script>
-  document.getElementById("current-year")!.textContent = new Date()
-    .getFullYear()
-    .toString();
-</script>

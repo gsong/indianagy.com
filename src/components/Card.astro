@@ -10,16 +10,10 @@ interface Props {
 const { label, href, imgSrc } = Astro.props;
 ---
 
-<li
-  class="relative flex flex-col rounded-lg border border-transparent p-1 transition duration-300 ease-in-out focus-within:border-muted-foreground motion-safe:hover:scale-[1.03]"
->
+<li>
   <div class="order-1">
     <h3>
-      <a
-        href={href}
-        class="after:absolute after:inset-0 hover:no-underline focus:outline-none"
-        >{label}</a
-      >
+      <a href={href}>{label}</a>
     </h3>
   </div>
   <div>
@@ -34,3 +28,13 @@ const { label, href, imgSrc } = Astro.props;
     />
   </div>
 </li>
+
+<style>
+  li {
+    @apply relative flex flex-col rounded-lg border border-transparent p-1 transition duration-300 ease-in-out focus-within:border-muted-foreground motion-safe:hover:scale-[1.03];
+  }
+
+  h3 > a {
+    @apply after:absolute after:inset-0 hover:no-underline focus:outline-none;
+  }
+</style>

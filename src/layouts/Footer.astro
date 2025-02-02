@@ -1,0 +1,37 @@
+---
+import { Mail } from "lucide-react";
+import { Phone } from "lucide-react";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="mt-6 bg-secondary py-2">
+  <div class="site-width my-4 space-y-4">
+    <a
+      href="mailto:hello@indianagy.com"
+      class="flex w-fit items-center gap-2"
+      rel="nofollow"
+    >
+      <Mail size="18" />
+      <div>hello@indianagy.com</div>
+    </a>
+    <a
+      href="tel:+12063835468"
+      aria-label="Call India at 206-383-5468"
+      class="flex w-fit items-center gap-2"
+      rel="nofollow"
+    >
+      <Phone size="18" />
+      <div>(260) 383-5468</div>
+    </a>
+    <p class="text-sm text-muted-foreground">
+      © <span id="current-year">{currentYear}</span> India Nagy. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("current-year")!.textContent = new Date()
+    .getFullYear()
+    .toString();
+</script>

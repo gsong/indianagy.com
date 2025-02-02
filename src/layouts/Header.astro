@@ -1,0 +1,58 @@
+---
+const BASE_URL = import.meta.env.BASE_URL;
+---
+
+<header id="header" class="py-2 md:py-12">
+  <nav
+    class="site-width flex items-baseline justify-between"
+    aria-label="primary navigation"
+  >
+    <a
+      href={BASE_URL}
+      class="font-serif text-2xl hover:no-underline md:text-3xl">India Nagy</a
+    >
+    <ul class="flex gap-x-3.5">
+      <li>
+        <a href={BASE_URL}>Work</a>
+      </li>
+      <li>
+        <a href={`${BASE_URL}about`}>About</a>
+      </li>
+      <li>
+        <a href={`${BASE_URL}contact`}>Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const header = document.getElementById("header")!;
+
+  function updateHeaderHeight() {
+    const scrollTop = document.documentElement.scrollTop;
+
+    if (scrollTop > 90) {
+      header.classList.remove("md:py-12");
+    } else {
+      header.classList.add("md:py-12");
+    }
+  }
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      header.classList.add(
+        "transition-[padding]",
+        "duration-300",
+        "ease-in-out",
+      );
+    }, 50);
+
+    window.addEventListener("scroll", updateHeaderHeight);
+  });
+</script>
+
+<style>
+  header {
+    @apply fixed left-0 top-0 z-50 w-full bg-white bg-opacity-80 shadow-lg backdrop-blur-md backdrop-filter;
+  }
+</style>
