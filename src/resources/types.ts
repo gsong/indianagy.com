@@ -1,8 +1,13 @@
 import type { JSX } from "react";
 
+interface Image {
+  src: string;
+  alt: string;
+}
+
 export interface Section {
   label?: string;
-  images?: string[];
+  images?: (Image | string)[];
   videos?: string[];
 }
 

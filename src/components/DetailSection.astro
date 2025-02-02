@@ -45,16 +45,21 @@ const { label, images, videos } = Astro.props;
 {
   images ? (
     <div class="flex flex-col gap-4 sm:gap-10">
-      {images.map((imgSrc) => (
-        <Picture
-          src={imgSrc}
-          alt=""
-          widths={[768, 1280, 1536, 2560]}
-          sizes="(max-width: 768px) 768px, 1280px"
-          formats={["avif", "webp"]}
-          inferSize
-        />
-      ))}
+      {images.map((image) => {
+        const imgSrc = typeof image === "string" ? image : image.src;
+        const altText = typeof image === "string" ? "" : image.alt;
+
+        return (
+          <Picture
+            src={imgSrc}
+            alt={altText}
+            widths={[768, 1280, 1536, 2560]}
+            sizes="(max-width: 768px) 768px, 1280px"
+            formats={["avif", "webp"]}
+            inferSize
+          />
+        );
+      })}
     </div>
   ) : null
 }
