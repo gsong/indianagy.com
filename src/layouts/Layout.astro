@@ -78,69 +78,27 @@ const currentYear = new Date().getFullYear();
 
 <script>
   const header = document.getElementById("header")!;
-  const main = document.getElementById("main")!;
-  const DELAY = 300 * 1.1;
-
-  let mainPadding = 0;
 
   function updateHeaderHeight() {
     const scrollTop = document.documentElement.scrollTop;
 
-    if (scrollTop > 50) {
+    if (scrollTop > 90) {
       header.classList.remove("md:py-12");
     } else {
       header.classList.add("md:py-12");
     }
   }
 
-  function updateMainPadding() {
-    const height = header.offsetHeight;
-    if (height === mainPadding) return;
-    mainPadding = height;
-    main.style.paddingTop = `${mainPadding}px`;
-  }
-
-  function setMainPaddingTop() {
-    const viewportWidth = window.innerWidth;
-
-    if (viewportWidth < 768) {
-      mainPadding = 48;
-    } else {
-      mainPadding = 132;
-    }
-    main.style.paddingTop = `${mainPadding}px`;
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    setMainPaddingTop();
-  });
-
   window.addEventListener("load", () => {
     setTimeout(() => {
-      updateMainPadding();
-
       header.classList.add(
         "transition-[padding]",
         "duration-300",
         "ease-in-out",
       );
-    }, DELAY);
+    }, 100);
 
     window.addEventListener("scroll", updateHeaderHeight);
-    window.addEventListener("resize", updateHeaderHeight);
-
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach(({ type, attributeName }) => {
-        if (type === "attributes" && attributeName === "class") {
-          setTimeout(updateMainPadding, DELAY);
-        }
-      });
-    });
-
-    observer.observe(header, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
   });
 </script>
 
