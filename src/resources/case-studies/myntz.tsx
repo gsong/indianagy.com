@@ -1,4 +1,4 @@
-import type { DetailMetadata } from "../types";
+import type { DetailMetadata, Section } from "../types";
 
 import { initGetImage, slugify } from "./utils";
 
@@ -6,20 +6,55 @@ const label = "Myntz! Breathmints";
 
 const getImage = initGetImage("myntz");
 
-export const sections = [
+export const sections: Section[] = [
   {
     label: "Strategy",
-    images: ["strategy-1.png", "strategy-2.png"].map(getImage),
+    images: [
+      {
+        src: getImage("strategy-1.png"),
+        alt: "Side-by-side comparison of the previous and refreshed design of MYNTZ! breathmints, displaying the packaging and the candies.",
+      },
+      {
+        src: getImage("strategy-2.png"),
+        alt: "Three black and white logos of MYNTZ! breathmints, including the main logo, the secondary logo and the plant-based sweeteners logo.",
+      },
+    ],
   },
   {
     label: "Photography Art Direction",
-    images: ["photo-1.png", "photo-2.png"].map(getImage),
+    images: [
+      {
+        src: getImage("photo-1.png"),
+        alt: "Four tins of MYNTZ! breathmints in different flavors with mint, lemon, tangerine and cinnamon with corresponding fruit and herbs.",
+      },
+      {
+        src: getImage("photo-2.png"),
+        alt: "An open tin of MYNTZ! breathmints with an unopened tin and scattered mint leaves and mints on a light blue background.",
+      },
+    ],
   },
   {
     label: "Packaging",
-    images: ["packaging-1.png", "packaging-2.png"].map(getImage),
+    images: [
+      {
+        src: getImage("packaging-1.png"),
+        alt: "Four tins of MYNTZ! breathmints displaying different flavors: Wintermint, Cinnamon, Tangerine Vanilla, and Lemon Ginger.",
+      },
+      {
+        src: getImage("packaging-2.png"),
+        alt: "Two images of MYNTZ! breathmints. The first is a variety box with six tins. The second is a stack of 4 single-flavor boxes.",
+      },
+    ],
   },
-  { label: "Store Displays", images: [getImage("store.png")] },
+  {
+    label: "Store Displays",
+    images: [
+      {
+        src: getImage("store.png"),
+        alt: "Two images showcasing MYNTZ! breathmints displays; one display stand alone, the other in a store shelf.",
+      },
+    ],
+  },
 ];
 
 const description = () => (
