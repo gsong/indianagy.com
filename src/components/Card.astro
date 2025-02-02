@@ -11,11 +11,15 @@ const { label, href, imgSrc } = Astro.props;
 ---
 
 <li
-  class="card relative flex flex-col rounded-lg border border-transparent p-1"
+  class="relative flex flex-col rounded-lg border border-transparent p-1 transition duration-300 ease-in-out focus-within:border-muted-foreground motion-safe:hover:scale-[1.03]"
 >
   <div class="order-1">
     <h3>
-      <a href={href} class="hover:no-underline">{label}</a>
+      <a
+        href={href}
+        class="after:absolute after:inset-0 hover:no-underline focus:outline-none"
+        >{label}</a
+      >
     </h3>
   </div>
   <div>
@@ -30,22 +34,3 @@ const { label, href, imgSrc } = Astro.props;
     />
   </div>
 </li>
-
-<style>
-  .card:focus-within {
-    @apply border-muted-foreground;
-  }
-
-  a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  a:focus {
-    outline: none;
-  }
-</style>
