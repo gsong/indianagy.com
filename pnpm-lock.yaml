@@ -16,7 +16,7 @@ importers:
         version: 4.2.0(@types/node@22.13.0)(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(jiti@2.4.2)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(yaml@2.7.0)
       '@astrojs/tailwind':
         specifier: ^6.0.0
-        version: 6.0.0(astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))
+        version: 6.0.0(astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.34.0)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))
       '@fontsource-variable/work-sans':
         specifier: ^5.1.1
         version: 5.1.1
@@ -43,7 +43,7 @@ importers:
         version: 1.1.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       astro:
         specifier: ^5.2.3
-        version: 5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.34.0)(typescript@5.7.3)(yaml@2.7.0)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -77,7 +77,7 @@ importers:
         version: 22.13.0
       netlify-cli:
         specifier: ^18.0.3
-        version: 18.0.3(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.32.1)
+        version: 18.0.3(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.34.0)
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -1234,98 +1234,98 @@ packages:
       rollup:
         optional: true
 
-  '@rollup/rollup-android-arm-eabi@4.32.1':
-    resolution: {integrity: sha512-/pqA4DmqyCm8u5YIDzIdlLcEmuvxb0v8fZdFhVMszSpDTgbQKdw3/mB3eMUHIbubtJ6F9j+LtmyCnHTEqIHyzA==}
+  '@rollup/rollup-android-arm-eabi@4.34.0':
+    resolution: {integrity: sha512-Eeao7ewDq79jVEsrtWIj5RNqB8p2knlm9fhR6uJ2gqP7UfbLrTrxevudVrEPDM7Wkpn/HpRC2QfazH7MXLz3vQ==}
     cpu: [arm]
     os: [android]
 
-  '@rollup/rollup-android-arm64@4.32.1':
-    resolution: {integrity: sha512-If3PDskT77q7zgqVqYuj7WG3WC08G1kwXGVFi9Jr8nY6eHucREHkfpX79c0ACAjLj3QIWKPJR7w4i+f5EdLH5Q==}
+  '@rollup/rollup-android-arm64@4.34.0':
+    resolution: {integrity: sha512-yVh0Kf1f0Fq4tWNf6mWcbQBCLDpDrDEl88lzPgKhrgTcDrTtlmun92ywEF9dCjmYO3EFiSuJeeo9cYRxl2FswA==}
     cpu: [arm64]
     os: [android]
 
-  '@rollup/rollup-darwin-arm64@4.32.1':
-    resolution: {integrity: sha512-zCpKHioQ9KgZToFp5Wvz6zaWbMzYQ2LJHQ+QixDKq52KKrF65ueu6Af4hLlLWHjX1Wf/0G5kSJM9PySW9IrvHA==}
+  '@rollup/rollup-darwin-arm64@4.34.0':
+    resolution: {integrity: sha512-gCs0ErAZ9s0Osejpc3qahTsqIPUDjSKIyxK/0BGKvL+Tn0n3Kwvj8BrCv7Y5sR1Ypz1K2qz9Ny0VvkVyoXBVUQ==}
     cpu: [arm64]
     os: [darwin]
 
-  '@rollup/rollup-darwin-x64@4.32.1':
-    resolution: {integrity: sha512-sFvF+t2+TyUo/ZQqUcifrJIgznx58oFZbdHS9TvHq3xhPVL9nOp+yZ6LKrO9GWTP+6DbFtoyLDbjTpR62Mbr3Q==}
+  '@rollup/rollup-darwin-x64@4.34.0':
+    resolution: {integrity: sha512-aIB5Anc8hngk15t3GUkiO4pv42ykXHfmpXGS+CzM9CTyiWyT8HIS5ygRAy7KcFb/wiw4Br+vh1byqcHRTfq2tQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@rollup/rollup-freebsd-arm64@4.32.1':
-    resolution: {integrity: sha512-NbOa+7InvMWRcY9RG+B6kKIMD/FsnQPH0MWUvDlQB1iXnF/UcKSudCXZtv4lW+C276g3w5AxPbfry5rSYvyeYA==}
+  '@rollup/rollup-freebsd-arm64@4.34.0':
+    resolution: {integrity: sha512-kpdsUdMlVJMRMaOf/tIvxk8TQdzHhY47imwmASOuMajg/GXpw8GKNd8LNwIHE5Yd1onehNpcUB9jHY6wgw9nHQ==}
     cpu: [arm64]
     os: [freebsd]
 
-  '@rollup/rollup-freebsd-x64@4.32.1':
-    resolution: {integrity: sha512-JRBRmwvHPXR881j2xjry8HZ86wIPK2CcDw0EXchE1UgU0ubWp9nvlT7cZYKc6bkypBt745b4bglf3+xJ7hXWWw==}
+  '@rollup/rollup-freebsd-x64@4.34.0':
+    resolution: {integrity: sha512-D0RDyHygOBCQiqookcPevrvgEarN0CttBecG4chOeIYCNtlKHmf5oi5kAVpXV7qs0Xh/WO2RnxeicZPtT50V0g==}
     cpu: [x64]
     os: [freebsd]
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.32.1':
-    resolution: {integrity: sha512-PKvszb+9o/vVdUzCCjL0sKHukEQV39tD3fepXxYrHE3sTKrRdCydI7uldRLbjLmDA3TFDmh418XH19NOsDRH8g==}
+  '@rollup/rollup-linux-arm-gnueabihf@4.34.0':
+    resolution: {integrity: sha512-mCIw8j5LPDXmCOW8mfMZwT6F/Kza03EnSr4wGYEswrEfjTfVsFOxvgYfuRMxTuUF/XmRb9WSMD5GhCWDe2iNrg==}
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm-musleabihf@4.32.1':
-    resolution: {integrity: sha512-9WHEMV6Y89eL606ReYowXuGF1Yb2vwfKWKdD1A5h+OYnPZSJvxbEjxTRKPgi7tkP2DSnW0YLab1ooy+i/FQp/Q==}
+  '@rollup/rollup-linux-arm-musleabihf@4.34.0':
+    resolution: {integrity: sha512-AwwldAu4aCJPob7zmjuDUMvvuatgs8B/QiVB0KwkUarAcPB3W+ToOT+18TQwY4z09Al7G0BvCcmLRop5zBLTag==}
     cpu: [arm]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-gnu@4.32.1':
-    resolution: {integrity: sha512-tZWc9iEt5fGJ1CL2LRPw8OttkCBDs+D8D3oEM8mH8S1ICZCtFJhD7DZ3XMGM8kpqHvhGUTvNUYVDnmkj4BDXnw==}
+  '@rollup/rollup-linux-arm64-gnu@4.34.0':
+    resolution: {integrity: sha512-e7kDUGVP+xw05pV65ZKb0zulRploU3gTu6qH1qL58PrULDGxULIS0OSDQJLH7WiFnpd3ZKUU4VM3u/Z7Zw+e7Q==}
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-arm64-musl@4.32.1':
-    resolution: {integrity: sha512-FTYc2YoTWUsBz5GTTgGkRYYJ5NGJIi/rCY4oK/I8aKowx1ToXeoVVbIE4LGAjsauvlhjfl0MYacxClLld1VrOw==}
+  '@rollup/rollup-linux-arm64-musl@4.34.0':
+    resolution: {integrity: sha512-SXYJw3zpwHgaBqTXeAZ31qfW/v50wq4HhNVvKFhRr5MnptRX2Af4KebLWR1wpxGJtLgfS2hEPuALRIY3LPAAcA==}
     cpu: [arm64]
     os: [linux]
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.32.1':
-    resolution: {integrity: sha512-F51qLdOtpS6P1zJVRzYM0v6MrBNypyPEN1GfMiz0gPu9jN8ScGaEFIZQwteSsGKg799oR5EaP7+B2jHgL+d+Kw==}
+  '@rollup/rollup-linux-loongarch64-gnu@4.34.0':
+    resolution: {integrity: sha512-e5XiCinINCI4RdyU3sFyBH4zzz7LiQRvHqDtRe9Dt8o/8hTBaYpdPimayF00eY2qy5j4PaaWK0azRgUench6WQ==}
     cpu: [loong64]
     os: [linux]
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.32.1':
-    resolution: {integrity: sha512-wO0WkfSppfX4YFm5KhdCCpnpGbtgQNj/tgvYzrVYFKDpven8w2N6Gg5nB6w+wAMO3AIfSTWeTjfVe+uZ23zAlg==}
+  '@rollup/rollup-linux-powerpc64le-gnu@4.34.0':
+    resolution: {integrity: sha512-3SWN3e0bAsm9ToprLFBSro8nJe6YN+5xmB11N4FfNf92wvLye/+Rh5JGQtKOpwLKt6e61R1RBc9g+luLJsc23A==}
     cpu: [ppc64]
     os: [linux]
 
-  '@rollup/rollup-linux-riscv64-gnu@4.32.1':
-    resolution: {integrity: sha512-iWswS9cIXfJO1MFYtI/4jjlrGb/V58oMu4dYJIKnR5UIwbkzR0PJ09O0PDZT0oJ3LYWXBSWahNf/Mjo6i1E5/g==}
+  '@rollup/rollup-linux-riscv64-gnu@4.34.0':
+    resolution: {integrity: sha512-B1Oqt3GLh7qmhvfnc2WQla4NuHlcxAD5LyueUi5WtMc76ZWY+6qDtQYqnxARx9r+7mDGfamD+8kTJO0pKUJeJA==}
     cpu: [riscv64]
     os: [linux]
 
-  '@rollup/rollup-linux-s390x-gnu@4.32.1':
-    resolution: {integrity: sha512-RKt8NI9tebzmEthMnfVgG3i/XeECkMPS+ibVZjZ6mNekpbbUmkNWuIN2yHsb/mBPyZke4nlI4YqIdFPgKuoyQQ==}
+  '@rollup/rollup-linux-s390x-gnu@4.34.0':
+    resolution: {integrity: sha512-UfUCo0h/uj48Jq2lnhX0AOhZPSTAq3Eostas+XZ+GGk22pI+Op1Y6cxQ1JkUuKYu2iU+mXj1QjPrZm9nNWV9rg==}
     cpu: [s390x]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-gnu@4.32.1':
-    resolution: {integrity: sha512-WQFLZ9c42ECqEjwg/GHHsouij3pzLXkFdz0UxHa/0OM12LzvX7DzedlY0SIEly2v18YZLRhCRoHZDxbBSWoGYg==}
+  '@rollup/rollup-linux-x64-gnu@4.34.0':
+    resolution: {integrity: sha512-chZLTUIPbgcpm+Z7ALmomXW8Zh+wE2icrG+K6nt/HenPLmtwCajhQC5flNSk1Xy5EDMt/QAOz2MhzfOfJOLSiA==}
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-linux-x64-musl@4.32.1':
-    resolution: {integrity: sha512-BLoiyHDOWoS3uccNSADMza6V6vCNiphi94tQlVIL5de+r6r/CCQuNnerf+1g2mnk2b6edp5dk0nhdZ7aEjOBsA==}
+  '@rollup/rollup-linux-x64-musl@4.34.0':
+    resolution: {integrity: sha512-jo0UolK70O28BifvEsFD/8r25shFezl0aUk2t0VJzREWHkq19e+pcLu4kX5HiVXNz5qqkD+aAq04Ct8rkxgbyQ==}
     cpu: [x64]
     os: [linux]
 
-  '@rollup/rollup-win32-arm64-msvc@4.32.1':
-    resolution: {integrity: sha512-w2l3UnlgYTNNU+Z6wOR8YdaioqfEnwPjIsJ66KxKAf0p+AuL2FHeTX6qvM+p/Ue3XPBVNyVSfCrfZiQh7vZHLQ==}
+  '@rollup/rollup-win32-arm64-msvc@4.34.0':
+    resolution: {integrity: sha512-Vmg0NhAap2S54JojJchiu5An54qa6t/oKT7LmDaWggpIcaiL8WcWHEN6OQrfTdL6mQ2GFyH7j2T5/3YPEDOOGA==}
     cpu: [arm64]
     os: [win32]
 
-  '@rollup/rollup-win32-ia32-msvc@4.32.1':
-    resolution: {integrity: sha512-Am9H+TGLomPGkBnaPWie4F3x+yQ2rr4Bk2jpwy+iV+Gel9jLAu/KqT8k3X4jxFPW6Zf8OMnehyutsd+eHoq1WQ==}
+  '@rollup/rollup-win32-ia32-msvc@4.34.0':
+    resolution: {integrity: sha512-CV2aqhDDOsABKHKhNcs1SZFryffQf8vK2XrxP6lxC99ELZAdvsDgPklIBfd65R8R+qvOm1SmLaZ/Fdq961+m7A==}
     cpu: [ia32]
     os: [win32]
 
-  '@rollup/rollup-win32-x64-msvc@4.32.1':
-    resolution: {integrity: sha512-ar80GhdZb4DgmW3myIS9nRFYcpJRSME8iqWgzH2i44u+IdrzmiXVxeFnExQ5v4JYUSpg94bWjevMG8JHf1Da5Q==}
+  '@rollup/rollup-win32-x64-msvc@4.34.0':
+    resolution: {integrity: sha512-g2ASy1QwHP88y5KWvblUolJz9rN+i4ZOsYzkEwcNfaNooxNUXG+ON6F5xFo0NIItpHqxcdAyls05VXpBnludGw==}
     cpu: [x64]
     os: [win32]
 
@@ -4696,8 +4696,8 @@ packages:
     deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rollup@4.32.1:
-    resolution: {integrity: sha512-z+aeEsOeEa3mEbS1Tjl6sAZ8NE3+AalQz1RJGj81M+fizusbdDMoEJwdJNHfaB40Scr4qNu+welOfes7maKonA==}
+  rollup@4.34.0:
+    resolution: {integrity: sha512-+4C/cgJ9w6sudisA0nZz0+O7lTP9a3CzNLsoDwaRumM8QHwghUsu6tqHXiTmNUp/rqNiM14++7dkzHDyCRs0Jg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
@@ -5720,9 +5720,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/tailwind@6.0.0(astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))':
+  '@astrojs/tailwind@6.0.0(astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.34.0)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))':
     dependencies:
-      astro: 5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.34.0)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer: 10.4.20(postcss@8.5.1)
       postcss: 8.5.1
       postcss-load-config: 4.0.2(postcss@8.5.1)(ts-node@10.9.2(@types/node@22.13.0)(typescript@5.7.3))
@@ -5733,7 +5733,7 @@ snapshots:
   '@astrojs/telemetry@3.2.0':
     dependencies:
       ci-info: 4.1.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0
       dlv: 1.1.3
       dset: 3.1.4
       is-docker: 3.0.0
@@ -5763,7 +5763,7 @@ snapshots:
       '@babel/traverse': 7.26.7
       '@babel/types': 7.26.7
       convert-source-map: 2.0.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -5842,7 +5842,7 @@ snapshots:
       '@babel/parser': 7.26.7
       '@babel/template': 7.25.9
       '@babel/types': 7.26.7
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -6296,7 +6296,7 @@ snapshots:
       nopt: 5.0.0
       npmlog: 5.0.1
       rimraf: 3.0.2
-      semver: 7.7.0
+      semver: 7.6.3
       tar: 6.2.1
     transitivePeerDependencies:
       - encoding
@@ -6316,24 +6316,24 @@ snapshots:
       find-up: 6.3.0
       minimatch: 9.0.5
       read-pkg: 7.1.0
-      semver: 7.7.0
+      semver: 7.6.3
       yaml: 2.7.0
       yargs: 17.7.2
 
-  '@netlify/build@29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.32.1)':
+  '@netlify/build@29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.34.0)':
     dependencies:
       '@bugsnag/js': 7.25.0
       '@netlify/blobs': 7.4.0
       '@netlify/cache-utils': 5.2.0
       '@netlify/config': 20.21.7
-      '@netlify/edge-bundler': 12.3.2(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/edge-bundler': 12.3.2(rollup@4.34.0)(supports-color@9.4.0)
       '@netlify/framework-info': 9.9.1
-      '@netlify/functions-utils': 5.3.4(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/functions-utils': 5.3.4(rollup@4.34.0)(supports-color@9.4.0)
       '@netlify/git-utils': 5.2.0
       '@netlify/opentelemetry-utils': 1.3.0(@opentelemetry/api@1.8.0)
       '@netlify/plugins-list': 6.80.0
       '@netlify/run-utils': 5.2.0
-      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.34.0)(supports-color@9.4.0)
       '@opentelemetry/api': 1.8.0
       '@sindresorhus/slugify': 2.2.1
       ansi-escapes: 6.2.1
@@ -6372,7 +6372,7 @@ snapshots:
       resolve: 2.0.0-next.5
       rfdc: 1.4.1
       safe-json-stringify: 1.2.0
-      semver: 7.7.0
+      semver: 7.6.3
       string-width: 5.1.2
       strip-ansi: 7.1.0
       supports-color: 9.4.0
@@ -6427,10 +6427,10 @@ snapshots:
       validate-npm-package-name: 4.0.0
       yargs: 17.7.2
 
-  '@netlify/edge-bundler@12.3.2(rollup@4.32.1)(supports-color@9.4.0)':
+  '@netlify/edge-bundler@12.3.2(rollup@4.34.0)(supports-color@9.4.0)':
     dependencies:
       '@import-maps/resolve': 1.0.1
-      '@vercel/nft': 0.27.7(rollup@4.32.1)(supports-color@9.4.0)
+      '@vercel/nft': 0.27.7(rollup@4.34.0)(supports-color@9.4.0)
       ajv: 8.17.1
       ajv-errors: 3.0.0(ajv@8.17.1)
       better-ajv-errors: 1.2.0(ajv@8.17.1)
@@ -6448,7 +6448,7 @@ snapshots:
       p-retry: 5.1.2
       p-wait-for: 5.0.2
       path-key: 4.0.0
-      semver: 7.7.0
+      semver: 7.6.3
       tmp-promise: 3.0.3
       urlpattern-polyfill: 8.0.2
       uuid: 9.0.1
@@ -6470,11 +6470,11 @@ snapshots:
       p-locate: 6.0.0
       process: 0.11.10
       read-package-up: 11.0.0
-      semver: 7.7.0
+      semver: 7.6.3
 
-  '@netlify/functions-utils@5.3.4(rollup@4.32.1)(supports-color@9.4.0)':
+  '@netlify/functions-utils@5.3.4(rollup@4.34.0)(supports-color@9.4.0)':
     dependencies:
-      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.34.0)(supports-color@9.4.0)
       cpy: 9.0.1
       path-exists: 5.0.0
     transitivePeerDependencies:
@@ -6577,13 +6577,13 @@ snapshots:
       '@netlify/node-cookies': 0.1.0
       urlpattern-polyfill: 8.0.2
 
-  '@netlify/zip-it-and-ship-it@9.42.4(rollup@4.32.1)(supports-color@9.4.0)':
+  '@netlify/zip-it-and-ship-it@9.42.4(rollup@4.34.0)(supports-color@9.4.0)':
     dependencies:
       '@babel/parser': 7.26.7
       '@babel/types': 7.26.5
       '@netlify/binary-info': 1.0.0
       '@netlify/serverless-functions-api': 1.32.0
-      '@vercel/nft': 0.27.7(rollup@4.32.1)(supports-color@9.4.0)
+      '@vercel/nft': 0.27.7(rollup@4.34.0)(supports-color@9.4.0)
       archiver: 7.0.1
       common-path-prefix: 3.0.0
       cp-file: 10.0.0
@@ -6606,13 +6606,13 @@ snapshots:
       precinct: 11.0.5(supports-color@9.4.0)
       require-package-name: 2.0.1
       resolve: 2.0.0-next.5
-      semver: 7.7.0
+      semver: 7.6.3
       tmp-promise: 3.0.3
       toml: 3.0.0
       unixify: 1.0.0
       urlpattern-polyfill: 8.0.2
       yargs: 17.7.2
-      zod: 3.24.1
+      zod: 3.23.8
     transitivePeerDependencies:
       - encoding
       - rollup
@@ -6790,69 +6790,69 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.0.8
 
-  '@rollup/pluginutils@5.1.4(rollup@4.32.1)':
+  '@rollup/pluginutils@5.1.4(rollup@4.34.0)':
     dependencies:
       '@types/estree': 1.0.6
       estree-walker: 2.0.2
       picomatch: 4.0.2
     optionalDependencies:
-      rollup: 4.32.1
+      rollup: 4.34.0
 
-  '@rollup/rollup-android-arm-eabi@4.32.1':
+  '@rollup/rollup-android-arm-eabi@4.34.0':
     optional: true
 
-  '@rollup/rollup-android-arm64@4.32.1':
+  '@rollup/rollup-android-arm64@4.34.0':
     optional: true
 
-  '@rollup/rollup-darwin-arm64@4.32.1':
+  '@rollup/rollup-darwin-arm64@4.34.0':
     optional: true
 
-  '@rollup/rollup-darwin-x64@4.32.1':
+  '@rollup/rollup-darwin-x64@4.34.0':
     optional: true
 
-  '@rollup/rollup-freebsd-arm64@4.32.1':
+  '@rollup/rollup-freebsd-arm64@4.34.0':
     optional: true
 
-  '@rollup/rollup-freebsd-x64@4.32.1':
+  '@rollup/rollup-freebsd-x64@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-gnueabihf@4.32.1':
+  '@rollup/rollup-linux-arm-gnueabihf@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-arm-musleabihf@4.32.1':
+  '@rollup/rollup-linux-arm-musleabihf@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-gnu@4.32.1':
+  '@rollup/rollup-linux-arm64-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-musl@4.32.1':
+  '@rollup/rollup-linux-arm64-musl@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-loongarch64-gnu@4.32.1':
+  '@rollup/rollup-linux-loongarch64-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-powerpc64le-gnu@4.32.1':
+  '@rollup/rollup-linux-powerpc64le-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-riscv64-gnu@4.32.1':
+  '@rollup/rollup-linux-riscv64-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-s390x-gnu@4.32.1':
+  '@rollup/rollup-linux-s390x-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.32.1':
+  '@rollup/rollup-linux-x64-gnu@4.34.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-musl@4.32.1':
+  '@rollup/rollup-linux-x64-musl@4.34.0':
     optional: true
 
-  '@rollup/rollup-win32-arm64-msvc@4.32.1':
+  '@rollup/rollup-win32-arm64-msvc@4.34.0':
     optional: true
 
-  '@rollup/rollup-win32-ia32-msvc@4.32.1':
+  '@rollup/rollup-win32-ia32-msvc@4.34.0':
     optional: true
 
-  '@rollup/rollup-win32-x64-msvc@4.32.1':
+  '@rollup/rollup-win32-x64-msvc@4.34.0':
     optional: true
 
   '@shikijs/core@1.29.2':
@@ -7013,10 +7013,10 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.7.0
+      semver: 7.6.3
       tsutils: 3.21.0(typescript@5.7.3)
     optionalDependencies:
       typescript: 5.7.3
@@ -7030,10 +7030,10 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@vercel/nft@0.27.7(rollup@4.32.1)(supports-color@9.4.0)':
+  '@vercel/nft@0.27.7(rollup@4.34.0)(supports-color@9.4.0)':
     dependencies:
       '@mapbox/node-pre-gyp': 1.0.11(supports-color@9.4.0)
-      '@rollup/pluginutils': 5.1.4(rollup@4.32.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.34.0)
       acorn: 8.14.0
       acorn-import-attributes: 1.9.5(acorn@8.14.0)
       async-sema: 3.1.1
@@ -7143,7 +7143,7 @@ snapshots:
 
   agent-base@6.0.2(supports-color@9.4.0):
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -7277,14 +7277,14 @@ snapshots:
 
   ast-module-types@5.0.0: {}
 
-  astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.32.1)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.2.3(@netlify/blobs@8.1.0)(@types/node@22.13.0)(jiti@2.4.2)(rollup@4.34.0)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.0
       '@astrojs/markdown-remark': 6.1.0
       '@astrojs/telemetry': 3.2.0
       '@oslojs/encoding': 1.1.0
-      '@rollup/pluginutils': 5.1.4(rollup@4.32.1)
+      '@rollup/pluginutils': 5.1.4(rollup@4.34.0)
       '@types/cookie': 0.6.0
       acorn: 8.14.0
       aria-query: 5.3.2
@@ -7295,7 +7295,7 @@ snapshots:
       common-ancestor-path: 1.0.1
       cookie: 0.7.2
       cssesc: 3.0.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0
       deterministic-object-hash: 2.0.2
       devalue: 5.1.1
       diff: 5.2.0
@@ -7553,7 +7553,7 @@ snapshots:
 
   builtins@5.1.0:
     dependencies:
-      semver: 7.7.0
+      semver: 7.6.3
 
   byline@5.0.0: {}
 
@@ -7890,15 +7890,15 @@ snapshots:
     dependencies:
       ms: 2.0.0
 
-  debug@4.3.7:
-    dependencies:
-      ms: 2.1.3
-
-  debug@4.4.0(supports-color@9.4.0):
+  debug@4.3.7(supports-color@9.4.0):
     dependencies:
       ms: 2.1.3
     optionalDependencies:
       supports-color: 9.4.0
+
+  debug@4.4.0:
+    dependencies:
+      ms: 2.1.3
 
   decache@4.6.2:
     dependencies:
@@ -8334,7 +8334,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -8402,7 +8402,7 @@ snapshots:
       proxy-addr: 2.0.7
       rfdc: 1.4.1
       secure-json-parse: 2.7.0
-      semver: 7.7.0
+      semver: 7.6.3
       toad-cache: 3.7.0
 
   fastq@1.19.0:
@@ -8522,7 +8522,7 @@ snapshots:
 
   follow-redirects@1.15.9(debug@4.3.7):
     optionalDependencies:
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@9.4.0)
 
   foreground-child@3.3.0:
     dependencies:
@@ -8626,7 +8626,7 @@ snapshots:
     dependencies:
       '@xhmikosr/downloader': 13.0.1
       node-fetch: 3.3.2
-      semver: 7.7.0
+      semver: 7.6.3
 
   git-repo-info@2.1.1: {}
 
@@ -8900,14 +8900,14 @@ snapshots:
   https-proxy-agent@5.0.1(supports-color@9.4.0):
     dependencies:
       agent-base: 6.0.2(supports-color@9.4.0)
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
   https-proxy-agent@7.0.6:
     dependencies:
       agent-base: 7.1.3
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9180,7 +9180,7 @@ snapshots:
       lodash.isstring: 4.0.1
       lodash.once: 4.1.1
       ms: 2.1.3
-      semver: 7.7.0
+      semver: 7.6.3
 
   junk@4.0.1: {}
 
@@ -9307,7 +9307,7 @@ snapshots:
       jest-validate: 27.5.1
       map-obj: 5.0.2
       moize: 6.1.6
-      semver: 7.7.0
+      semver: 7.6.3
 
   log-symbols@6.0.0:
     dependencies:
@@ -9369,7 +9369,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.7.0
+      semver: 7.6.3
 
   make-error@1.3.6: {}
 
@@ -9704,7 +9704,7 @@ snapshots:
   micromark@4.0.1:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.2
@@ -9841,20 +9841,20 @@ snapshots:
 
   nested-error-stacks@2.1.1: {}
 
-  netlify-cli@18.0.3(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.32.1):
+  netlify-cli@18.0.3(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.34.0):
     dependencies:
       '@bugsnag/js': 7.25.0
       '@fastify/static': 7.0.4
       '@netlify/blobs': 8.1.0
-      '@netlify/build': 29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.32.1)
+      '@netlify/build': 29.58.8(@opentelemetry/api@1.8.0)(@types/node@22.13.0)(picomatch@4.0.2)(rollup@4.34.0)
       '@netlify/build-info': 8.0.0
       '@netlify/config': 20.21.7
-      '@netlify/edge-bundler': 12.3.2(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/edge-bundler': 12.3.2(rollup@4.34.0)(supports-color@9.4.0)
       '@netlify/edge-functions': 2.11.1
       '@netlify/headers-parser': 7.3.0
       '@netlify/local-functions-proxy': 1.1.1
       '@netlify/redirect-parser': 14.5.0
-      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.32.1)(supports-color@9.4.0)
+      '@netlify/zip-it-and-ship-it': 9.42.4(rollup@4.34.0)(supports-color@9.4.0)
       '@octokit/rest': 20.1.1
       '@opentelemetry/api': 1.8.0
       ansi-escapes: 7.0.0
@@ -9873,7 +9873,7 @@ snapshots:
       content-type: 1.0.5
       cookie: 0.7.2
       cron-parser: 4.9.0
-      debug: 4.3.7
+      debug: 4.3.7(supports-color@9.4.0)
       decache: 4.6.2
       dot-prop: 9.0.0
       dotenv: 16.4.7
@@ -9999,7 +9999,7 @@ snapshots:
 
   node-abi@3.74.0:
     dependencies:
-      semver: 7.7.0
+      semver: 7.6.3
 
   node-addon-api@6.1.0: {}
 
@@ -10039,13 +10039,13 @@ snapshots:
     dependencies:
       hosted-git-info: 4.1.0
       is-core-module: 2.16.1
-      semver: 7.7.0
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.7.0
+      semver: 7.6.3
       validate-npm-package-license: 3.0.4
 
   normalize-path@2.1.1:
@@ -10245,7 +10245,7 @@ snapshots:
       ky: 1.7.4
       registry-auth-token: 5.0.3
       registry-url: 6.0.1
-      semver: 7.7.0
+      semver: 7.6.3
 
   parallel-transform@1.2.0:
     dependencies:
@@ -10796,29 +10796,29 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rollup@4.32.1:
+  rollup@4.34.0:
     dependencies:
       '@types/estree': 1.0.6
     optionalDependencies:
-      '@rollup/rollup-android-arm-eabi': 4.32.1
-      '@rollup/rollup-android-arm64': 4.32.1
-      '@rollup/rollup-darwin-arm64': 4.32.1
-      '@rollup/rollup-darwin-x64': 4.32.1
-      '@rollup/rollup-freebsd-arm64': 4.32.1
-      '@rollup/rollup-freebsd-x64': 4.32.1
-      '@rollup/rollup-linux-arm-gnueabihf': 4.32.1
-      '@rollup/rollup-linux-arm-musleabihf': 4.32.1
-      '@rollup/rollup-linux-arm64-gnu': 4.32.1
-      '@rollup/rollup-linux-arm64-musl': 4.32.1
-      '@rollup/rollup-linux-loongarch64-gnu': 4.32.1
-      '@rollup/rollup-linux-powerpc64le-gnu': 4.32.1
-      '@rollup/rollup-linux-riscv64-gnu': 4.32.1
-      '@rollup/rollup-linux-s390x-gnu': 4.32.1
-      '@rollup/rollup-linux-x64-gnu': 4.32.1
-      '@rollup/rollup-linux-x64-musl': 4.32.1
-      '@rollup/rollup-win32-arm64-msvc': 4.32.1
-      '@rollup/rollup-win32-ia32-msvc': 4.32.1
-      '@rollup/rollup-win32-x64-msvc': 4.32.1
+      '@rollup/rollup-android-arm-eabi': 4.34.0
+      '@rollup/rollup-android-arm64': 4.34.0
+      '@rollup/rollup-darwin-arm64': 4.34.0
+      '@rollup/rollup-darwin-x64': 4.34.0
+      '@rollup/rollup-freebsd-arm64': 4.34.0
+      '@rollup/rollup-freebsd-x64': 4.34.0
+      '@rollup/rollup-linux-arm-gnueabihf': 4.34.0
+      '@rollup/rollup-linux-arm-musleabihf': 4.34.0
+      '@rollup/rollup-linux-arm64-gnu': 4.34.0
+      '@rollup/rollup-linux-arm64-musl': 4.34.0
+      '@rollup/rollup-linux-loongarch64-gnu': 4.34.0
+      '@rollup/rollup-linux-powerpc64le-gnu': 4.34.0
+      '@rollup/rollup-linux-riscv64-gnu': 4.34.0
+      '@rollup/rollup-linux-s390x-gnu': 4.34.0
+      '@rollup/rollup-linux-x64-gnu': 4.34.0
+      '@rollup/rollup-linux-x64-musl': 4.34.0
+      '@rollup/rollup-win32-arm64-msvc': 4.34.0
+      '@rollup/rollup-win32-ia32-msvc': 4.34.0
+      '@rollup/rollup-win32-x64-msvc': 4.34.0
       fsevents: 2.3.3
 
   run-async@2.4.1: {}
@@ -10904,7 +10904,7 @@ snapshots:
       detect-libc: 2.0.3
       node-addon-api: 6.1.0
       prebuild-install: 7.1.3
-      semver: 7.7.0
+      semver: 7.6.3
       simple-get: 4.0.1
       tar-fs: 3.0.8
       tunnel-agent: 0.6.0
@@ -11200,7 +11200,7 @@ snapshots:
 
   tabtab@3.0.2:
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
       es6-promisify: 6.1.1
       inquirer: 6.5.2
       minimist: 1.2.8
@@ -11569,7 +11569,7 @@ snapshots:
       is-npm: 6.0.0
       latest-version: 9.0.0
       pupa: 3.1.0
-      semver: 7.7.0
+      semver: 7.6.3
       xdg-basedir: 5.1.0
 
   uqr@0.1.2: {}
@@ -11614,7 +11614,7 @@ snapshots:
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
-      rollup: 4.32.1
+      rollup: 4.34.0
     optionalDependencies:
       '@types/node': 22.13.0
       fsevents: 2.3.3
@@ -11629,7 +11629,7 @@ snapshots:
     dependencies:
       chalk: 4.1.2
       commander: 9.5.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.3.7(supports-color@9.4.0)
     transitivePeerDependencies:
       - supports-color
 
