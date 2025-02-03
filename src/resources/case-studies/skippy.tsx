@@ -1,4 +1,4 @@
-import type { DetailMetadata } from "../types";
+import type { DetailMetadata, Section } from "../types";
 
 import { initGetImage, slugify } from "./utils";
 
@@ -6,15 +6,56 @@ const label = "Skippy Nut Roll";
 
 const getImage = initGetImage("skippy");
 
-export const sections = [
-  { label: "Branding", images: [getImage("branding.png")] },
-  { label: "Web", images: [getImage("web.png")] },
-  { label: "Digital Imagery", images: [getImage("digital.png")] },
+export const sections: Section[] = [
+  {
+    label: "Branding",
+    images: [
+      {
+        src: getImage("branding.png"),
+        alt: "Image showing the collaboration of Skippy and Pearson to create Skippy’s Peanut Butter Salted Nut Roll with a 2023 award.",
+      },
+    ],
+  },
+  {
+    label: "Web",
+    images: [
+      {
+        src: getImage("web.png"),
+        alt: "Pearson’s website showcasing the new Skippy Peanut Butter Salted Nut Roll.",
+      },
+    ],
+  },
+  {
+    label: "Digital Imagery",
+    images: [
+      {
+        src: getImage("digital.png"),
+        alt: "Three images of the Skippy Peanut Butter Salted Nut Roll including box, bar closeup, and nutritional information.",
+      },
+    ],
+  },
   {
     label: "Packaging",
-    images: ["packaging-1.png", "packaging-2.png"].map(getImage),
+    images: [
+      {
+        src: getImage("packaging-1.png"),
+        alt: "Two packages and two individual bars of Skippy's Peanut Butter Salted Nut Roll. One package is King Size.",
+      },
+      {
+        src: getImage("packaging-2.png"),
+        alt: "A bag of Skippy Peanut Butter Salted Nut Roll bite sized candies and three individual pieces.",
+      },
+    ],
   },
-  { label: "Store Displays", images: [getImage("store.png")] },
+  {
+    label: "Store Displays",
+    images: [
+      {
+        src: getImage("store.png"),
+        alt: "Three images of Skippy's Peanut Butter Salted Nut Roll display boxes. The first two are stand alone boxes and the last two are placed in a store.",
+      },
+    ],
+  },
 ];
 
 const description = () => (

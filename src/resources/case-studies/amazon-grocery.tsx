@@ -1,4 +1,4 @@
-import type { DetailMetadata } from "../types";
+import type { DetailMetadata, Section } from "../types";
 
 import { initGetImage, slugify } from "./utils";
 
@@ -6,12 +6,52 @@ const label = "Amazon Grocery";
 
 const getImage = initGetImage("amazon-grocery");
 
-export const sections = [
-  { label: "Store Renders", images: [getImage("store-renders.png")] },
-  { label: "Signage", images: [getImage("signage.png")] },
-  { label: "Website", images: [getImage("website.png")] },
-  { label: "Digital Menus", images: [getImage("menu.jpg")] },
-  { label: "Store Signage", images: [getImage("store-signage.png")] },
+export const sections: Section[] = [
+  {
+    label: "Store Renders",
+    images: [
+      {
+        src: getImage("store-renders.png"),
+        alt: "Collage of Amazon Grocery stores including mockups and real photos of the entrance, aisles, shelves and machines.",
+      },
+    ],
+  },
+  {
+    label: "Signage",
+    images: [
+      {
+        src: getImage("signage.png"),
+        alt: "Four Amazon Grocery advertisements featuring discounts, grocery items and information about the first-floor store location.",
+      },
+    ],
+  },
+  {
+    label: "Website",
+    images: [
+      {
+        src: getImage("website.png"),
+        alt: "Screenshot of the Amazon Grocery website promoting popular grocery brands, grab & go meals, coffee, desserts, dairy, frozen, pantry & household items.",
+      },
+    ],
+  },
+  {
+    label: "Digital Menus",
+    images: [
+      {
+        src: getImage("menu.jpg"),
+        alt: "Digital menu boards displaying Counter Culture Coffee drink options, pricing, and an ad with information on their seed-to-cup process.",
+      },
+    ],
+  },
+  {
+    label: "Store Signage",
+    images: [
+      {
+        src: getImage("store-signage.png"),
+        alt: "Collage of Amazon Grocery marketing images showcasing soft serve ice cream, ice cream bars, and Counter Culture coffee and their availability.",
+      },
+    ],
+  },
 ];
 
 const description = () => (

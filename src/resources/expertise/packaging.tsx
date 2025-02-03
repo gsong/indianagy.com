@@ -1,4 +1,4 @@
-import type { DetailMetadata } from "../types";
+import type { DetailMetadata, Section } from "../types";
 
 import { initGetImage, slugify } from "./utils";
 
@@ -6,28 +6,67 @@ const label = "Packaging";
 
 const getImage = initGetImage("packaging");
 
-export const sections = [
+export const sections: Section[] = [
   {
     label: "Packaging Redesign for Choice",
-    images: ["choice-redesign-1.png", "choice-redesign-2.jpg"].map(getImage),
+    images: [
+      {
+        src: getImage("choice-redesign-1.png"),
+        alt: "Collage of Choice teas including sketches of tea packaging, floral watercolor paintings, color swatches, brewing instructions, a sample tea box and a box of Mango Black tea.",
+      },
+      {
+        src: getImage("choice-redesign-2.jpg"),
+        alt: "Three images showcasing Choice tea boxes. One side by side of an old and new design and one with multiple flavors stacked.",
+      },
+    ],
   },
   {
     label: "Packaging Redesign for Dilettante",
-    images: [getImage("dillettante-redesign.png")],
+    images: [
+      {
+        src: getImage("dillettante-redesign.png"),
+        alt: "Side-by-side comparisons of previous and refreshed designs of Dilettante chocolates, showing bags of peppermint truffles and rainier cherries.",
+      },
+    ],
   },
   {
     label: "New Packaging for Choice",
-    images: ["choice-new-1.png", "choice-new-2.png", "choice-new-3.png"].map(
-      getImage,
-    ),
+    images: [
+      {
+        src: getImage("choice-new-1.png"),
+        alt: "Collage of four images showing various stages of tea-themed artwork, from a photograph of a tea plantation to sketches and illustrations.",
+      },
+      {
+        src: getImage("choice-new-2.png"),
+        alt: "Two images showing Choice tea packaging elements including pyramid illustrations, tea name typography, color palette, packaging sketches and a box of Lychee White tea.",
+      },
+      {
+        src: getImage("choice-new-3.png"),
+        alt: "Two images of Choice brand tea, on the left is a stack of eight tins and on the right is a pyramid tea bag with its wrapper.",
+      },
+    ],
   },
   {
     label: "New Product Line for Alki Organics",
-    images: [getImage("alki.png")],
+    images: [
+      {
+        src: getImage("alki.png"),
+        alt: "Three boxes of Alki Organics tea, including Beet Root Hibiscus, Reishi Green, and Mushroom Turmeric on a light wood surface.",
+      },
+    ],
   },
   {
     label: "New Products Offerings for Dilettante",
-    images: ["dillettante-new-1.png", "dillettante-new-2.jpg"].map(getImage),
+    images: [
+      {
+        src: getImage("dillettante-new-1.png"),
+        alt: "Two images of Dilettante chocolate boxes, including Ruby Cacao Cherries, Ruby Cacao Blueberries and Hearts Mix, one image with stand alone boxes and one with boxes on a store shelf.",
+      },
+      {
+        src: getImage("dillettante-new-2.jpg"),
+        alt: "Collage of Dilettante chocolate holiday packaging, including patterns and boxes of Candy Cane, Peppermint Pretzels, Dark Chocolate and Chocolate Trufflecremes.",
+      },
+    ],
   },
 ];
 

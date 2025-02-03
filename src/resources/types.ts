@@ -1,10 +1,23 @@
 import type { JSX } from "react";
 
-export interface Section {
-  label?: string;
-  images?: string[];
-  videos?: string[];
+interface Media {
+  src: string;
+  alt: string;
 }
+
+interface ImageSection {
+  label?: string;
+  images: Media[];
+  videos?: Media[];
+}
+
+interface VideoSection {
+  label?: string;
+  images?: Media[];
+  videos: Media[];
+}
+
+export type Section = ImageSection | VideoSection;
 
 export interface DetailMetadata {
   label: string;
