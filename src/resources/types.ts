@@ -1,14 +1,14 @@
 import type { JSX } from "react";
 
-interface Image {
+interface Media {
   src: string;
   alt: string;
 }
 
 export interface Section {
   label?: string;
-  images?: (Image | string)[];
-  videos?: string[];
+  images?: (Media | string)[];
+  videos?: (Media | string)[];
 }
 
 export interface DetailMetadata {

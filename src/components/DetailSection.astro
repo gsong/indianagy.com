@@ -13,28 +13,28 @@ const { label, images, videos } = Astro.props;
 {
   videos ? (
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-      {videos.map((video) => (
+      {videos.map(({ src, alt }) => (
         <video
           class="aspect-video h-auto w-full"
-          aria-label=""
-          poster={`${import.meta.env.BASE_URL}videos/${video}.jpg`}
+          aria-label={alt}
+          poster={`${import.meta.env.BASE_URL}videos/${src}.jpg`}
           controls
           preload="metadata"
         >
           <source
-            src={`${import.meta.env.BASE_URL}videos/${video}.webm`}
+            src={`${import.meta.env.BASE_URL}videos/${src}.webm`}
             type="video/webm"
           />
           <source
-            src={`${import.meta.env.BASE_URL}videos/${video}.mp4`}
+            src={`${import.meta.env.BASE_URL}videos/${src}.mp4`}
             type="video/mp4"
           />
           <p>
             Your browser doesn't support HTML5 video. Here is a{" "}
-            <a href={`${import.meta.env.BASE_URL}videos/${video}.mp4`}>
+            <a href={`${import.meta.env.BASE_URL}videos/${src}.mp4`}>
               link to the video
-            </a>{" "}
-            instead.
+            </a>
+            . Description for the video: {alt}
           </p>
         </video>
       ))}
@@ -45,21 +45,16 @@ const { label, images, videos } = Astro.props;
 {
   images ? (
     <div class="flex flex-col gap-4 sm:gap-10">
-      {images.map((image) => {
-        const imgSrc = typeof image === "string" ? image : image.src;
-        const altText = typeof image === "string" ? "" : image.alt;
-
-        return (
-          <Picture
-            src={imgSrc}
-            alt={altText}
-            widths={[768, 1280, 1536, 2560]}
-            sizes="(max-width: 768px) 768px, 1280px"
-            formats={["avif", "webp"]}
-            inferSize
-          />
-        );
-      })}
+      {images.map(({ src, alt }) => (
+        <Picture
+          src={src}
+          alt={alt}
+          widths={[768, 1280, 1536, 2560]}
+          sizes="(max-width: 768px) 768px, 1280px"
+          formats={["avif", "webp"]}
+          inferSize
+        />
+      ))}
     </div>
   ) : null
 }
