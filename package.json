@@ -9,7 +9,8 @@
     }
   },
   "scripts": {
-    "build": "if [ \"$CLEAR_CACHE\" = \"true\" ]; then rm -rf node_modules/.astro; fi && astro build",
+    "prebuild": "if [ \"$CLEAR_CACHE\" = \"true\" ]; then rm -rf node_modules/.astro; fi",
+    "build": "astro build",
     "deploy": "netlify build && netlify deploy --prod",
     "dev": "astro dev",
     "postinstall": "if command -v jq &> /dev/null; then pnpm_version=$(pnpm --version) && jq --arg version \"$pnpm_version\" '.packageManager = \"pnpm@\" + $version' package.json > tmp.json && mv tmp.json package.json; else echo 'jq not found, skipping packageManager update'; fi",
