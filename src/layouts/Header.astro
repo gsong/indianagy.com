@@ -26,19 +26,19 @@ const BASE_URL = import.meta.env.BASE_URL;
 </header>
 
 <script>
-  const header = document.getElementById("header")!;
+  document.addEventListener("astro:page-load", () => {
+    const header = document.getElementById("header")!;
 
-  function updateHeaderHeight() {
-    const scrollTop = document.documentElement.scrollTop;
+    function updateHeaderHeight() {
+      const scrollTop = document.documentElement.scrollTop;
 
-    if (scrollTop > 90) {
-      header.classList.remove("md:py-12");
-    } else {
-      header.classList.add("md:py-12");
+      if (scrollTop > 90) {
+        header.classList.remove("md:py-12");
+      } else {
+        header.classList.add("md:py-12");
+      }
     }
-  }
 
-  window.addEventListener("load", () => {
     setTimeout(() => {
       header.classList.add(
         "transition-[padding]",

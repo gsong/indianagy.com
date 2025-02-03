@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 import alice from "@fontsource/alice/files/alice-latin-400-normal.woff2?url";
 import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2?url";
 
@@ -56,4 +58,6 @@ const IMAGE_URL =
   <meta name="twitter:description" content={DESCRIPTION} />
   <meta name="twitter:url" content={SITE} />
   <meta name="twitter:image" content={IMAGE_URL} />
+
+  <ClientRouter />
 </head>
