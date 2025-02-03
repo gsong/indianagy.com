@@ -4,7 +4,9 @@ This repository contains the source code for India Nagy's portfolio website, bui
 
 ## Deployment
 
-The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12e42639-e8ab-4149-ad54-ee8026533a38/deploy-status)](https://app.netlify.com/sites/indianagy-dot-com/deploys)
+
+The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com).
 
 ## Project Structure
 
