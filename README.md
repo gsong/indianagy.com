@@ -1,48 +1,50 @@
-# Astro Starter Kit: Basics
+# India Nagy Portfolio Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repository contains the source code for India Nagy's portfolio website, built using Astro.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Deployment
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Project Structure
 
-## 🚀 Project Structure
+- `components/`: Reusable Astro and React components, including UI elements and content display components.
+- `layouts/`: Layout components for the site's overall structure (header, footer, base layout).
+- `lib/`: Utility functions, such as helper functions for Tailwind CSS.
+- `pages/`: Astro pages for different routes, including the homepage, about page, contact page, and dynamic routes for case studies and expertise.
+- `resources/`: Data and utility files for case studies, areas of expertise, and shared types/utils.
+  - `case-studies/`: Data files for individual case studies.
+  - `expertise/`: Data files for individual areas of expertise.
+- `styles/`: CSS files.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Image Storage
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Most of the images used on the site are stored on Cloudflare R2:
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+- Case study images are stored in a dedicated R2 bucket.
+- Expertise images are stored in a separate dedicated R2 bucket.
 
-## 🧞 Commands
+These URLs are used in utility functions to generate image paths.
+Other images are in `public/` folder.
 
-All commands are run from the root of the project, from a terminal:
+## Key Points
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Astro:** The project uses Astro for building the site, which allows for component-based architecture and great performance.
+- **React:** React is used for interactive components, such as the contact form, via `@astrojs/react`.
+- **Tailwind CSS:** Tailwind CSS is used for styling, enabling rapid development and a consistent visual language.
+- **R2 Storage:** R2 is used to host most of the images, separating the static assets from the codebase.
+- **Data-Driven Pages:** Case studies and expertise pages are generated dynamically using data from the `resources/` directory.
+- **Sitemap:** The `@astrojs/sitemap` integration generates a sitemap for SEO.
 
-## 👀 Want to learn more?
+## Available `pnpm` Commands
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The following `pnpm` commands are available for development and deployment:
+
+- `pnpm build`: Builds the Astro site for production. It also includes a step to clear the Astro cache if the `CLEAR_CACHE` environment variable is set to `true` (e.g., `CLEAR_CACHE=true pnpm build`).
+  - **Note:** In order to clear the Astro build cache in Netlify, you must set the `CLEAR_CACHE` environment variable in your Netlify project settings.
+- `pnpm run deploy`: Builds the site using `netlify build` and then deploys it to Netlify production using `netlify deploy --prod`.
+- `pnpm dev`: Starts the Astro development server.
+- `pnpm postinstall`: This script runs after `pnpm install`. It checks if `jq` (a command-line JSON processor) is available. If it is, the script updates the `package.json` file with the current version of pnpm. This ensures that the `packageManager` field reflects the actual pnpm version used.
+- `pnpm preview`: Runs the Netlify preview server.
+
+This README provides a general overview of the project. For more specific information, please refer to the source code.
