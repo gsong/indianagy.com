@@ -1,7 +1,9 @@
 ---
-import type { Section as Props } from "@/resources/types";
+import type { Section } from "@/resources/types";
 
 import { Picture } from "astro:assets";
+
+type Props = Section;
 
 const { label, images, videos } = Astro.props;
 ---
