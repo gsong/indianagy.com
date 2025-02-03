@@ -5,11 +5,19 @@ interface Media {
   alt: string;
 }
 
-export interface Section {
+interface ImageSection {
   label?: string;
-  images?: (Media | string)[];
-  videos?: (Media | string)[];
+  images: Media[];
+  videos?: Media[];
 }
+
+interface VideoSection {
+  label?: string;
+  images?: Media[];
+  videos: Media[];
+}
+
+export type Section = ImageSection | VideoSection;
 
 export interface DetailMetadata {
   label: string;
