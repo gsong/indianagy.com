@@ -72,6 +72,8 @@ export default {
   highlights: ["Brand", "Digital", "Retail Store Environment"],
   sections,
   description,
+  metaDescription:
+    "Created cohesive digital and print signage for Amazon’s new store, integrating brand messaging to deliver an engaging and impactful customer experience.",
   credit:
     "Credit: art direction @Dana Deneinger, creative director, and Amazon Go!/Grocery Team",
 } satisfies DetailMetadata;

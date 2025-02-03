@@ -8,15 +8,19 @@ import Layout from "@/layouts/Layout.astro";
 import { getDetailNavigation } from "@/resources/utils";
 
 interface Props {
+  category: string;
   details: DetailMetadata[];
   label: string;
 }
 
-const { details, label } = Astro.props;
+const { category, details, label } = Astro.props;
 const { current, previous, next } = getDetailNavigation(details, label);
 ---
 
-<Layout>
+<Layout
+  title={`India Nagy | ${category} |  ${current.label}`}
+  description={current.metaDescription}
+>
   <h1>{current.label}</h1>
 
   <Highlights items={current.highlights} />

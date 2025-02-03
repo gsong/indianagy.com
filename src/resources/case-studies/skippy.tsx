@@ -85,4 +85,6 @@ export default {
   ],
   sections,
   description,
+  metaDescription:
+    "Designed cohesive packaging and digital assets for the Salted Nut Roll x Skippy launch, earning recognition as an Innovative Product at the 2023 Sweets & Snacks Show.",
 } satisfies DetailMetadata;

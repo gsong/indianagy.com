@@ -81,5 +81,7 @@ export default {
   ],
   sections,
   description,
+  metaDescription:
+    "Revitalized brand identity with modern packaging and logo to reflect cleaner ingredients and support new flavors, enhancing market presence and appeal.",
   credit: "Credit: Myntz! on solid blue backgrounds @Julee Ho and team",
 } satisfies DetailMetadata;

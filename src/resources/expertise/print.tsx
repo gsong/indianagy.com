@@ -95,4 +95,6 @@ export default {
   ],
   sections,
   description,
+  metaDescription:
+    "Designed impactful print marketing materials, ensuring fresh, on-brand visuals. Collaborated with printers to maintain color accuracy and oversee quality production.",
 } satisfies DetailMetadata;

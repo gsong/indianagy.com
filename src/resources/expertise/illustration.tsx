@@ -50,4 +50,6 @@ export default {
   ],
   sections,
   description,
+  metaDescription:
+    "With a passion for exploration, I bring a fresh approach and creative ideas to each project with a mix of techniques and media.",
 } satisfies DetailMetadata;

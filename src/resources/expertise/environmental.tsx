@@ -45,4 +45,6 @@ export default {
   highlights: ["Marketing", "Strategy", "Branding", "Large Scale Design"],
   sections,
   description,
+  metaDescription:
+    "Designed impactful trade show booth graphics and elements, ensuring cohesive, on-brand messaging with engaging banners, counters, and swag to captivate audiences.",
 } satisfies DetailMetadata;

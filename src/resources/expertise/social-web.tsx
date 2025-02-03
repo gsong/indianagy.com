@@ -87,6 +87,8 @@ export default {
   ],
   sections,
   description,
+  metaDescription:
+    "Created on-brand digital content for social media and marketing, including web pages and custom graphics, enhancing storytelling and driving audience engagement.",
   credit:
     "Credit: art direction for Promise Confection website branding @Gertrude",
 } satisfies DetailMetadata;

@@ -27,5 +27,6 @@ export interface DetailMetadata {
   highlights: string[];
   sections: Section[];
   description: () => JSX.Element;
+  metaDescription: string;
   credit?: string;
 }
