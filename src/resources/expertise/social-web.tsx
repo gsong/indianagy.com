@@ -12,7 +12,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("social-1.png"),
-        alt: "Collage of sixteen images showing Choice tea packaging and marketing materials including product placement, flatlays, environmental consciousness and promotional quotes.",
+        alt: "Collage of 12 images showing Choice tea packaging and marketing materials including product placement, flatlays, environmental consciousness and promotional quotes.",
       },
       {
         src: getImage("social-2.png"),
@@ -23,12 +23,30 @@ export const sections: Section[] = [
   {
     label: "Video",
     videos: [
-      "holiday-shipping",
-      "skippy",
-      "trail-mix",
-      "cat",
-      "mark-your-calendar",
-      "cyber-monday",
+      {
+        src: "holiday-shipping",
+        alt: "Holiday shipping announcement video. December 15th is the last day to ship for the holidays.",
+      },
+      {
+        src: "skippy",
+        alt: "Animated promotional video for the new Skippy Salted Peanut Butter Nut Roll.",
+      },
+      {
+        src: "trail-mix",
+        alt: "Promotional video suggesting using Dilettante Chocolate Covered Blueberries to elevate trail mix.",
+      },
+      {
+        src: "cat",
+        alt: "Halloween themed animated video of a black cat made from Dilettante Chocolates.",
+      },
+      {
+        src: "mark-your-calendar",
+        alt: "Animated promotional video announcing upcoming sitewide savings. Text reads: Mark Your Calendar, sitewide savings ahead.",
+      },
+      {
+        src: "cyber-monday",
+        alt: "Cyber Monday promotional video, 20 percent off gift sets and 10 percent off sitewide.",
+      },
     ],
   },
   {
