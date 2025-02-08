@@ -25,7 +25,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("marketing-1.png"),
-        alt: "Collage of four images, each showcasing a Choice tea flavor with its ingredients, including Reishi Matcha, Easy Digest, English Breakfast and Mango Black teas.",
+        alt: "Collage of four images, each showcasing a Choice tea flavor with its ingredients, including Reishi Matcha, Easy Digest, English Breakfast, Mango Black, and Peach Green teas.",
       },
       {
         src: getImage("marketing-2.png"),

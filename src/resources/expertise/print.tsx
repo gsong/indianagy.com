@@ -12,7 +12,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("cookbook.jpg"),
-        alt: "Two images of Innovasian Cookbook, one closed on a textured surface with ingredients and one opened to a Sweet and Tangy Chicken Tostada Bites recipe.",
+        alt: "Two images of Innovasian cookbook, one closed on a textured surface with ingredients and one opened to a Sweet and Tangy Chicken Tostada Bites recipe.",
       },
     ],
   },
@@ -21,7 +21,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("invitations.jpg"),
-        alt: "Four wedding invitations for Uraina and David, with yellow and gray floral designs, including invite, program, rehearsal dinner and save the date cards.",
+        alt: "Wedding invitation set for Uraina and David, with yellow and gray floral designs, including invite, program, rehearsal dinner and save the date cards.",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("booklet.png"),
-        alt: "Three images of Choice tea's Modern Tea Party Kit, showing the box, scorecards and an inside page of the guide book.",
+        alt: "Three images of Choice's Modern Tea Party Kit, showing the box, scorecards and an inside page of the guide book.",
       },
     ],
   },
@@ -39,7 +39,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("business.jpg"),
-        alt: "Collage of Barefoot Yoga products, including stationery, a gift certificate, yoga blocks, and an ad with product photos and the Barefoot Yoga logo.",
+        alt: "Collage of Barefoot Yoga products, including stationery, a gift certificate, a yoga block sleeve, and an ad with product photos and the Barefoot Yoga logo.",
       },
     ],
   },
@@ -57,7 +57,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("catalogs.png"),
-        alt: "Two images of Sensational Foods materials, including the front of a catalog and a price list, and an inside spread showing a variety of Dilettante chocolate products.",
+        alt: "Two images of Seattle Gourmet Foods print materials, including the front of a catalog and a price list, and an inside spread showing a variety of Dilettante chocolate products.",
       },
     ],
   },

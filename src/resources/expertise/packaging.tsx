@@ -12,7 +12,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("choice-redesign-1.png"),
-        alt: "Collage of Choice teas including sketches of tea packaging, floral watercolor paintings, color swatches, brewing instructions, a sample tea box and a box of Mango Black tea.",
+        alt: "Collage of Choice teas including sketches of tea packaging, watercolor paintings and sketcches, color swatches, brewing instruction icons, a caddy of tea envelopes, and a box of Mango Black tea.",
       },
       {
         src: getImage("choice-redesign-2.jpg"),

@@ -23,7 +23,7 @@ export const sections: Section[] = [
       },
       {
         src: getImage("04.png"),
-        alt: "Two images of trade show displays. One shows Abba-Zaba banners and the other displays from Myntz, Dilettante, Sensational Gourmet Foods and Fungus Among Us.",
+        alt: "Two images of trade show displays. One shows Abba-Zaba banners and the other displays from Myntz, Dilettante, Seattle Gourmet Foods and Fungus Among Us.",
       },
     ],
   },

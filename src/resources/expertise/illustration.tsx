@@ -19,7 +19,7 @@ export const sections: Section[] = [
       },
       {
         src: getImage("03.png"),
-        alt: "Three images of Mishka M. Morris massage therapy branding; sketches of a swan, two business cards, and a sign for massage therapy services.",
+        alt: "Three images of Mishka M. Morris massage therapy branding; sketches of a swan, a business card, and a sign for massage therapy services.",
       },
       {
         src: getImage("04.png"),

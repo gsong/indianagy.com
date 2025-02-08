@@ -12,11 +12,11 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("social-1.png"),
-        alt: "Collage of 12 images showing Choice tea packaging and marketing materials including product placement, flatlays, environmental consciousness and promotional quotes.",
+        alt: "Collage of 12 social media posts showing Choice tea packaging and marketing materials including product placement, flatlays, environmental consciousness and promotional quotes.",
       },
       {
         src: getImage("social-2.png"),
-        alt: "Collage of 12 images depicting various water-related situations, from business and leisure to water damage, repairs, and billing concerns.",
+        alt: "Collage of 12 social media posts depicting various water-related situations, from business and leisure to water damage, repairs, and billing concerns.",
       },
     ],
   },
@@ -37,7 +37,7 @@ export const sections: Section[] = [
       },
       {
         src: "cat",
-        alt: "Halloween themed animated video of a black cat made from Dilettante Chocolates.",
+        alt: "Halloween themed animated video of a black cat overlay on chocolates from Dilettante Chocolates.",
       },
       {
         src: "mark-your-calendar",
@@ -54,7 +54,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("web-2.jpg"),
-        alt: "Three advertisements for the Sweets & Snacks Expo 2023, showing booths for Pearson's, Annabelle's and Dilettante and Myntz.",
+        alt: "Three email banner ads for the Sweets & Snacks Expo 2023, showing booths for Pearson's, Annabelle's and Dilettante and Myntz.",
       },
       {
         src: getImage("web-3.jpg"),
