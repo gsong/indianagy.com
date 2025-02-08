@@ -1,4 +1,4 @@
-import type { JSX } from "react";
+import type { ReactNode } from "react";
 
 interface Media {
   src: string;
@@ -8,12 +8,12 @@ interface Media {
 interface ImageSection {
   label?: string;
   images: Media[];
-  videos?: Media[];
+  videos?: never;
 }
 
 interface VideoSection {
   label?: string;
-  images?: Media[];
+  images?: never;
   videos: Media[];
 }
 
@@ -26,7 +26,7 @@ export interface DetailMetadata {
   imgSrc: string;
   highlights: string[];
   sections: Section[];
-  description: () => JSX.Element;
+  description: () => ReactNode;
   metaDescription: string;
   credit?: string;
 }
