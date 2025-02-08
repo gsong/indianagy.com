@@ -95,7 +95,7 @@ export default {
   sections,
   description,
   metaDescription:
-    "Specializing in packaging design, I craft cohesive branded systems, directing creatives to develop strategic, engaging concepts that resonate with consumers.",
+    "Specializing in packaging design, I craft cohesive branded systems and create strategic, engaging packaging that resonate with consumers.",
   credit:
     "Credits: Gourmet Teas watercolor illustrations @Karen Kurycki, Whole Leaf Organics tea field illustration @Maija Fiebig, Wellness Teas photo-illustrations @Joe Heiner, Dilettante chocolate photography @Sean Misa",
 } satisfies DetailMetadata;

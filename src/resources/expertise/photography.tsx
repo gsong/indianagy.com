@@ -63,7 +63,7 @@ export default {
   sections,
   description,
   metaDescription:
-    "Directed photo shoots with thoughtful placement, cohesive styling, and trend-driven visuals, creating a unified look that elevated brand identity and storytelling.",
+    "I plan and direct photo shoots with thoughtful placement, cohesive styling, and trend-driven visuals, creating a unified look that elevated brand identity and storytelling.",
   credit:
     "Photography Credits: Peppermint Truffle photos @Sean Misa, photorealistic tea cups @Joe Heiner, tea compositions @People People, all other chocolate photos @Nelson Miyazaki",
 } satisfies DetailMetadata;
