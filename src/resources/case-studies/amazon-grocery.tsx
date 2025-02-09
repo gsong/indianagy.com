@@ -12,7 +12,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("store-renders.png"),
-        alt: "Collage of Amazon Grocery stores including mockups and real photos of the entrance, aisles, shelves and machines.",
+        alt: "Collage of Amazon Grocery stores shows mockups and real photos of the entrance, aisles, shelves and machines.",
       },
     ],
   },
@@ -56,8 +56,8 @@ export const sections: Section[] = [
 
 const description = () => (
   <p>
-    As graphic designer, I created digital and print programmatic signage and
-    that highlighted the innovative character of Amazon's new store, while
+    As a graphic designer, I created digital and print programmatic signage
+    that highlighted the innovative character of Amazon's new store while
     adapting the brand's new expression into cohesive visual materials.
     Collaborating with the copywriter and art director, I ensured seamless
     integration of brand messaging across mediums, delivering an engaging and

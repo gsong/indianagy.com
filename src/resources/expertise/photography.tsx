@@ -41,10 +41,10 @@ export const sections: Section[] = [
 
 const description = () => (
   <p>
-    When I provide art direction for photo shoots, I focus on showcasing product
+    When I provide art direction for photo shoots, I focus on showcasing products
     and packaging through thoughtful placement, cohesive styling, and
     trend-driven visuals. By ensuring consistency, I partner with photographers
-    to create a unified look that elevated the brand's identity and tells a
+    to create a unified look that elevates the brand's identity and tells a
     strong visual story.
   </p>
 );
@@ -63,7 +63,7 @@ export default {
   sections,
   description,
   metaDescription:
-    "I plan and direct photo shoots with thoughtful placement, cohesive styling, and trend-driven visuals, creating a unified look that elevated brand identity and storytelling.",
+    "I plan and direct photo shoots with thoughtful placement, cohesive styling, and trend-driven visuals, creating a unified look that elevates brand identity and storytelling.",
   credit:
     "Photography Credits: Peppermint Truffle photos @Sean Misa, photorealistic tea cups @Joe Heiner, tea compositions @People People, all other chocolate photos @Nelson Miyazaki",
 } satisfies DetailMetadata;

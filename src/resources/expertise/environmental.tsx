@@ -11,7 +11,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("01.png"),
-        alt: "Collage of six photos from trade shows, featuring Choice tea booths, banners, products, and tea samples.",
+        alt: "Collage of six photos from trade shows features Choice tea booths, banners, products, and tea samples.",
       },
       {
         src: getImage("02.png"),
