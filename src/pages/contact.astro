@@ -1,8 +1,8 @@
 ---
+import { FileText } from "lucide-react";
+
 import { ContactForm } from "@/components/ContactForm";
 import Layout from "@/layouts/Layout.astro";
-
-import { FileText } from "lucide-react";
 ---
 
 <Layout>
@@ -20,8 +20,12 @@ import { FileText } from "lucide-react";
     <a
       href="https://pub-01eadd61e87f425eb8cdb0a64a96ed42.r2.dev/resume.pdf"
       class="flex gap-2"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Download India Nagy's resume (PDF)"
+      onclick="return fetch(this.href).then(r => r.ok ? true : alert('Resume temporarily unavailable'))"
     >
-      <FileText />
+      <FileText aria-hidden="true" />
       Download my resume.
     </a>
   </div>
