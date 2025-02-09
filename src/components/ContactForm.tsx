@@ -36,10 +36,10 @@ const formValidation = {
   botcheck: {},
 } satisfies Partial<Record<keyof FormData, object>>;
 
-type SubmitStatus =
-  | { status: "idle" }
-  | { status: "success"; message: string }
-  | { status: "error"; message: string };
+type SubmitStatus = {
+  status: "idle" | "success" | "error";
+  message?: string;
+};
 
 type FormData = {
   name: string;
@@ -79,7 +79,7 @@ export const ContactForm = () => {
 
   return (
     <div className="mt-10 max-w-[60ch]">
-      <form onSubmit={onSubmit} className="space-y-6">
+      <form onSubmit={onSubmit} className="space-y-6" aria-label="Contact form">
         <FormField label="Name" error={errors.name?.message}>
           <Input
             type="text"
