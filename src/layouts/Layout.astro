@@ -21,12 +21,19 @@ const { title, description } = Astro.props;
   <Head title={title} description={description} />
 
   <body>
+    <a href="#main" class="skip-link"> Skip to main content </a>
     <Header />
 
-    <main class="site-width mt-6 pt-[48px] sm:mt-8 md:pt-[132px]">
+    <main id="main" class="site-width mt-6 pt-[48px] sm:mt-8 md:pt-[132px]">
       <slot />
     </main>
 
     <Footer />
   </body>
 </html>
+
+<style>
+  .skip-link {
+    @apply sr-only z-[100] focus:not-sr-only focus:fixed focus:left-0 focus:top-0 focus:bg-white focus:p-2;
+  }
+</style>
