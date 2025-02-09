@@ -10,10 +10,10 @@ interface Props {
 const { label, href, imgSrc } = Astro.props;
 ---
 
-<li>
+<li role="article">
   <div class="order-1">
     <h3>
-      <a href={href}>{label}</a>
+      <a href={href} aria-label={`View ${label} case study`}>{label}</a>
     </h3>
   </div>
   <div>
@@ -25,6 +25,7 @@ const { label, href, imgSrc } = Astro.props;
       sizes="600px"
       formats={["avif", "webp"]}
       inferSize
+      loading="lazy"
     />
   </div>
 </li>

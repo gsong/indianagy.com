@@ -52,6 +52,7 @@ const { label, images, videos } = Astro.props;
           widths={[768, 1280, 1536, 2560]}
           sizes="(max-width: 768px) 768px, 1280px"
           formats={["avif", "webp"]}
+          loading="lazy"
           inferSize
         />
       ))}
