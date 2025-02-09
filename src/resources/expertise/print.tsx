@@ -12,7 +12,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("cookbook.jpg"),
-        alt: "Two images of Innovasian cookbook, one closed on a textured surface with ingredients and one opened to a Sweet and Tangy Chicken Tostada Bites recipe.",
+        alt: "Two images of Innovasian cookbook show one closed on a textured surface with ingredients and one opens to a Sweet and Tangy Chicken Tostada Bites recipe.",
       },
     ],
   },

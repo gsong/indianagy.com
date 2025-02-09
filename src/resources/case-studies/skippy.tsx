@@ -52,7 +52,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("store.png"),
-        alt: "Three images of Skippy's Peanut Butter Salted Nut Roll display boxes. The first two are stand alone boxes and the last two are placed in a store.",
+        alt: "Three images of Skippy's Peanut Butter Salted Nut Roll display boxes. The first two show stand alone boxes and the last two show placement in a store.",
       },
     ],
   },

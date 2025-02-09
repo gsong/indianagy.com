@@ -11,7 +11,7 @@ export const sections: Section[] = [
     images: [
       {
         src: getImage("01.png"),
-        alt: "Three illustrations. The first a watercolor of two women and a rabbit, the second is a digital drawing of a bird, and the third is a drawing of a moth, flowers, and a diamond.",
+        alt: "Three illustrations. The first shows a watercolor of two women and a rabbit, the second shows a digital drawing of a bird, and the third shows a drawing of a moth, flowers, and a diamond.",
       },
       {
         src: getImage("02.png"),
