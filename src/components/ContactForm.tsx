@@ -18,6 +18,7 @@ const formValidation = {
   name: {
     required: "Name is required",
     minLength: { value: 2, message: "Name must be at least 2 characters" },
+    maxLength: { value: 100, message: "Name too long" },
   },
   email: {
     required: "Email is required",
@@ -25,12 +26,20 @@ const formValidation = {
       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
       message: "Invalid email address",
     },
+    maxLength: { value: 254, message: "Email too long" },
   },
   message: {
     required: "Message is required",
     minLength: { value: 10, message: "Message must be at least 10 characters" },
+    maxLength: { value: 2000, message: "Message too long" },
   },
-} as const;
+  botcheck: {},
+} satisfies Partial<Record<keyof FormData, object>>;
+
+type SubmitStatus =
+  | { status: "idle" }
+  | { status: "success"; message: string }
+  | { status: "error"; message: string };
 
 type FormData = {
   name: string;
@@ -47,20 +56,22 @@ export const ContactForm = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormData>();
 
-  const [submitStatus, setSubmitStatus] = useState<{
-    success?: boolean;
-    message?: string;
-  }>({});
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>({
+    status: "idle",
+  });
 
   const { submit: submitToWeb3Forms } = useWeb3Forms({
     access_key: ACCESS_KEY,
     settings: FORM_SETTINGS,
     onSuccess: (msg) => {
-      setSubmitStatus({ success: true, message: msg });
+      setSubmitStatus({ status: "success", message: msg });
       reset();
+      setTimeout(() => {
+        setSubmitStatus({ status: "idle" });
+      }, 5000);
     },
     onError: (msg) => {
-      setSubmitStatus({ success: false, message: msg });
+      setSubmitStatus({ status: "error", message: msg });
     },
   });
 
@@ -73,6 +84,7 @@ export const ContactForm = () => {
           <Input
             type="text"
             autoComplete="name"
+            aria-invalid={!!errors.name}
             className={errors.name ? "border-red-500" : ""}
             {...register("name", formValidation.name)}
           />
@@ -82,6 +94,7 @@ export const ContactForm = () => {
           <Input
             type="email"
             autoComplete="email"
+            aria-invalid={!!errors.email}
             className={errors.email ? "border-red-500" : ""}
             {...register("email", formValidation.email)}
           />
@@ -90,21 +103,42 @@ export const ContactForm = () => {
         <FormField label="Message" error={errors.message?.message}>
           <Textarea
             rows={10}
+            aria-invalid={!!errors.message}
             className={errors.message ? "border-red-500" : ""}
             {...register("message", formValidation.message)}
           />
         </FormField>
 
-        <input type="checkbox" className="hidden" {...register("botcheck")} />
+        <input
+          type="checkbox"
+          className="hidden"
+          tabIndex={-1}
+          aria-hidden="true"
+          {...register("botcheck")}
+        />
 
-        <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? <LoadingSpinner /> : "Send Message"}
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          aria-disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <span className="flex items-center gap-2">
+              <LoadingSpinner />
+              Sending...
+            </span>
+          ) : (
+            "Send Message"
+          )}
         </Button>
       </form>
 
-      {submitStatus.message && (
+      {submitStatus.status !== "idle" && (
         <Alert
-          className={`mt-4 ${submitStatus.success ? "bg-green-50" : "bg-red-50"}`}
+          variant={
+            submitStatus.status === "success" ? "default" : "destructive"
+          }
+          className="mt-4"
         >
           <AlertDescription>{submitStatus.message}</AlertDescription>
         </Alert>
@@ -132,24 +166,28 @@ const FormField = ({ label, error, children }: FormFieldProps) => {
 };
 
 const LoadingSpinner = () => (
-  <svg
-    className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-  >
-    <circle
-      className="opacity-25"
-      cx="12"
-      cy="12"
-      r="10"
-      stroke="currentColor"
-      strokeWidth="4"
-    />
-    <path
-      className="opacity-75"
-      fill="currentColor"
-      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-    />
-  </svg>
+  <span role="status" aria-live="polite">
+    <svg
+      className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <circle
+        className="opacity-25"
+        cx="12"
+        cy="12"
+        r="10"
+        stroke="currentColor"
+        strokeWidth="4"
+      />
+      <path
+        className="opacity-75"
+        fill="currentColor"
+        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+      />
+    </svg>
+    <span className="sr-only">Submitting...</span>
+  </span>
 );
