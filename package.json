@@ -23,7 +23,7 @@
     "@astrojs/tailwind": "^6.0.0",
     "@fontsource-variable/work-sans": "^5.1.1",
     "@fontsource/alice": "^5.1.1",
-    "@hookform/resolvers": "^3.10.0",
+    "@hookform/resolvers": "^4.1.0",
     "@radix-ui/react-slot": "^1.1.2",
     "@sindresorhus/slugify": "^2.2.1",
     "@web3forms/react": "^1.1.3",
