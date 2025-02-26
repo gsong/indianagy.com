@@ -78,7 +78,7 @@ export const ContactForm = () => {
   const onSubmit = handleSubmit(submitToWeb3Forms);
 
   return (
-    <div className="mt-10 max-w-[60ch]">
+    <div className="mb-12 mt-10 max-w-[60ch]">
       <form onSubmit={onSubmit} className="space-y-6" aria-label="Contact form">
         <FormField label="Name" error={errors.name?.message}>
           <Input
