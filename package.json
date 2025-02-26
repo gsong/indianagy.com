@@ -2,7 +2,7 @@
   "name": "indianagy-dot-com",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.5.0",
   "pnpm": {
     "overrides": {
       "tailwindcss": "<4"
@@ -13,7 +13,7 @@
     "build": "astro build",
     "deploy": "netlify build && netlify deploy --prod",
     "dev": "astro dev",
-    "postinstall": "if command -v jq &> /dev/null; then pnpm_version=$(pnpm --version) && jq --arg version \"$pnpm_version\" '.packageManager = \"pnpm@\" + $version' package.json > tmp.json && mv tmp.json package.json; else echo 'jq not found, skipping packageManager update'; fi",
+    "postinstall": "is-ci || mise postinstall",
     "preview": "netlify serve"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
+    "is-ci": "^4.1.0",
     "netlify-cli": "^18.0.4",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
