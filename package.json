@@ -41,7 +41,7 @@
   "devDependencies": {
     "@types/node": "^22.13.1",
     "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
+    "@types/react-dom": "^19.0.4",
     "is-ci": "^4.1.0",
     "netlify-cli": "^18.0.4",
     "prettier": "^3.4.2",
