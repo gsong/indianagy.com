@@ -2,7 +2,7 @@
   "name": "indianagy-dot-com",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.5.1",
+  "packageManager": "pnpm@10.5.2",
   "pnpm": {
     "overrides": {
       "tailwindcss": "<4"
@@ -18,16 +18,15 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^4.2.0",
+    "@astrojs/react": "^4.2.1",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^6.0.0",
     "@fontsource-variable/work-sans": "^5.1.1",
     "@fontsource/alice": "^5.1.1",
-    "@hookform/resolvers": "^4.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@sindresorhus/slugify": "^2.2.1",
     "@web3forms/react": "^1.1.3",
-    "astro": "^5.3.1",
+    "astro": "^5.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.476.0",
@@ -48,7 +47,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-astro-organize-imports": "^0.4.11",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "sharp": "^0.33.5",
     "typescript": "^5.7.3"
   }
 }
