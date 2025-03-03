@@ -24,8 +24,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(astro@5.4.0(@netlify/blobs@8.1.1)(@types/node@22.13.5)(jiti@2.4.2)(rollup@4.34.8)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@3.4.17(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3)))(ts-node@10.9.2(@types/node@22.13.5)(typescript@5.7.3))
       '@fontsource-variable/work-sans':
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^5.2.5
+        version: 5.2.5
       '@fontsource/alice':
         specifier: ^5.1.1
         version: 5.1.1
@@ -766,8 +766,8 @@ packages:
   '@fastify/static@7.0.4':
     resolution: {integrity: sha512-p2uKtaf8BMOZWLs6wu+Ihg7bWNBdjNgCwDza4MJtTqg+5ovKmcbgbR9Xs5/smZ1YISfzKOCNYmZV8LaCj+eJ1Q==}
 
-  '@fontsource-variable/work-sans@5.1.1':
-    resolution: {integrity: sha512-9p3A0ek+Lcr8Xal7sWlNHY5rTyG3FJIwdZ+Rm59dxULbbrZEbtojiQzcamTC/s76cttmGiT+LpNpGM4VGqFrhg==}
+  '@fontsource-variable/work-sans@5.2.5':
+    resolution: {integrity: sha512-zvoUtTMsk0c0Iygz8DAWrSdVgQvcIMxRtLS7a1H3tFuUHIOAN0NHRrwONyeebDuzXrgAUmSrDOAxOz5D+pn6nw==}
 
   '@fontsource/alice@5.1.1':
     resolution: {integrity: sha512-w+Coly9qWTWVjrThddzwjnUyU3f6TfZebPxuK0AjplMv5goLArhSWZ+foaPSwVCRuoZsIlPe6emm7mRp3bH8FA==}
@@ -6531,7 +6531,7 @@ snapshots:
       fastq: 1.19.1
       glob: 10.4.5
 
-  '@fontsource-variable/work-sans@5.1.1': {}
+  '@fontsource-variable/work-sans@5.2.5': {}
 
   '@fontsource/alice@5.1.1': {}
 
