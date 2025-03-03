@@ -27,8 +27,8 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1
       '@fontsource/alice':
-        specifier: ^5.1.1
-        version: 5.1.1
+        specifier: ^5.2.5
+        version: 5.2.5
       '@radix-ui/react-slot':
         specifier: ^1.1.2
         version: 1.1.2(@types/react@19.0.10)(react@19.0.0)
@@ -769,8 +769,8 @@ packages:
   '@fontsource-variable/work-sans@5.1.1':
     resolution: {integrity: sha512-9p3A0ek+Lcr8Xal7sWlNHY5rTyG3FJIwdZ+Rm59dxULbbrZEbtojiQzcamTC/s76cttmGiT+LpNpGM4VGqFrhg==}
 
-  '@fontsource/alice@5.1.1':
-    resolution: {integrity: sha512-w+Coly9qWTWVjrThddzwjnUyU3f6TfZebPxuK0AjplMv5goLArhSWZ+foaPSwVCRuoZsIlPe6emm7mRp3bH8FA==}
+  '@fontsource/alice@5.2.5':
+    resolution: {integrity: sha512-WZhYgQDWb7cpSSQ3Tz1HVrNOL0peYpm4b0wamP/gtIQ2QagrK6V91y66DAvKQEXGVM0PeIfrGqXv2Ue4fsmeHQ==}
 
   '@humanwhocodes/momoa@2.0.4':
     resolution: {integrity: sha512-RE815I4arJFtt+FVeU1Tgp9/Xvecacji8w/V6XtXsWWH/wz/eNkNbhb+ny/+PlVZjV0rxQpRSQKNKE3lcktHEA==}
@@ -6533,7 +6533,7 @@ snapshots:
 
   '@fontsource-variable/work-sans@5.1.1': {}
 
-  '@fontsource/alice@5.1.1': {}
+  '@fontsource/alice@5.2.5': {}
 
   '@humanwhocodes/momoa@2.0.4': {}
 
