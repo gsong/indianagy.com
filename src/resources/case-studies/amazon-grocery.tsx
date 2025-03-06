@@ -56,12 +56,12 @@ export const sections: Section[] = [
 
 const description = () => (
   <p>
-    As a graphic designer, I created digital and print programmatic signage
-    that highlighted the innovative character of Amazon's new store while
-    adapting the brand's new expression into cohesive visual materials.
-    Collaborating with the copywriter and art director, I ensured seamless
-    integration of brand messaging across mediums, delivering an engaging and
-    impactful customer experience.
+    As a graphic designer, I created digital and print programmatic signage that
+    highlighted the innovative character of Amazon's new store while adapting
+    the brand's new expression into cohesive visual materials. Collaborating
+    with the copywriter and art director, I ensured seamless integration of
+    brand messaging across mediums, delivering an engaging and impactful
+    customer experience.
   </p>
 );
 

@@ -41,8 +41,8 @@ export const sections: Section[] = [
 
 const description = () => (
   <p>
-    When I provide art direction for photo shoots, I focus on showcasing products
-    and packaging through thoughtful placement, cohesive styling, and
+    When I provide art direction for photo shoots, I focus on showcasing
+    products and packaging through thoughtful placement, cohesive styling, and
     trend-driven visuals. By ensuring consistency, I partner with photographers
     to create a unified look that elevates the brand's identity and tells a
     strong visual story.
