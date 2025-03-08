@@ -33,7 +33,9 @@ const { title, description } = Astro.props;
 </html>
 
 <style>
+  @reference "@/styles/global.css";
+
   .skip-link {
-    @apply sr-only z-[100] focus:not-sr-only focus:fixed focus:left-0 focus:top-0 focus:bg-white focus:p-2;
+    @apply sr-only z-100 focus:not-sr-only focus:fixed focus:top-0 focus:left-0 focus:bg-white focus:p-2;
   }
 </style>
