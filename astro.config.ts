@@ -19,9 +19,9 @@ export default defineConfig({
 
   image: { remotePatterns: [{ protocol: "https", hostname: "*.r2.dev" }] },
 
-  server: { host: true },
+  server: { host: true, allowedHosts: true },
+
   vite: {
-    server: { allowedHosts: ["shadow.local"] },
     plugins: [tailwindcss()],
   },
 });

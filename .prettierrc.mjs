@@ -12,5 +12,11 @@ export default {
         parser: "astro",
       },
     },
+    {
+      files: "*.jsonc",
+      options: {
+        parser: "json",
+      },
+    },
   ],
 };

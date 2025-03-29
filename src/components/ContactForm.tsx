@@ -1,5 +1,5 @@
-import { useState } from "react";
 import useWeb3Forms from "@web3forms/react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -156,6 +156,7 @@ type FormFieldProps = {
 const FormField = ({ label, error, children }: FormFieldProps) => {
   return (
     <div className="mb-4">
+      {/* biome-ignore lint/a11y/noLabelWithoutControl: implicit association */}
       <label className="mb-2 block">
         <div className="mb-1">{label}</div>
         {children}
@@ -166,7 +167,7 @@ const FormField = ({ label, error, children }: FormFieldProps) => {
 };
 
 const LoadingSpinner = () => (
-  <span role="status" aria-live="polite">
+  <output aria-live="polite">
     <svg
       className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
       xmlns="http://www.w3.org/2000/svg"
@@ -189,5 +190,5 @@ const LoadingSpinner = () => (
       />
     </svg>
     <span className="sr-only">Submitting...</span>
-  </span>
+  </output>
 );
