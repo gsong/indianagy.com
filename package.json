@@ -2,7 +2,7 @@
   "name": "indianagy-dot-com",
   "type": "module",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@10.8.1",
   "scripts": {
     "prebuild": "if [ \"$CLEAR_CACHE\" = \"true\" ]; then rm -rf node_modules/.astro; fi",
     "build": "astro build",
@@ -16,35 +16,36 @@
   "dependencies": {
     "@fontsource-variable/work-sans": "^5.2.5",
     "@fontsource/alice": "^5.2.5",
-    "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-slot": "^1.2.0",
     "@web3forms/react": "^1.1.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.485.0",
+    "lucide-react": "^0.501.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-hook-form": "^7.55.0",
-    "tailwind-merge": "^3.0.2"
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/react": "^4.2.2",
+    "@astrojs/react": "^4.2.4",
     "@astrojs/sitemap": "^3.3.0",
     "@biomejs/biome": "^1.9.4",
     "@sindresorhus/slugify": "^2.2.1",
-    "@tailwindcss/vite": "^4.0.17",
-    "@types/node": "^22.13.14",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "astro": "^5.5.5",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.7.4",
     "is-ci": "^4.1.0",
-    "netlify-cli": "^19.1.4",
+    "netlify-cli": "^20.0.2",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-astro-organize-imports": "^0.4.11",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.17",
+    "sharp": "^0.34.1",
+    "tailwindcss": "^4.1.4",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
