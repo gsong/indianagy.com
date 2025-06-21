@@ -43,11 +43,9 @@
   --color-chart-4: hsl(var(--chart-4));
   --color-chart-5: hsl(var(--chart-5));
 
-  --font-sans:
-    Work Sans Variable, ui-sans-serif, system-ui, sans-serif,
+  --font-sans: Work Sans Variable, ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-serif:
-    Alice, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+  --font-serif: Alice, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 

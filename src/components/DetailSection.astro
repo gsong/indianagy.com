@@ -1,7 +1,6 @@
 ---
-import type { Section } from "@/resources/types";
-
 import { Picture } from "astro:assets";
+import type { Section } from "@/resources/types";
 
 const getVideoUrl = (src: string, ext: string) =>
   `${import.meta.env.BASE_URL}videos/${src}.${ext}`;

@@ -10,6 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 async function main() {
   try {
     // Get PNPM version using mise
+    // biome-ignore lint/suspicious/noTemplateCurlyInString: HOME is a shell variable, not JS template
     const pnpmVersion = execSync('mise -C "${HOME}" x pnpm -- pnpm -v')
       .toString()
       .trim();
@@ -26,7 +27,7 @@ async function main() {
       `${JSON.stringify(packageJson, undefined, 2)}\n`,
     );
 
-    console.log("Updated packageManager in package.json");
+    console.info("Updated packageManager in package.json");
   } catch (error) {
     console.error("Error updating package.json:", error);
     process.exit(1);
