@@ -12,7 +12,8 @@ const { title, description } = Astro.props;
 
 const SITE = import.meta.env.SITE;
 const BASE_URL = import.meta.env.BASE_URL;
-const SITE_NAME = "India Nagy’s Portfolio";
+const GA4_MEASUREMENT_ID = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
+const SITE_NAME = "India Nagy's Portfolio";
 const TITLE = title ?? "India Nagy | Art Director & Graphic Designer";
 const DESCRIPTION =
   description ??
@@ -69,4 +70,38 @@ const IMAGE_URL =
   <meta name="twitter:image" content={IMAGE_URL} />
 
   <ClientRouter />
+
+  {
+    GA4_MEASUREMENT_ID && (
+      <>
+        <!-- Google Analytics -->
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`}
+        />
+        <script is:inline>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+        </script>
+        <script is:inline data-ga-id={GA4_MEASUREMENT_ID}>
+          // Handle View Transitions with GA4
+          document.addEventListener(
+            "astro:page-load",
+            () => {
+              const gaId = document
+                .querySelector("[data-ga-id]")
+                ?.getAttribute("data-ga-id");
+              if (gaId) {
+                gtag("js", new Date());
+                gtag("config", gaId);
+              }
+            },
+            { once: false }
+          );
+        </script>
+      </>
+    )
+  }
 </head>
