@@ -31,7 +31,17 @@ const currentYear = new Date().getFullYear();
       target="_blank"
       class="flex w-fit items-center gap-2"
       rel="noopener noreferrer"
-      onclick="return fetch(this.href).then(r => r.ok ? true : alert('Resume temporarily unavailable'))"
+      onclick="
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'file_download', {
+            file_name: 'resume.pdf',
+            file_extension: 'pdf',
+            link_url: this.href,
+            link_text: 'Download my resume'
+          });
+        }
+        return fetch(this.href).then(r => r.ok ? true : alert('Resume temporarily unavailable'));
+      "
     >
       <FileText size="18" aria-hidden="true" />
       Download my resume
