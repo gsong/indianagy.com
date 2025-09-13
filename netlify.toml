@@ -1,3 +1,14 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+  environment = { NODE_VERSION = "22" }
+
+[build.environment]
+  NETLIFY_IMAGE = "focal"
+
+[context.production]
+  environment = { NETLIFY_IMAGE = "noble" }
+
 [dev]
 host = "0.0.0.0"
 port = 4321
