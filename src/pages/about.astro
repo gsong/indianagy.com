@@ -2,18 +2,21 @@
 import { Picture } from "astro:assets";
 
 import Layout from "@/layouts/Layout.astro";
+import { CDN_RESOURCES } from "@/lib/constants";
 ---
 
 <Layout>
   <h1 class="sr-only">About India Nagy</h1>
 
   <Picture
-    src="https://pub-01eadd61e87f425eb8cdb0a64a96ed42.r2.dev/about.jpg"
+    src={CDN_RESOURCES.ABOUT_IMAGE}
     alt="India basking in the sun posed in front a bright, colorful mural of a beach scene in Mexico."
     class="w-full max-w-[60ch] rounded-3xl"
-    widths={[600, 1200]}
-    sizes="600px"
+    widths={[800, 1600]}
+    sizes="(max-width: 768px) 100vw, 600px"
     formats={["avif", "webp"]}
+    fallbackFormat="jpg"
+    quality={85}
     loading="lazy"
     inferSize
   />

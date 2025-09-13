@@ -11,6 +11,4 @@ export const slugify = (label: string) => {
   };
 };
 
-export const initGetImage = createUrlGenerator(
-  "https://pub-37a146c31556466fa0f3dde87899ea27.r2.dev",
-);
+export const initGetImage = createUrlGenerator("expertise");

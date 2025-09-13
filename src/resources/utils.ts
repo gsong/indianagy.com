@@ -1,14 +1,15 @@
+import { R2_CDN_URL } from "../lib/constants";
 import type { DetailMetadata } from "./types";
 
-export const createUrlGenerator = (baseUrl: string) => {
-  const cleanBaseUrl = baseUrl.replace(/\/+$/, ""); // Remove trailing slashes
+export const createUrlGenerator = (firstPart: string) => {
+  const cleanFirstPart = firstPart.replace(/^\/+|\/+$/, ""); // Remove surrounding slashes
 
-  return (firstPart: string) => {
-    const cleanFirstPart = firstPart.replace(/^\/+|\/+$/, ""); // Remove surrounding slashes
+  return (secondPart: string) => {
+    const cleanSecondPart = secondPart.replace(/^\/+|\/+$/, "");
 
-    return (secondPart: string): string => {
-      const cleanSecondPart = secondPart.replace(/^\/+|\/+$/, "");
-      return `${cleanBaseUrl}/${cleanFirstPart}/${cleanSecondPart}`;
+    return (thirdPart: string): string => {
+      const cleanThirdPart = thirdPart.replace(/^\/+|\/+$/, "");
+      return `${R2_CDN_URL}/${cleanFirstPart}/${cleanSecondPart}/${cleanThirdPart}`;
     };
   };
 };

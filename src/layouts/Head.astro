@@ -2,6 +2,7 @@
 import { ClientRouter } from "astro:transitions";
 import alice from "@fontsource/alice/files/alice-latin-400-normal.woff2?url";
 import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2?url";
+import { CDN_RESOURCES } from "../lib/constants";
 
 interface Props {
   title?: string;
@@ -18,8 +19,7 @@ const TITLE = title ?? "India Nagy | Art Director & Graphic Designer";
 const DESCRIPTION =
   description ??
   "Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands. Passionate about storytelling, collaboration, and turning curiosity into impactful design solutions.";
-const IMAGE_URL =
-  "https://pub-01eadd61e87f425eb8cdb0a64a96ed42.r2.dev/social-card.jpg";
+const IMAGE_URL = CDN_RESOURCES.SOCIAL_CARD;
 ---
 
 <head>

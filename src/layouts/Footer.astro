@@ -1,5 +1,6 @@
 ---
 import { FileText, Mail, Phone } from "lucide-react";
+import { CDN_RESOURCES } from "../lib/constants";
 
 const currentYear = new Date().getFullYear();
 ---
@@ -26,7 +27,7 @@ const currentYear = new Date().getFullYear();
     </a>
 
     <a
-      href="https://pub-01eadd61e87f425eb8cdb0a64a96ed42.r2.dev/resume.pdf"
+      href={CDN_RESOURCES.RESUME_PDF}
       aria-label="Download India Nagy's resume (PDF)"
       target="_blank"
       class="flex w-fit items-center gap-2"

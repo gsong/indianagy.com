@@ -11,6 +11,4 @@ export const slugify = (label: string) => {
   };
 };
 
-export const initGetImage = createUrlGenerator(
-  "https://pub-2b21573a122e4116b29744d5dfaf96d6.r2.dev",
-);
+export const initGetImage = createUrlGenerator("case-studies");
