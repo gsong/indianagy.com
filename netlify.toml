@@ -1,3 +1,13 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+  environment = { NODE_VERSION = "22" }
+
+[[plugins]]
+  package = "netlify-plugin-cache"
+  [plugins.inputs]
+    paths = ["node_modules/.astro"]
+
 [dev]
 host = "0.0.0.0"
 port = 4321

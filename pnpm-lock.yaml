@@ -78,6 +78,9 @@ importers:
       netlify-cli:
         specifier: ^23.5.1
         version: 23.5.1(@types/node@24.3.3)(picomatch@4.0.3)(rollup@4.50.1)
+      netlify-plugin-cache:
+        specifier: ^1.0.3
+        version: 1.0.3
       npm-run-all2:
         specifier: ^8.0.4
         version: 8.0.4
@@ -3860,6 +3863,9 @@ packages:
     resolution: {integrity: sha512-CeWygxSDEoBMvVz4osfBI0euADqX7rDL0MTM9HW/TZPS54IrubmnfhSdhFRaONB4JtfRuNLzAV0wra5xYSWNTg==}
     engines: {node: '>=20.12.2'}
     hasBin: true
+
+  netlify-plugin-cache@1.0.3:
+    resolution: {integrity: sha512-CTOwNWrTOP59T6y6unxQNnp1WX702v2R/faR5peSH94ebrYfyY4zT5IsRcIiHKq57jXeyCrhy0GLuTN8ktzuQg==}
 
   netlify-redirector@0.5.0:
     resolution: {integrity: sha512-4zdzIP+6muqPCuE8avnrgDJ6KW/2+UpHTRcTbMXCIRxiRmyrX+IZ4WSJGZdHPWF3WmQpXpy603XxecZ9iygN7w==}
@@ -10001,6 +10007,8 @@ snapshots:
       - supports-color
       - uploadthing
       - utf-8-validate
+
+  netlify-plugin-cache@1.0.3: {}
 
   netlify-redirector@0.5.0: {}
 
