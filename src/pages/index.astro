@@ -8,23 +8,8 @@ import { expertise } from "@/resources/expertise";
 <Layout>
   <h1 class="sr-only">India Nagy's Portfolio</h1>
 
-  <aside class="mb-10 md:flex md:items-start md:gap-x-20 lg:gap-x-40">
-    <p class="mb-2 text-xl font-semibold md:text-2xl">
-      Art Director & Graphic Designer
-    </p>
-    <nav aria-label="secondary navigation" class="md:min-w-[28rem]">
-      <ul class="grid auto-cols-min grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-        {
-          expertise.map(({ label, href }) => (
-            <li>
-              <a href={href} class="home-nav">
-                {label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
+  <aside class="mt-5 mb-10 text-xl font-semibold md:text-2xl">
+    Art Director & Graphic Designer
   </aside>
 
   <section class="mb-10">
