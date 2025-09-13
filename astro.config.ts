@@ -15,7 +15,12 @@ export default defineConfig({
     }),
   ],
 
-  image: { remotePatterns: [{ protocol: "https", hostname: "*.r2.dev" }] },
+  image: {
+    remotePatterns: [
+      { protocol: "https", hostname: "*.r2.dev" },
+      { protocol: "https", hostname: "assets.indianagy.com" },
+    ],
+  },
 
   server: { host: true, allowedHosts: true },
 

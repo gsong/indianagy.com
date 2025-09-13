@@ -21,11 +21,13 @@ const { label, href, imgSrc } = Astro.props;
       src={imgSrc}
       alt={label}
       class="rounded-3xl"
-      widths={[600, 1200]}
-      sizes="600px"
+      widths={[800, 1600]}
+      sizes="(max-width: 768px) 100vw, 600px"
       formats={["avif", "webp"]}
-      inferSize
+      fallbackFormat="jpg"
+      quality={75}
       loading="lazy"
+      inferSize
     />
   </div>
 </li>
