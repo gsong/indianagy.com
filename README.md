@@ -8,6 +8,12 @@ This repository contains the source code for India Nagy's portfolio website, bui
 
 The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com).
 
+## Domain Infrastructure
+
+- **Domain Registration:** Namecheap
+- **DNS Management:** Cloudflare
+- **Email Forwarding:** ImprovMX (forwards to Gmail)
+
 ## Project Structure
 
 - `components/`: Reusable Astro and React components, including UI elements and content display components.
@@ -36,6 +42,7 @@ Other images are in `public/` folder.
 - **Tailwind CSS:** Tailwind CSS is used for styling, enabling rapid development and a consistent visual language.
 - **R2 Storage:** R2 is used to host most of the images, separating the static assets from the codebase.
 - **Data-Driven Pages:** Case studies and expertise pages are generated dynamically using data from the `resources/` directory.
+- **Form Submission:** Contact form submissions are handled by Web3Forms.
 - **Sitemap:** The `@astrojs/sitemap` integration generates a sitemap for SEO.
 
 ## Available `pnpm` Commands
