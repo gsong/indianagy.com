@@ -31,8 +31,17 @@
    ```
 
 5. Push the tag to the remote repository
+
    ```bash
    git push origin 2025/06/13-a
    ```
+
+6. Run the deployment script to build and deploy to Netlify
+
+   ```bash
+   pnpm run deploy
+   ```
+
+   This command runs `netlify build && netlify deploy --prod`, which builds the site and deploys to production at https://indianagy.com
 
 Use these git commands to accomplish the deployment process. Always check for existing tags on the same date to determine the correct letter suffix.
