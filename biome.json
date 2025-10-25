@@ -43,15 +43,5 @@
       "tailwindDirectives": true
     }
   },
-  "overrides": [
-    {
-      "includes": ["**/*.css"],
-      "linter": {
-        "enabled": false
-      },
-      "formatter": {
-        "enabled": false
-      }
-    }
-  ]
+  "overrides": []
 }

@@ -11,12 +11,10 @@
     "postinstall": "is-ci || mise postinstall",
     "prepreview": "pnpm run build",
     "preview": "astro preview",
-    "fix": "run-s fix:astro fix:biome fix:css fix:prettier",
+    "fix": "run-s fix:astro fix:biome fix:prettier",
     "fix:astro": "astro check",
     "fix:biome": "biome check --fix",
-    "fix:css": "stylelint \"src/**/*.css\" --fix",
-    "fix:prettier": "prettier --write .",
-    "lint:css": "stylelint \"src/**/*.css\""
+    "fix:prettier": "prettier --write ."
   },
   "dependencies": {
     "@fontsource-variable/work-sans": "^5.2.8",
@@ -48,9 +46,6 @@
     "prettier": "^3.6.2",
     "prettier-plugin-tailwindcss": "^0.7.1",
     "sharp": "^0.34.4",
-    "stylelint": "^16.25.0",
-    "stylelint-config-standard": "^39.0.1",
-    "stylelint-config-tailwindcss": "^1.0.0",
     "tailwindcss": "^4.1.14",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.9.3"
