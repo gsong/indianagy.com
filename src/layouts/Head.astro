@@ -106,4 +106,24 @@ const IMAGE_URL = CDN_RESOURCES.SOCIAL_CARD;
       </>
     )
   }
+
+  <!-- Structured Data (JSON-LD) -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Indiana Nagy",
+    "jobTitle": "Art Director & Graphic Designer",
+    "url": SITE,
+    "description": "Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands.",
+    "knowsAbout": [
+      "Graphic Design",
+      "Art Direction",
+      "Illustration",
+      "Photography",
+      "Packaging Design",
+      "Social Media Design",
+      "Environmental Graphics",
+      "Print Design"
+    ]
+  })} />
 </head>

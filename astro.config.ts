@@ -17,6 +17,13 @@ export default defineConfig({
 
   image: {
     remotePatterns: [{ protocol: "https", hostname: "assets.indianagy.com" }],
+    layout: "constrained",
+    responsiveStyles: true, // Enabled - using wrapper-based styling to avoid cascade layer conflicts
+    objectFit: "cover",
+  },
+
+  experimental: {
+    contentIntellisense: true,
   },
 
   server: { host: true, allowedHosts: true },

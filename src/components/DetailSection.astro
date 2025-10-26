@@ -44,7 +44,6 @@ const { label, images, videos } = Astro.props;
         <Picture
           src={src}
           alt={alt}
-          widths={[800, 1600]}
           sizes="(max-width: 1280px) 100vw, 1280px"
           formats={["avif", "webp"]}
           fallbackFormat="jpg"

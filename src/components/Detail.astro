@@ -21,6 +21,20 @@ const { current, previous, next } = getDetailNavigation(details, label);
   title={`India Nagy | ${category} |  ${current.label}`}
   description={current.metaDescription}
 >
+  <!-- Structured Data (JSON-LD) for Case Study/Expertise -->
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": current.label,
+    "author": {
+      "@type": "Person",
+      "name": "Indiana Nagy"
+    },
+    "description": current.metaDescription,
+    "image": current.imgSrc,
+    "url": Astro.url.href
+  })} />
+
   <h1>{current.label}</h1>
 
   <Highlights items={current.highlights} />

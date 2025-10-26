@@ -17,12 +17,10 @@ const { label, href, imgSrc } = Astro.props;
       <a href={href} aria-label={`View ${label} case study`}>{label}</a>
     </h3>
   </div>
-  <div>
+  <div class="overflow-hidden rounded-3xl">
     <Picture
       src={imgSrc}
       alt={label}
-      class="rounded-3xl"
-      widths={[800, 1600]}
       sizes="(max-width: 640px) 100vw, 50vw"
       formats={["avif", "webp"]}
       fallbackFormat="jpg"
