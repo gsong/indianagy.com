@@ -1,6 +1,6 @@
 import _slugify from "@sindresorhus/slugify";
 
-import { createUrlGenerator } from "../utils";
+import { r2Url } from "../../lib/r2";
 
 export const slugify = (label: string) => {
   const slug = _slugify(label);
@@ -11,4 +11,5 @@ export const slugify = (label: string) => {
   };
 };
 
-export const initGetImage = createUrlGenerator("expertise");
+export const initGetImage = (folder: string) => (file: string) =>
+  r2Url("expertise", folder, file);
