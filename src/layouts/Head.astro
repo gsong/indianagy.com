@@ -1,26 +1,40 @@
 ---
 
+import { getImage } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import alice from "@fontsource/alice/files/alice-latin-400-normal.woff2?url";
 import workSans from "@fontsource-variable/work-sans/files/work-sans-latin-wght-normal.woff2?url";
-import { CDN_RESOURCES } from "../lib/r2";
+import { pageMetadata } from "@/lib/page-metadata";
+import type { Detail } from "@/resources/detail-kind";
 
 interface Props {
-  title?: string;
-  description?: string;
+  detail?: Detail;
 }
-
-const { title, description } = Astro.props;
 
 const SITE = import.meta.env.SITE;
 const BASE_URL = import.meta.env.BASE_URL;
 const GA4_MEASUREMENT_ID = import.meta.env.PUBLIC_GA4_MEASUREMENT_ID;
 const SITE_NAME = "India Nagy's Portfolio";
-const TITLE = title ?? "India Nagy | Art Director & Graphic Designer";
-const DESCRIPTION =
-  description ??
-  "Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands. Passionate about storytelling, collaboration, and turning curiosity into impactful design solutions.";
-const IMAGE_URL = CDN_RESOURCES.SOCIAL_CARD;
+
+const { title, description, ogImage, jsonLd } = pageMetadata({
+  site: SITE,
+  pageUrl: Astro.url.href,
+  detail: Astro.props.detail,
+});
+const IMAGE_URL = ogImage.crop
+  ? new URL(
+      (
+        await getImage({
+          src: ogImage.src,
+          width: ogImage.width,
+          height: ogImage.height,
+          fit: "cover",
+          format: "jpg",
+        })
+      ).src,
+      SITE,
+    ).href
+  : ogImage.src;
 ---
 
 <head>
@@ -49,24 +63,24 @@ const IMAGE_URL = CDN_RESOURCES.SOCIAL_CARD;
 
   <link rel="sitemap" href="/sitemap-index.xml" />
 
-  <title>{TITLE}</title>
-  <meta name="description" content={DESCRIPTION} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
   <meta name="generator" content={Astro.generator} />
 
   <!-- Open Graph Tags -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content={SITE_NAME} />
-  <meta property="og:title" content={TITLE} />
-  <meta property="og:description" content={DESCRIPTION} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:url" content={SITE} />
   <meta property="og:image" content={IMAGE_URL} />
-  <meta property="og:image:width" content="1280" />
-  <meta property="og:image:height" content="672" />
+  <meta property="og:image:width" content={String(ogImage.width)} />
+  <meta property="og:image:height" content={String(ogImage.height)} />
 
   <!-- Twitter Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={TITLE} />
-  <meta name="twitter:description" content={DESCRIPTION} />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:url" content={SITE} />
   <meta name="twitter:image" content={IMAGE_URL} />
 
@@ -108,22 +122,9 @@ const IMAGE_URL = CDN_RESOURCES.SOCIAL_CARD;
   }
 
   <!-- Structured Data (JSON-LD) -->
-  <script is:inline type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Indiana Nagy",
-    "jobTitle": "Art Director & Graphic Designer",
-    "url": SITE,
-    "description": "Creative and versatile Art Director and Graphic Designer with extensive experience shaping iconic brands.",
-    "knowsAbout": [
-      "Graphic Design",
-      "Art Direction",
-      "Illustration",
-      "Photography",
-      "Packaging Design",
-      "Social Media Design",
-      "Environmental Graphics",
-      "Print Design"
-    ]
-  })} />
+  {
+    jsonLd.map((data) => (
+      <script is:inline type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))
+  }
 </head>
