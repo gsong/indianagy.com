@@ -14,17 +14,6 @@ export const createUrlGenerator = (firstPart: string) => {
   };
 };
 
-export const initGetImage = <T>(
-  images: Record<string, () => T>,
-): ((filename: string) => T | undefined) => {
-  return (filename: string) => {
-    const matchingKey = Object.keys(images).find((key) =>
-      key.endsWith(filename),
-    );
-    return matchingKey ? images[matchingKey]() : undefined;
-  };
-};
-
 interface NavigationResult {
   current: DetailMetadata;
   previous: DetailMetadata | null;
