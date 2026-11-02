@@ -1,6 +1,16 @@
 ---
 
 const BASE_URL = import.meta.env.BASE_URL;
+
+const path = Astro.url.pathname.replace(/\/+$/, "");
+const isActive = (href: string, prefixes: string[] = []) => {
+  const target = href.replace(/\/+$/, "");
+  return (
+    path === target ||
+    prefixes.some((prefix) => path.startsWith(`${target}/${prefix}/`))
+  );
+};
+const current = (active: boolean) => (active ? "page" : undefined);
 ---
 
 <header id="header" class="py-2 md:py-12">
@@ -14,31 +24,44 @@ const BASE_URL = import.meta.env.BASE_URL;
     >
     <ul class="flex gap-x-3.5">
       <li>
-        <a href={BASE_URL}>Work</a>
+        <a
+          href={BASE_URL}
+          aria-current={current(isActive(BASE_URL, ["case-study", "expertise"]))}
+          >Work</a
+        >
       </li>
       <li>
-        <a href={`${BASE_URL}about`}>About</a>
+        <a
+          href={`${BASE_URL}about`}
+          aria-current={current(isActive(`${BASE_URL}about`))}>About</a
+        >
       </li>
       <li>
-        <a href={`${BASE_URL}contact`}>Contact</a>
+        <a
+          href={`${BASE_URL}contact`}
+          aria-current={current(isActive(`${BASE_URL}contact`))}>Contact</a
+        >
       </li>
     </ul>
   </nav>
 </header>
 
 <script>
+  function updateHeaderHeight() {
+    const header = document.getElementById("header");
+    if (!header) return;
+
+    if (document.documentElement.scrollTop > 90) {
+      header.classList.remove("md:py-12");
+    } else {
+      header.classList.add("md:py-12");
+    }
+  }
+
+  window.addEventListener("scroll", updateHeaderHeight, { passive: true });
+
   document.addEventListener("astro:page-load", () => {
     const header = document.getElementById("header")!;
-
-    function updateHeaderHeight() {
-      const scrollTop = document.documentElement.scrollTop;
-
-      if (scrollTop > 90) {
-        header.classList.remove("md:py-12");
-      } else {
-        header.classList.add("md:py-12");
-      }
-    }
 
     setTimeout(() => {
       header.classList.add(
@@ -47,8 +70,6 @@ const BASE_URL = import.meta.env.BASE_URL;
         "ease-in-out",
       );
     }, 50);
-
-    window.addEventListener("scroll", updateHeaderHeight, { passive: true });
   });
 </script>
 
@@ -57,5 +78,9 @@ const BASE_URL = import.meta.env.BASE_URL;
 
   header {
     @apply fixed top-0 left-0 z-50 w-full bg-white/80 shadow-lg backdrop-blur-md backdrop-filter;
+  }
+
+  a[aria-current="page"] {
+    @apply underline underline-offset-4;
   }
 </style>
