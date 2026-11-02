@@ -6,20 +6,21 @@ import "@fontsource/alice";
 import Footer from "./Footer.astro";
 import Head from "./Head.astro";
 import Header from "./Header.astro";
+import type { Detail } from "@/resources/detail-kind";
 
 import "@/styles/global.css";
 
 interface Props {
-  title?: string;
-  description?: string;
+  /** Set on a detail page, so the head describes that detail. */
+  detail?: Detail;
 }
 
-const { title, description } = Astro.props;
+const { detail } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head title={title} description={description} />
+  <Head detail={detail} />
 
   <body>
     <a href="#main" class="skip-link"> Skip to main content </a>
