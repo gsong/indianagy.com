@@ -4,9 +4,9 @@ import PortfolioPicture from "@/components/PortfolioPicture.astro";
 
 import type { DetailCard } from "@/resources/detail-kind";
 
-type Props = DetailCard;
+type Props = DetailCard & { priority?: boolean };
 
-const { label, href, picture, ariaLabel } = Astro.props;
+const { label, href, picture, ariaLabel, priority } = Astro.props;
 ---
 
 <li role="article">
@@ -20,6 +20,7 @@ const { label, href, picture, ariaLabel } = Astro.props;
       src={picture}
       alt={label}
       role="card"
+      priority={priority}
     />
   </div>
 </li>

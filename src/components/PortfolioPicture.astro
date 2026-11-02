@@ -24,9 +24,10 @@ interface Props {
   src: string;
   alt: string;
   role: keyof typeof DISPLAY_ROLES;
+  priority?: boolean;
 }
 
-const { src, alt, role } = Astro.props;
+const { src, alt, role, priority = false } = Astro.props;
 const { widths, sizes, quality } = DISPLAY_ROLES[role];
 
 // Fetch the size here rather than pass `inferSize`: Astro's inferSize also
@@ -45,5 +46,6 @@ const height = Math.round((widest * original.height) / original.width);
   widths={srcsetWidths}
   sizes={sizes}
   quality={quality}
-  loading="lazy"
+  loading={priority ? "eager" : "lazy"}
+  fetchpriority={priority ? "high" : undefined}
 />
