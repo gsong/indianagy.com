@@ -1,6 +1,6 @@
 ---
 
-import { Picture } from "astro:assets";
+import PortfolioPicture from "@/components/PortfolioPicture.astro";
 
 interface Props {
   label: string;
@@ -18,15 +18,10 @@ const { label, href, imgSrc } = Astro.props;
     </h3>
   </div>
   <div class="overflow-hidden rounded-3xl">
-    <Picture
+    <PortfolioPicture
       src={imgSrc}
       alt={label}
-      sizes="(max-width: 640px) 100vw, 50vw"
-      formats={["avif", "webp"]}
-      fallbackFormat="jpg"
-      quality={75}
-      loading="lazy"
-      inferSize
+      role="card"
     />
   </div>
 </li>

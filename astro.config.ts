@@ -1,5 +1,6 @@
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import netlify from "@netlify/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
@@ -16,6 +17,9 @@ export default defineConfig({
   ],
 
   image: {
+    // Netlify Image CDN transforms pictures on request. Its allowlist lives in
+    // netlify.toml; this copy lets Astro fetch originals for their size.
+    service: { entrypoint: "@astrojs/netlify/image-service.js" },
     remotePatterns: [{ protocol: "https", hostname: "assets.indianagy.com" }],
     layout: "constrained",
     responsiveStyles: true, // Enabled - using wrapper-based styling to avoid cascade layer conflicts
@@ -29,6 +33,16 @@ export default defineConfig({
   server: { host: true, allowedHosts: true },
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      // Serves /.netlify/images during `astro dev`; nothing else.
+      netlify({
+        blobs: { enabled: false },
+        database: { enabled: false },
+        edgeFunctions: { enabled: false },
+        environmentVariables: { enabled: false },
+        functions: { enabled: false },
+      }),
+    ],
   },
 });
