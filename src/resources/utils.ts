@@ -1,18 +1,4 @@
-import { R2_CDN_URL } from "../lib/constants";
 import type { DetailMetadata } from "./types";
-
-export const createUrlGenerator = (firstPart: string) => {
-  const cleanFirstPart = firstPart.replace(/^\/+|\/+$/, ""); // Remove surrounding slashes
-
-  return (secondPart: string) => {
-    const cleanSecondPart = secondPart.replace(/^\/+|\/+$/, "");
-
-    return (thirdPart: string): string => {
-      const cleanThirdPart = thirdPart.replace(/^\/+|\/+$/, "");
-      return `${R2_CDN_URL}/${cleanFirstPart}/${cleanSecondPart}/${cleanThirdPart}`;
-    };
-  };
-};
 
 interface NavigationResult {
   current: DetailMetadata;

@@ -4,6 +4,8 @@ import netlify from "@netlify/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
+import { R2_ORIGIN } from "./src/lib/r2";
+
 export default defineConfig({
   site: process.env.SITE_URL || "https://indianagy.com",
   base: process.env.SITE_BASE || "/",
@@ -18,9 +20,11 @@ export default defineConfig({
 
   image: {
     // Netlify Image CDN transforms pictures on request. Its allowlist lives in
-    // netlify.toml; this copy lets Astro fetch originals for their size.
+    // netlify.toml; this pattern lets Astro fetch originals for their size.
     service: { entrypoint: "@astrojs/netlify/image-service.js" },
-    remotePatterns: [{ protocol: "https", hostname: "assets.indianagy.com" }],
+    remotePatterns: [
+      { protocol: "https", hostname: new URL(R2_ORIGIN).hostname },
+    ],
     layout: "constrained",
     responsiveStyles: true, // Enabled - using wrapper-based styling to avoid cascade layer conflicts
     objectFit: "cover",
