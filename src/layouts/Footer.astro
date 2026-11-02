@@ -1,9 +1,6 @@
 ---
-
 import { FileText, Mail, Phone } from "lucide-react";
 import { CDN_RESOURCES } from "../lib/r2";
-
-const currentYear = new Date().getFullYear();
 ---
 
 <footer class="bg-secondary mt-6 py-2">
@@ -33,30 +30,39 @@ const currentYear = new Date().getFullYear();
       target="_blank"
       class="flex w-fit items-center gap-2"
       rel="noopener noreferrer"
-      onclick="
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'file_download', {
-            file_name: 'resume.pdf',
-            file_extension: 'pdf',
-            link_url: this.href,
-            link_text: 'Download my resume'
-          });
-        }
-        return fetch(this.href).then(r => r.ok ? true : alert('Resume temporarily unavailable'));
-      "
+      data-resume-link
     >
       <FileText size="18" aria-hidden="true" />
       Download my resume
     </a>
 
     <p class="text-muted-foreground text-sm">
-      © <span id="current-year">{currentYear}</span> India Nagy. All rights reserved.
+      © <span id="current-year"></span> India Nagy. All rights reserved.
     </p>
   </div>
 </footer>
 
 <script>
-  document.getElementById("current-year")!.textContent = new Date()
-    .getFullYear()
-    .toString();
+  function initFooter() {
+    document.getElementById("current-year")!.textContent = new Date()
+      .getFullYear()
+      .toString();
+
+    const link = document.querySelector<HTMLAnchorElement>(
+      "[data-resume-link]",
+    );
+    link?.addEventListener("click", () => {
+      const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
+      if (gtag) {
+        gtag("event", "file_download", {
+          file_name: "resume.pdf",
+          file_extension: "pdf",
+          link_url: link.href,
+          link_text: "Download my resume",
+        });
+      }
+    });
+  }
+
+  document.addEventListener("astro:page-load", initFooter);
 </script>
