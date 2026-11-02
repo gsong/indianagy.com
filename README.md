@@ -6,7 +6,7 @@ This repository contains the source code for India Nagy's portfolio website, bui
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/12e42639-e8ab-4149-ad54-ee8026533a38/deploy-status)](https://app.netlify.com/sites/indianagy-dot-com/deploys)
 
-The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com).
+The site is deployed on **Netlify** at: [https://indianagy.com](https://indianagy.com). Netlify CI builds and deploys every push to `main`; there is no local deploy path.
 
 ## Domain Infrastructure
 
@@ -50,7 +50,6 @@ Other images are in `public/` folder.
 The following `pnpm` commands are available for development and deployment:
 
 - `pnpm build`: Builds the Astro site for production. Portfolio pictures are not transformed at build time; Netlify Image CDN transforms them on request (see `docs/adr/0001-request-time-image-transforms.md`).
-- `pnpm run deploy`: Builds the site using `netlify build` and then deploys it to Netlify production using `netlify deploy --prod`.
 - `pnpm dev`: Starts the Astro development server.
 - `pnpm postinstall`: This script runs after `pnpm install`. It checks if `jq` (a command-line JSON processor) is available. If it is, the script updates the `package.json` file with the current version of pnpm. This ensures that the `packageManager` field reflects the actual pnpm version used.
 - `pnpm preview`: Builds the site and serves it with `netlify serve`, which also serves Netlify Image CDN URLs (`/.netlify/images`). Plain `astro preview` cannot render portfolio pictures.

@@ -36,12 +36,6 @@
    git push origin 2025/06/13-a
    ```
 
-6. Run the deployment script to build and deploy to Netlify
-
-   ```bash
-   pnpm run deploy
-   ```
-
-   This command runs `netlify build && netlify deploy --prod`, which builds the site and deploys to production at https://indianagy.com
+6. Netlify CI builds and deploys `main` to production at https://indianagy.com. Do not build or deploy locally. Watch the deploy at https://app.netlify.com/sites/indianagy-dot-com/deploys.
 
 Use these git commands to accomplish the deployment process. Always check for existing tags on the same date to determine the correct letter suffix.
