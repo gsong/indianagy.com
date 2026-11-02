@@ -10,7 +10,7 @@ Sharp used to resize and re-encode portfolio pictures during `astro build`. 62 R
 
 - **Keep build-time transforms and tune the cache.** Rejected: even a warm cache needs restoring and revalidating on every CI build, and any width or quality change makes the next build cold again.
 - **Install the `@astrojs/netlify` adapter.** Rejected: the adapter switches the build output to server mode even when every page is prerendered. It then deploys a catch-all function at `/*`, so every 404 counts against the function quota. We use only the adapter's image service (`@astrojs/netlify/image-service.js`), list R2 under `[images]` in `netlify.toml`, and add `@netlify/vite-plugin` so `astro dev` serves `/.netlify/images`.
-- **Cloudflare Image Transformations on assets.indianagy.com.** Rejected: the Free plan caps unique transforms at 5,000 a month and returns errors past that, and no maintained Astro image service builds Cloudflare transform URLs, so we would have to write and maintain one.
+- **Cloudflare Image Transformations.** Rejected: it means moving hosting off Netlify. The `@astrojs/cloudflare` adapter's `imageService: "cloudflare"` builds transform URLs under `/cdn-cgi/image/` on the site's own domain. Those URLs work only when Cloudflare hosts or proxies the site. The Free plan's cap of 5,000 unique transforms a month is not the obstacle, because the build emits about 300. Reconsider if the Netlify usage page shows an Image Transformations charge or bandwidth near the 100 GB limit.
 
 ## Consequences
 
