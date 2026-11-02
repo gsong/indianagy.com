@@ -18,6 +18,10 @@ _Avoid_: Skill, service
 The shared shape of a case study or an expertise: label, highlights, description, sections and card picture.
 _Avoid_: Item, entry
 
+**Detail kind**:
+Whether a detail is a case study or an expertise. The kind fixes the name shown with the detail, its place in the URL, and its home-page listing.
+_Avoid_: Category, type
+
 **Section**:
 A labelled group of pictures or videos within a detail. A portfolio picture inside one has the **section** display role.
 _Avoid_: Gallery, block
