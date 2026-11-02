@@ -3,6 +3,8 @@ import type { Detail } from "@/resources/detail-kind";
 import { CDN_RESOURCES } from "./r2";
 
 export interface PageMetadata {
+  /** The page's own URL, for og:url and twitter:url. */
+  url: string;
   title: string;
   description: string;
   ogImage: OgImage;
@@ -43,6 +45,7 @@ export const pageMetadata = ({
 
   if (!detail) {
     return {
+      url: pageUrl,
       title: `${PERSON} | ${JOB_TITLE}`,
       description: SITE_DESCRIPTION,
       ogImage: SOCIAL_CARD,
@@ -51,6 +54,7 @@ export const pageMetadata = ({
   }
 
   return {
+    url: pageUrl,
     title: `${PERSON} | ${detail.kind} | ${detail.label}`,
     description: detail.metaDescription,
     ogImage: { src: detail.card, width: 1200, height: 630, crop: true },
