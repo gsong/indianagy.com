@@ -11,6 +11,10 @@ describe("pageMetadata", () => {
   describe("for a site page", () => {
     const metadata = pageMetadata({ site: SITE, pageUrl: `${SITE}/about/` });
 
+    it("points link previews at the page itself", () => {
+      expect(metadata.url).toBe(`${SITE}/about/`);
+    });
+
     it("uses the site title", () => {
       expect(metadata.title).toBe(
         "India Nagy | Art Director & Graphic Designer",
@@ -57,6 +61,10 @@ describe("pageMetadata", () => {
     const { detail } = kind.page("print");
     const pageUrl = `${SITE}/expertise/print/`;
     const metadata = pageMetadata({ site: SITE, pageUrl, detail });
+
+    it("points link previews at the detail page", () => {
+      expect(metadata.url).toBe(pageUrl);
+    });
 
     it("names India, the kind and the detail in the title", () => {
       expect(metadata.title).toBe("India Nagy | Expertise | Print");
