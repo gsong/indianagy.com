@@ -1,0 +1,49 @@
+---
+import { Image, inferRemoteSize } from "astro:assets";
+
+// Each display role caps the srcset at about twice its widest slot.
+const DISPLAY_ROLES = {
+  card: {
+    widths: [320, 640, 960, 1280],
+    sizes: "(max-width: 640px) 100vw, 50vw",
+    quality: 75,
+  },
+  section: {
+    widths: [640, 960, 1280, 1920, 2560],
+    sizes: "(max-width: 1280px) 100vw, 1280px",
+    quality: 75,
+  },
+  portrait: {
+    widths: [320, 640, 960, 1280],
+    sizes: "60ch",
+    quality: 85,
+  },
+} as const;
+
+interface Props {
+  src: string;
+  alt: string;
+  role: keyof typeof DISPLAY_ROLES;
+}
+
+const { src, alt, role } = Astro.props;
+const { widths, sizes, quality } = DISPLAY_ROLES[role];
+
+// Fetch the size here rather than pass `inferSize`: Astro's inferSize also
+// pins the format to webp, and Netlify should pick WebP or AVIF per browser.
+const original = await inferRemoteSize(src);
+const widest = Math.min(original.width, widths.at(-1) ?? original.width);
+const srcsetWidths = [...widths.filter((width) => width < widest), widest];
+const height = Math.round((widest * original.height) / original.width);
+---
+
+<Image
+  src={src}
+  alt={alt}
+  width={widest}
+  height={height}
+  widths={srcsetWidths}
+  sizes={sizes}
+  quality={quality}
+  loading="lazy"
+/>

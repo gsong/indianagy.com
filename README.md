@@ -49,11 +49,11 @@ Other images are in `public/` folder.
 
 The following `pnpm` commands are available for development and deployment:
 
-- `pnpm build`: Builds the Astro site for production. It also includes a step to clear the Astro cache if the `CLEAR_CACHE` environment variable is set to `true` (e.g., `CLEAR_CACHE=true pnpm build`).
-  - **Note:** In order to clear the Astro build cache in Netlify, you must set the `CLEAR_CACHE` environment variable in your Netlify project settings.
+- `pnpm build`: Builds the Astro site for production. Portfolio pictures are not transformed at build time; Netlify Image CDN transforms them on request (see `docs/adr/0001-request-time-image-transforms.md`).
 - `pnpm run deploy`: Builds the site using `netlify build` and then deploys it to Netlify production using `netlify deploy --prod`.
 - `pnpm dev`: Starts the Astro development server.
 - `pnpm postinstall`: This script runs after `pnpm install`. It checks if `jq` (a command-line JSON processor) is available. If it is, the script updates the `package.json` file with the current version of pnpm. This ensures that the `packageManager` field reflects the actual pnpm version used.
-- `pnpm preview`: Runs the Netlify preview server.
+- `pnpm preview`: Builds the site and serves it with `netlify serve`, which also serves Netlify Image CDN URLs (`/.netlify/images`). Plain `astro preview` cannot render portfolio pictures.
+- `pnpm test`: Runs the vitest suite.
 
 This README provides a general overview of the project. For more specific information, please refer to the source code.

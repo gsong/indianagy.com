@@ -1,6 +1,6 @@
 ---
 
-import { Picture } from "astro:assets";
+import PortfolioPicture from "@/components/PortfolioPicture.astro";
 import type { Section } from "@/resources/types";
 
 const getVideoUrl = (src: string, ext: string) =>
@@ -41,15 +41,10 @@ const { label, images, videos } = Astro.props;
   images ? (
     <div class="flex flex-col gap-4 sm:gap-10">
       {images.map(({ src, alt }) => (
-        <Picture
+        <PortfolioPicture
           src={src}
           alt={alt}
-          sizes="(max-width: 1280px) 100vw, 1280px"
-          formats={["avif", "webp"]}
-          fallbackFormat="jpg"
-          quality={75}
-          loading="lazy"
-          inferSize
+          role="section"
         />
       ))}
     </div>

@@ -1,6 +1,6 @@
 ---
 
-import { Picture } from "astro:assets";
+import PortfolioPicture from "@/components/PortfolioPicture.astro";
 
 import Layout from "@/layouts/Layout.astro";
 import { CDN_RESOURCES } from "@/lib/constants";
@@ -10,15 +10,10 @@ import { CDN_RESOURCES } from "@/lib/constants";
   <h1 class="sr-only">About India Nagy</h1>
 
   <div class="w-full max-w-[60ch] overflow-hidden rounded-3xl">
-    <Picture
+    <PortfolioPicture
       src={CDN_RESOURCES.ABOUT_IMAGE}
       alt="India basking in the sun posed in front a bright, colorful mural of a beach scene in Mexico."
-      sizes="60ch"
-      formats={["avif", "webp"]}
-      fallbackFormat="jpg"
-      quality={85}
-      loading="lazy"
-      inferSize
+      role="portrait"
     />
   </div>
 

@@ -4,17 +4,16 @@
   "version": "1.0.0",
   "packageManager": "pnpm@12.15.0",
   "scripts": {
-    "prebuild": "if [ \"$CLEAR_CACHE\" = \"true\" ]; then rm -rf node_modules/.astro; fi",
     "build": "astro build",
     "deploy": "netlify build && netlify deploy --prod",
     "dev": "astro dev",
     "postinstall": "is-ci || mise postinstall",
-    "prepreview": "pnpm run build",
-    "preview": "astro preview",
+    "preview": "netlify serve",
     "fix": "run-s fix:astro fix:biome fix:prettier",
     "fix:astro": "astro check",
     "fix:biome": "biome check --fix",
-    "fix:prettier": "prettier --write .claude"
+    "fix:prettier": "prettier --write .claude",
+    "test": "vitest run"
   },
   "dependencies": {
     "@fontsource-variable/work-sans": "^5.3.0",
@@ -31,9 +30,11 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
+    "@astrojs/netlify": "^8.2.10",
     "@astrojs/react": "^7.1.2",
     "@astrojs/sitemap": "^3.7.4",
     "@biomejs/biome": "^2.6.4",
+    "@netlify/vite-plugin": "^3.0.1",
     "@sindresorhus/slugify": "^3.0.1",
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.6.6",
@@ -42,12 +43,11 @@
     "astro": "^7.4.4",
     "is-ci": "^4.1.0",
     "netlify-cli": "^27.16.1",
-    "netlify-plugin-cache": "^1.0.3",
     "npm-run-all2": "^9.0.4",
     "prettier": "^3.9.10",
-    "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
   }
 }
