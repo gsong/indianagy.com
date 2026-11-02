@@ -1,5 +1,5 @@
 [images]
-remote_images = ["https://assets\\.indianagy\\.com/.*"]
+remote_images = ["^https://assets\\.indianagy\\.com/.*$"]
 
 [dev]
 host = "0.0.0.0"
