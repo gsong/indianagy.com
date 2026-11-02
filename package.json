@@ -5,7 +5,6 @@
   "packageManager": "pnpm@12.15.0",
   "scripts": {
     "build": "astro build",
-    "deploy": "netlify build && netlify deploy --prod",
     "dev": "astro dev",
     "postinstall": "is-ci || mise postinstall",
     "preview": "netlify serve",
