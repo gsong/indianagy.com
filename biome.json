@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["**", "!!**/*.astro", "!.claude"]
+    "includes": ["**", "!!**/*.astro", "!.claude", "!docs/adr"]
   },
   "formatter": {
     "enabled": true,
