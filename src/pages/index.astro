@@ -23,9 +23,7 @@ import { expertise } from "@/resources/expertise";
     </header>
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
       {
-        caseStudies.map(({ label, imgSrc, href }) => (
-          <Card label={label} href={href} imgSrc={imgSrc} />
-        ))
+        caseStudies.cards().map((card) => <Card {...card} />)
       }
     </ul>
   </section>
@@ -34,9 +32,7 @@ import { expertise } from "@/resources/expertise";
     <h2>Expertise</h2>
     <ul class="grid grid-cols-1 gap-8 sm:grid-cols-2">
       {
-        expertise.map(({ label, imgSrc, href }) => (
-          <Card label={label} href={href} imgSrc={imgSrc} />
-        ))
+        expertise.cards().map((card) => <Card {...card} />)
       }
     </ul>
   </section>

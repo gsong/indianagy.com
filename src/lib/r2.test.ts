@@ -35,8 +35,8 @@ describe("portfolio pictures on R2", () => {
 
 const portfolioPictures = () => [
   CDN_RESOURCES.ABOUT_IMAGE,
-  ...[...caseStudies, ...expertise].flatMap((detail) => [
-    detail.imgSrc,
+  ...[...caseStudies.details, ...expertise.details].flatMap((detail) => [
+    detail.card,
     ...detail.sections.flatMap(
       (section) => section.images?.map(({ src }) => src) ?? [],
     ),

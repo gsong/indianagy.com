@@ -4,21 +4,17 @@ import DetailCredit from "@/components/DetailCredit.astro";
 import DetailSection from "@/components/DetailSection.astro";
 import Highlights from "@/components/Highlights.astro";
 import Layout from "@/layouts/Layout.astro";
-import type { DetailMetadata } from "@/resources/types";
-import { getDetailNavigation } from "@/resources/utils";
+import type { DetailPage } from "@/resources/detail-kind";
 
 interface Props {
-  category: string;
-  details: DetailMetadata[];
-  label: string;
+  page: DetailPage;
 }
 
-const { category, details, label } = Astro.props;
-const { current, previous, next } = getDetailNavigation(details, label);
+const { detail: current, previous, next } = Astro.props.page;
 ---
 
 <Layout
-  title={`India Nagy | ${category} |  ${current.label}`}
+  title={`India Nagy | ${current.kind} |  ${current.label}`}
   description={current.metaDescription}
 >
   <!-- Structured Data (JSON-LD) for Case Study/Expertise -->
@@ -31,7 +27,7 @@ const { current, previous, next } = getDetailNavigation(details, label);
       "name": "Indiana Nagy"
     },
     "description": current.metaDescription,
-    "image": current.imgSrc,
+    "image": current.card,
     "url": Astro.url.href
   })} />
 

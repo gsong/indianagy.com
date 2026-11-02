@@ -1,21 +1,15 @@
 ---
-
-
-
-
-
-
-
-import Expertise from "@/components/Expertise.astro";
+import Detail from "@/components/Detail.astro";
+import type { DetailPage } from "@/resources/detail-kind";
 import { expertise } from "@/resources/expertise";
 
-export const getStaticPaths = () =>
-  expertise.map(({ label, slug }) => ({
-    params: { slug },
-    props: { label },
-  }));
+export const getStaticPaths = expertise.staticPaths;
 
-const { label } = Astro.props;
+interface Props {
+  page: DetailPage;
+}
+
+const { page } = Astro.props;
 ---
 
-<Expertise label={label} />
+<Detail page={page} />
