@@ -2,24 +2,22 @@
 
 import PortfolioPicture from "@/components/PortfolioPicture.astro";
 
-interface Props {
-  label: string;
-  href: string;
-  imgSrc: string;
-}
+import type { DetailCard } from "@/resources/detail-kind";
 
-const { label, href, imgSrc } = Astro.props;
+type Props = DetailCard;
+
+const { label, href, picture, ariaLabel } = Astro.props;
 ---
 
 <li role="article">
   <div class="order-1">
     <h3>
-      <a href={href} aria-label={`View ${label} case study`}>{label}</a>
+      <a href={href} aria-label={ariaLabel}>{label}</a>
     </h3>
   </div>
   <div class="overflow-hidden rounded-3xl">
     <PortfolioPicture
-      src={imgSrc}
+      src={picture}
       alt={label}
       role="card"
     />

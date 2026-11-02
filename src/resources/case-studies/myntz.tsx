@@ -1,21 +1,17 @@
-import type { DetailMetadata, Section } from "../types";
-
-import { initGetImage, slugify } from "./utils";
+import type { DetailSource, SectionSource } from "../detail-kind";
 
 const label = "Myntz! Breathmints";
 
-const getImage = initGetImage("myntz");
-
-export const sections: Section[] = [
+const sections: SectionSource[] = [
   {
     label: "Strategy",
     images: [
       {
-        src: getImage("strategy-1.png"),
+        src: "strategy-1.png",
         alt: "Side-by-side comparison of the previous and refreshed design of MYNTZ! breathmints, displaying the packaging and the candies.",
       },
       {
-        src: getImage("strategy-2.png"),
+        src: "strategy-2.png",
         alt: "Three black and white logos of MYNTZ! breathmints, including the main logo, the secondary logo and the plant-based sweeteners logo.",
       },
     ],
@@ -24,11 +20,11 @@ export const sections: Section[] = [
     label: "Photography Art Direction",
     images: [
       {
-        src: getImage("photo-1.png"),
+        src: "photo-1.png",
         alt: "Four tins of MYNTZ! breathmints in different flavors with mint, lemon, tangerine and cinnamon with corresponding fruit and herbs.",
       },
       {
-        src: getImage("photo-2.png"),
+        src: "photo-2.png",
         alt: "An open tin of MYNTZ! breathmints with an unopened tin and scattered mint leaves and mints on a light blue background.",
       },
     ],
@@ -37,11 +33,11 @@ export const sections: Section[] = [
     label: "Packaging",
     images: [
       {
-        src: getImage("packaging-1.png"),
+        src: "packaging-1.png",
         alt: "Four tins of MYNTZ! breathmints displaying different flavors: Wintermint, Cinnamon, Tangerine Vanilla, and Lemon Ginger.",
       },
       {
-        src: getImage("packaging-2.png"),
+        src: "packaging-2.png",
         alt: "Two images of MYNTZ! breathmints. The first is a variety box with six tins. The second is a stack of 4 single-flavor boxes.",
       },
     ],
@@ -50,7 +46,7 @@ export const sections: Section[] = [
     label: "Store Displays",
     images: [
       {
-        src: getImage("store.png"),
+        src: "store.png",
         alt: "Two images showcasing MYNTZ! breathmints displays; one display stand alone, the other in a store shelf.",
       },
     ],
@@ -69,8 +65,8 @@ const description = () => (
 
 export default {
   label,
-  ...slugify(label),
-  imgSrc: getImage("card.png"),
+  folder: "myntz",
+  card: "card.png",
   highlights: [
     "Brand Strategy",
     "Photography Art Direction",
@@ -84,4 +80,4 @@ export default {
   metaDescription:
     "Revitalized brand identity with modern packaging and logo to reflect cleaner ingredients and support new flavors, enhancing market presence and appeal.",
   credit: "Credit: Myntz! on solid blue backgrounds @Julee Ho and team",
-} satisfies DetailMetadata;
+} satisfies DetailSource;

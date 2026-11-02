@@ -1,21 +1,15 @@
 ---
-
-
-
-
-
-
-
-import CaseStudy from "@/components/CaseStudy.astro";
+import Detail from "@/components/Detail.astro";
+import type { DetailPage } from "@/resources/detail-kind";
 import { caseStudies } from "@/resources/case-studies";
 
-export const getStaticPaths = () =>
-  caseStudies.map(({ label, slug }) => ({
-    params: { slug },
-    props: { label },
-  }));
+export const getStaticPaths = caseStudies.staticPaths;
 
-const { label } = Astro.props;
+interface Props {
+  page: DetailPage;
+}
+
+const { page } = Astro.props;
 ---
 
-<CaseStudy label={label} />
+<Detail page={page} />

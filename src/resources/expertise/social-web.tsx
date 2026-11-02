@@ -1,21 +1,17 @@
-import type { DetailMetadata, Section } from "../types";
-
-import { initGetImage, slugify } from "./utils";
+import type { DetailSource, SectionSource } from "../detail-kind";
 
 const label = "Social + Web";
 
-const getImage = initGetImage("social-web");
-
-export const sections: Section[] = [
+const sections: SectionSource[] = [
   {
     label: "Campaigns",
     images: [
       {
-        src: getImage("social-1.png"),
+        src: "social-1.png",
         alt: "Collage of 12 social media posts showing Choice tea packaging and marketing materials including product placement, flatlays, environmental consciousness and promotional quotes.",
       },
       {
-        src: getImage("social-2.png"),
+        src: "social-2.png",
         alt: "Collage of 12 social media posts depicting various water-related situations, from business and leisure to water damage, repairs, and billing concerns.",
       },
     ],
@@ -53,11 +49,11 @@ export const sections: Section[] = [
     label: "Web",
     images: [
       {
-        src: getImage("web-2.jpg"),
+        src: "web-2.jpg",
         alt: "Three email banner ads for the Sweets & Snacks Expo 2023, showing booths for Pearson's, Annabelle's and Dilettante and Myntz.",
       },
       {
-        src: getImage("web-3.jpg"),
+        src: "web-3.jpg",
         alt: "Six screenshots of the Annabelle's Candy Co. website, showcasing the variety of branding for different candy bars: U-No, Big Hunk, a company history banner, and Look! and Abba-Zaba.",
       },
     ],
@@ -75,8 +71,8 @@ const description = () => (
 
 export default {
   label,
-  ...slugify(label),
-  imgSrc: getImage("card.png"),
+  folder: "social-web",
+  card: "card.png",
   highlights: [
     "Brand Strategy",
     "Design",
@@ -91,4 +87,4 @@ export default {
     "I create on-brand digital content for social media and direct marketing, including web pages and custom graphics, enhancing storytelling and driving audience engagement.",
   credit:
     "Credit: art direction for Promise Confection website branding @Gertrude",
-} satisfies DetailMetadata;
+} satisfies DetailSource;

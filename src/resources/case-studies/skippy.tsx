@@ -1,17 +1,13 @@
-import type { DetailMetadata, Section } from "../types";
-
-import { initGetImage, slugify } from "./utils";
+import type { DetailSource, SectionSource } from "../detail-kind";
 
 const label = "Skippy Nut Roll";
 
-const getImage = initGetImage("skippy");
-
-export const sections: Section[] = [
+const sections: SectionSource[] = [
   {
     label: "Branding",
     images: [
       {
-        src: getImage("branding.png"),
+        src: "branding.png",
         alt: "Image showing the collaboration of Skippy and Pearson to create Skippy’s Peanut Butter Salted Nut Roll with a 2023 award.",
       },
     ],
@@ -20,7 +16,7 @@ export const sections: Section[] = [
     label: "Web",
     images: [
       {
-        src: getImage("web.png"),
+        src: "web.png",
         alt: "Pearson’s website showcasing the new Skippy Peanut Butter Salted Nut Roll.",
       },
     ],
@@ -29,7 +25,7 @@ export const sections: Section[] = [
     label: "Digital Imagery",
     images: [
       {
-        src: getImage("digital.png"),
+        src: "digital.png",
         alt: "Three images of the Skippy Peanut Butter Salted Nut Roll including box, bar closeup, and nutritional information.",
       },
     ],
@@ -38,11 +34,11 @@ export const sections: Section[] = [
     label: "Packaging",
     images: [
       {
-        src: getImage("packaging-1.png"),
+        src: "packaging-1.png",
         alt: "Two packages and two individual bars of Skippy's Peanut Butter Salted Nut Roll. One package is King Size.",
       },
       {
-        src: getImage("packaging-2.png"),
+        src: "packaging-2.png",
         alt: "A bag of Skippy Peanut Butter Salted Nut Roll bite sized candies and three individual pieces.",
       },
     ],
@@ -51,7 +47,7 @@ export const sections: Section[] = [
     label: "Store Displays",
     images: [
       {
-        src: getImage("store.png"),
+        src: "store.png",
         alt: "Three images of Skippy's Peanut Butter Salted Nut Roll display boxes. The first two show stand alone boxes and the last two show placement in a store.",
       },
     ],
@@ -74,8 +70,8 @@ const description = () => (
 
 export default {
   label,
-  ...slugify(label),
-  imgSrc: getImage("card.png"),
+  folder: "skippy",
+  card: "card.png",
   highlights: [
     "Brand Strategy",
     "Art Direction",
@@ -87,4 +83,4 @@ export default {
   description,
   metaDescription:
     "Designed cohesive packaging and digital assets for the Skippy Salted Nut Roll launch, earning recognition as an Innovative Product at the 2023 Sweets & Snacks Show.",
-} satisfies DetailMetadata;
+} satisfies DetailSource;
